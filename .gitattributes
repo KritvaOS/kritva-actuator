@@ -1,0 +1,51 @@
+# Kritva Actuator .gitattributes
+# Git LFS must be enabled once per machine:  git lfs install
+
+# ---- Text normalisation ----
+*           text=auto
+*.md        text eol=lf
+*.csv       text eol=lf
+*.py        text eol=lf
+*.c         text eol=lf
+*.h         text eol=lf
+*.cpp       text eol=lf
+*.hpp       text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+Makefile    text eol=lf
+*.sh        text eol=lf
+
+# ---- Mechanical CAD (LFS) ----
+*.step      filter=lfs diff=lfs merge=lfs -text
+*.stp       filter=lfs diff=lfs merge=lfs -text
+*.STEP      filter=lfs diff=lfs merge=lfs -text
+*.iges      filter=lfs diff=lfs merge=lfs -text
+*.igs       filter=lfs diff=lfs merge=lfs -text
+*.sldprt    filter=lfs diff=lfs merge=lfs -text
+*.SLDPRT    filter=lfs diff=lfs merge=lfs -text
+*.sldasm    filter=lfs diff=lfs merge=lfs -text
+*.SLDASM    filter=lfs diff=lfs merge=lfs -text
+*.slddrw    filter=lfs diff=lfs merge=lfs -text
+*.SLDDRW    filter=lfs diff=lfs merge=lfs -text
+*.f3d       filter=lfs diff=lfs merge=lfs -text
+*.f3z       filter=lfs diff=lfs merge=lfs -text
+*.FCStd     filter=lfs diff=lfs merge=lfs -text
+*.stl       filter=lfs diff=lfs merge=lfs -text
+*.3mf       filter=lfs diff=lfs merge=lfs -text
+*.dxf       filter=lfs diff=lfs merge=lfs -text
+*.dwg       filter=lfs diff=lfs merge=lfs -text
+
+# ---- Drawings, datasheets, images ----
+*.pdf       filter=lfs diff=lfs merge=lfs -text
+*.png       filter=lfs diff=lfs merge=lfs -text
+*.jpg       filter=lfs diff=lfs merge=lfs -text
+*.jpeg      filter=lfs diff=lfs merge=lfs -text
+
+# ---- Electronics manufacturing ----
+*.zip       filter=lfs diff=lfs merge=lfs -text
+*.gbr       filter=lfs diff=lfs merge=lfs -text
+
+# ---- Firmware release binaries ----
+*.bin       filter=lfs diff=lfs merge=lfs -text
+*.hex       filter=lfs diff=lfs merge=lfs -text
+*.elf       filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,27 @@
+name: docs-checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Documentation headers and revision history
+        run: make check-docs
+      - name: Relative links
+        run: make check-links
+      - name: Requirements traceability
+        run: make check-trace
+      - name: BOM schema
+        run: make check-bom
+      - name: Mechanical sizing calculations run
+        run: make calc

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project Lead
+    url: https://github.com/KritvaOS/kritva-actuator/blob/main/planning/v1/TASKS.md
+    about: For questions that are not tasks, bugs, change requests, test failures or audit findings, contact the Project Lead.

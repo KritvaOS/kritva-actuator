@@ -1,0 +1,38 @@
+name: firmware-build
+
+# Placeholder: enabled once ACT-DEC-004 (MCU family) is accepted and
+# firmware/CMakeLists.txt exists. Until then the job is skipped.
+
+on:
+  push:
+    branches: [main]
+    paths: ["firmware/**", "communication/can/firmware/**"]
+  pull_request:
+    paths: ["firmware/**", "communication/can/firmware/**"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for firmware build system
+        id: detect
+        run: |
+          if [ -f firmware/CMakeLists.txt ]; then echo "present=true" >> "$GITHUB_OUTPUT"; else echo "present=false" >> "$GITHUB_OUTPUT"; echo "firmware/CMakeLists.txt not found - skipping"; fi
+      - name: Install ARM toolchain
+        if: steps.detect.outputs.present == 'true'
+        run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi cmake ninja-build cppcheck
+      - name: Configure and build
+        if: steps.detect.outputs.present == 'true'
+        run: |
+          cmake -S firmware -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build
+      - name: Static analysis
+        if: steps.detect.outputs.present == 'true'
+        run: cppcheck --enable=warning,performance,portability --error-exitcode=1 --inline-suppr firmware
+      - name: Host unit tests
+        if: steps.detect.outputs.present == 'true' && hashFiles('tests/unit/CMakeLists.txt') != ''
+        run: |
+          cmake -S tests/unit -B build-tests
+          cmake --build build-tests
+          ctest --test-dir build-tests --output-on-failure
