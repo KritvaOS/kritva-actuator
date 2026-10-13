@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `LOAD_CASES.md`: point-mass 1.90 J marked illustrative only; rotor share corrected to about 2 %–25 %.
 - `BEARING_SELECTION.md` §9: 6202 stated as a candidate, not a released part (EXT-AUD-021).
 - External audit record updated with the re-verification result and EXT-AUD-018..021.
+- `planning/v1/M0_DECISION_SHEET.md` (new): decision sheet for M0 blockers B1-B7 with the external reviewer's recommendations.
 
 ### Changed (2026-10-12, external audit follow-up; see audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md)
 
