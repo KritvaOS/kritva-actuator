@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed (2026-10-13, external re-verification of 894860e)
+
+- `check_calcs.py` / `expected_results.json`: regression coverage of the effective-inertia range (rod inertia, low/mid/high rotor cases, rotor share); 24 results checked (EXT-AUD-019).
+- `LOAD_CASES.md`: point-mass 1.90 J marked illustrative only; rotor share corrected to about 2 %–25 %.
+- `BEARING_SELECTION.md` §9: 6202 stated as a candidate, not a released part (EXT-AUD-021).
+- External audit record updated with the re-verification result and EXT-AUD-018..021.
+
 ### Changed (2026-10-12, external audit follow-up; see audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md)
 
 - `LOAD_CASES.md` §8.1/§8.2: hard-stop model limitations; effective inertia with the reflected rotor (2.1–2.8 J); single-contact design rule (EXT-AUD-003/004).

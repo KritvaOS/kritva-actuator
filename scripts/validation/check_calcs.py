@@ -48,7 +48,15 @@ def compute(mod) -> dict:
     br = mod.bearings()
     checks = {c["bearing"].split(" ")[0]: c for c in br["checks"]}
     st = mod.stops()
+    eff = mod.effective_inertia()
+    lo, mid, hi = eff[(2e-5, 15)], eff[(5e-5, 20)], eff[(1e-4, 25)]
     return {
+        "J_rod": load["J_rod"],
+        "E_stop_rod_45": load["E_stop_rod"],
+        "eff_J_low": lo["J"], "eff_E_low": lo["E"],
+        "eff_J_mid": mid["J"], "eff_E_mid": mid["E"],
+        "eff_J_high": hi["J"], "eff_E_high": hi["E"],
+        "rotor_share_low_pct": 100 * lo["rotor_share"], "rotor_share_high_pct": 100 * hi["rotor_share"],
         "T_g": load["Tg"],
         "J_point": load["J_point"],
         "E_stop_45": load["E_stop"],

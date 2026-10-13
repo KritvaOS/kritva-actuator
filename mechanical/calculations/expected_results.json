@@ -1,19 +1,173 @@
 {
   "_comment": "Approved reference results for actuator_sizing.py (EXT-AUD-011). Change only in a reviewed PR together with the calculation documents. 'documents' maps a file to a Python format pattern ({v} = current value) that must appear in it.",
   "results": {
-    "T_g": {"value": 6.0822, "rel_tol": 0.001, "documents": {"mechanical/calculations/LOAD_CASES.md": "{v:.3f} N·m"}},
-    "J_point": {"value": 0.1711, "rel_tol": 0.001, "documents": {"mechanical/calculations/LOAD_CASES.md": "{v:.4f}"}},
-    "E_stop_45": {"value": 1.8998, "rel_tol": 0.001, "documents": {"mechanical/calculations/LOAD_CASES.md": "{v:.3f} J"}},
-    "P_out": {"value": 47.1239, "rel_tol": 0.001, "documents": {"mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.1f} W"}},
-    "Tm_cont_20": {"value": 0.588235, "rel_tol": 0.001, "documents": {"mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.3f} N·m"}},
-    "Tm_peak25_20": {"value": 1.470588, "rel_tol": 0.001, "documents": {"mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.3f} N·m"}},
-    "Kv_min_20": {"value": 59.5238, "rel_tol": 0.001, "documents": {"mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.1f} RPM/V"}},
-    "vm_kt_LC05": {"value": 324.5, "rel_tol": 0.002, "documents": {"mechanical/calculations/SHAFT_STRENGTH.md": "{v:.1f}"}},
-    "vm_kt_LC03_25": {"value": 255.4, "rel_tol": 0.002, "documents": {"mechanical/calculations/SHAFT_STRENGTH.md": "{v:.1f}"}},
-    "R_near_LC05": {"value": 1800.0, "rel_tol": 0.001, "documents": {"mechanical/calculations/BEARING_SELECTION.md": "{v:,.0f} N"}},
-    "s0_6001": {"value": 1.3111, "rel_tol": 0.002, "documents": {"mechanical/calculations/BEARING_SELECTION.md": "{v:.2f}"}},
-    "s0_6202": {"value": 2.0833, "rel_tol": 0.002, "documents": {"mechanical/calculations/BEARING_SELECTION.md": "{v:.2f}"}},
-    "T_stop_45": {"value": 47.4944, "rel_tol": 0.001, "documents": {"mechanical/calculations/LOAD_CASES.md": "{v:.1f} N·m"}},
-    "n_allow_20": {"value": 29.2, "rel_tol": 0.003, "documents": {"mechanical/calculations/LOAD_CASES.md": "{v:.1f} RPM"}}
+    "T_g": {
+      "value": 6.0822,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.3f} N·m"
+      }
+    },
+    "J_point": {
+      "value": 0.1711,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.4f}"
+      }
+    },
+    "E_stop_45": {
+      "value": 1.8998,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.3f} J"
+      }
+    },
+    "P_out": {
+      "value": 47.1239,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.1f} W"
+      }
+    },
+    "Tm_cont_20": {
+      "value": 0.588235,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.3f} N·m"
+      }
+    },
+    "Tm_peak25_20": {
+      "value": 1.470588,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.3f} N·m"
+      }
+    },
+    "Kv_min_20": {
+      "value": 59.5238,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/TORQUE_AND_SPEED.md": "{v:.1f} RPM/V"
+      }
+    },
+    "vm_kt_LC05": {
+      "value": 324.5,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/SHAFT_STRENGTH.md": "{v:.1f}"
+      }
+    },
+    "vm_kt_LC03_25": {
+      "value": 255.4,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/SHAFT_STRENGTH.md": "{v:.1f}"
+      }
+    },
+    "R_near_LC05": {
+      "value": 1800.0,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/BEARING_SELECTION.md": "{v:,.0f} N"
+      }
+    },
+    "s0_6001": {
+      "value": 1.3111,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/BEARING_SELECTION.md": "{v:.2f}"
+      }
+    },
+    "s0_6202": {
+      "value": 2.0833,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/BEARING_SELECTION.md": "{v:.2f}"
+      }
+    },
+    "T_stop_45": {
+      "value": 47.4944,
+      "rel_tol": 0.001,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.1f} N·m"
+      }
+    },
+    "n_allow_20": {
+      "value": 29.2,
+      "rel_tol": 0.003,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.1f} RPM"
+      }
+    },
+    "J_rod": {
+      "value": 0.1873,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.4f} kg·m²"
+      }
+    },
+    "E_stop_rod_45": {
+      "value": 2.079649,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.2f} J (rod"
+      }
+    },
+    "eff_J_low": {
+      "value": 0.1918,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "J = {v:.3f}"
+      }
+    },
+    "eff_E_low": {
+      "value": 2.129614,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "E = {v:.2f} J"
+      }
+    },
+    "eff_J_mid": {
+      "value": 0.2073,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "J = {v:.3f}"
+      }
+    },
+    "eff_E_mid": {
+      "value": 2.301715,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "E = {v:.2f} J"
+      }
+    },
+    "eff_J_high": {
+      "value": 0.2498,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "J = {v:.3f}"
+      }
+    },
+    "eff_E_high": {
+      "value": 2.773606,
+      "rel_tol": 0.002,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "E = {v:.2f} J"
+      }
+    },
+    "rotor_share_low_pct": {
+      "value": 2.3462,
+      "rel_tol": 0.05,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "{v:.0f} %–"
+      }
+    },
+    "rotor_share_high_pct": {
+      "value": 25.02,
+      "rel_tol": 0.05,
+      "documents": {
+        "mechanical/calculations/LOAD_CASES.md": "–{v:.0f} %"
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-LOAD |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 (Draft: proposed, pending approval) |
+| Revision | 0.3 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -154,9 +154,9 @@ The stop torques above use an **idealised linear-spring model**, T_peak = 2E/θ_
 | 5×10⁻⁵ | J = 0.199, E = 2.21 J | J = 0.207, E = 2.30 J | J = 0.219, E = 2.43 J |
 | 1×10⁻⁴ | J = 0.210, E = 2.33 J | J = 0.227, E = 2.52 J | J = 0.250, E = 2.77 J |
 
-At 45 RPM the stop energy can therefore be **2.1–2.8 J**, not 1.90 J. The point-mass value omits the forearm's own centroidal inertia and the rotor.
+At 45 RPM the stop energy can therefore be **2.1–2.8 J**, not 1.90 J. The point-mass value (1.90 J) is **illustrative only**: it omits the forearm's own centroidal inertia and the rotor, and must not be used as a design energy. The rod-plus-rotor values above are the screening range; `check_calcs.py` regression-tests the rod inertia (0.1873 kg·m²) and the low, mid and high corner cases (EXT-AUD-019), but they remain screening values until CAD inertia and the datasheet J_rotor replace the assumptions.
 
-**The rotor energy passes through the gearbox.** The reflected-rotor share, J_rotor·N²/J_total (about 4–25 % here), is decelerated through the gear teeth. It must be included in the gearbox peak and emergency-torque check.
+**The rotor energy passes through the gearbox.** The reflected-rotor share, J_rotor·N²/J_total (about 2 %–25 % here: 2 % at 15:1 with 2×10⁻⁵ kg·m², 25 % at 25:1 with 1×10⁻⁴ kg·m²), is decelerated through the gear teeth. It must be included in the gearbox peak and emergency-torque check.
 
 **Required before Gate A** (tracked as M2-05 / EXT-AUD-003):
 
@@ -216,3 +216,4 @@ A balanced (two-sided) stop reacts the stop torque as a couple, but **only if bo
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
 | 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: hard-stop model limitations, effective inertia with rotor, single-contact design rule (EXT-AUD-003/004) |
+| 0.3 | 2026-10-12 | Kritvaos Actuator Team | Re-verification: point-mass energy illustrative only; rotor share corrected to 2-25 %; effective-inertia cases regression-tested (EXT-AUD-019) |

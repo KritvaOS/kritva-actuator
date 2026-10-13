@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-BEARING |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 (Draft: proposed, pending approval) |
+| Revision | 0.3 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -119,6 +119,8 @@ With a **proven** balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is amp
 4. Replace the typical catalogue ratings with the **selected vendor's catalogue values**. Add the axial and combined-load cases (static equivalent load P0 = X0·Fr + Y0·Fa), fits, clearance and preload, and the stiffness and encoder-alignment checks, using the CAD geometry.
 5. Record the final choice as **ACT-DEC-019**.
 
+**Status of 6202 (EXT-AUD-021).** 6202 is a **candidate baseline, not an approved or released part**. The s0 ≈ 2.08 result is a static screening value from the assumed single-sided 1 000 N flange load and a generic C0 = 3.75 kN; it cannot certify the selection. The selection stays open until CAD reactions, vendor catalogue ratings, axial and moment loads and the final stop configuration are reviewed. The BOM item MB-004 carries status CANDIDATE.
+
 ## 10. Verification
 
 | Item | Method | Gate |
@@ -144,3 +146,4 @@ With a **proven** balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is amp
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
 | 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: single-sided case governs until balanced engagement proven; baseline 6202 on 15 mm seats; vendor/combined-load checks (EXT-AUD-004/006/012) |
+| 0.3 | 2026-10-12 | Kritvaos Actuator Team | Re-verification: 6202 stated as candidate, not released (EXT-AUD-021) |

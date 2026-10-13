@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-AUD-EXT-20261012 |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-12 |
 | Document owner | Project Lead (record keeper); findings owned by the external reviewer |
 | Reviewer / Approver | External reviewer: ChatGPT (remote documentary audit) / Project Lead |
@@ -50,6 +50,10 @@ The disposition states what was changed in the follow-up commit. **CLOSED-BY-AUT
 | EXT-AUD-015 | MED | No CODEOWNERS; branch protection not verified | `.github/CODEOWNERS` added (placeholders defaulting to the repository owner; replace with the role accounts). **Branch protection must be set by an administrator:** require PR, code-owner review and the `docs-checks` status on `main` | CODEOWNERS: CLOSED-BY-AUTHOR. Protection: **OPEN: admin** |
 | EXT-AUD-016 | LOW | Opaque `Claude outputs/kritva-protected-files.zip` committed | It was a delivery archive of `Makefile` and `.github/`, now extracted. `Claude outputs/` added to `.gitignore`. **The committed copy must be removed** with `git rm -r "Claude outputs"` in a reviewed commit | **OPEN: delete in git** |
 | EXT-AUD-017 | OBS | Baseline alignment is generally good | Noted | CLOSED |
+| EXT-AUD-018 | MED | (re-verification) `Claude outputs/kritva-protected-files.zip` is still tracked in `main` (Git LFS pointer); `.gitignore` cannot untrack it | Same action as EXT-AUD-016: `git rm -r "Claude outputs"` in a reviewed commit | **OPEN: delete in git** |
+| EXT-AUD-019 | HIGH | (re-verification) `check_calcs.py` regression covered only the point-mass 1.90 J / 47.5 N·m values, not the 2.1–2.8 J effective-inertia range | `actuator_sizing.py` gains `effective_inertia()`; `expected_results.json` / `check_calcs.py` now regression-test J_rod, E_rod and the low, mid and high rotor corner cases (J and E) and the rotor share, and check they appear in `LOAD_CASES.md` §8.1. The point-mass 1.90 J is stated as illustrative only. The check also caught a documentation error (low-end rotor share is 2 %, not 4 %), now corrected | CLOSED-BY-AUTHOR (24 results checked) |
+| EXT-AUD-020 | MED | (re-verification) CODEOWNERS does not enforce review: branch protection is off and handles are placeholders | Unchanged from EXT-AUD-015: replace the handles, then an administrator enables required PR review, CODEOWNERS review and the `docs-checks` status check on `main` | **OPEN: admin** |
+| EXT-AUD-021 | MED | (re-verification) The 6202 baseline is still a conditional static screening result | `BEARING_SELECTION.md` §9 now states that 6202 is a candidate baseline, not an approved or released part, and BOM MB-004 is CANDIDATE. Selection stays open until CAD reactions and vendor data are reviewed | Doc: CLOSED-BY-AUTHOR. Design: **OPEN** |
 
 ## 3. M0 blockers (must close before M0 can PASS)
 
@@ -69,10 +73,15 @@ The design items (stop architecture, shaft, bearings, motor/gearbox) are **M1/M2
 
 | Finding | Closure evidence (commit / file) | Verified by external reviewer | Date |
 |---|---|---|---|
-| 003, 004, 005, 006, 008, 010, 011, 012, 013, 014, 015 (CODEOWNERS) | Follow-up commit `ACT-03-006: Address external audit findings EXT-AUD-003..016` | Pending | — |
+| 008, 010 (checker), 013, 014, 016 (ignore rule) | Commit `894860e` (`ACT-03-006: Address external audit findings EXT-AUD-003..016`) | **VERIFIED** by the external reviewer | 2026-10-13 |
+| 003, 004, 005, 006, 011, 012, 015 (CODEOWNERS) | Commit `894860e` | **PARTIAL**: documentation action accepted, design validation or enforcement still open | 2026-10-13 |
+| 018, 019, 020, 021 (new) | Raised in the re-verification; 019 and 021 addressed in the second follow-up commit | Pending | — |
+
+Re-verification result (2026-10-13): CI `docs-checks` green at `894860e`. **M0 remains FAIL / NOT READY TO CLOSE**, unchanged by the verified items. The reviewer found no change to the headline architecture.
 
 ## 5. Revision history
 
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-12 | Kritvaos Actuator Team | Initial record of external audit EXT-AUD-001..017 with dispositions |
+| 0.2 | 2026-10-13 | Kritvaos Actuator Team | Re-verification of commit 894860e recorded; new findings EXT-AUD-018..021 with dispositions |
