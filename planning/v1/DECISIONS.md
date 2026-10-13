@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 (Draft: proposed, pending approval) |
+| Revision | 0.4 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -78,6 +78,7 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-013 | Supply voltage 24 V DC nominal | ACCEPTED | 2026-10-11 |
 | ACT-DEC-014 | Independent review rule and the NOT_VERIFIED gate block | ACCEPTED | 2026-10-11 |
 | ACT-DEC-015 | Restrained-fixture testing; no human-interactive testing without a safety review | ACCEPTED | 2026-10-11 |
+| ACT-DEC-023 | Repository visibility: private (EXT-AUD-001) | ACCEPTED | 2026-10-13 |
 
 ---
 
@@ -435,7 +436,8 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | Safe-state option per fault class (coast vs active damping) | ACT-DEC-020 | Project Lead + reviewer | Before loaded tests |
 | Peak torque rating (20 vs 25 N·m) and duration | ACT-DEC-021 | Project Lead | Motor/gearbox freeze |
 | CAN payload encoding (scaled integers vs float) | ACT-DEC-022 | Project Lead / Integration Owner | F1 |
-| Repository visibility: private, or public subset with a licence/IP review (EXT-AUD-001) | ACT-DEC-023 | Project Lead | Immediately |
+
+**ACT-DEC-023 resolved (2026-10-13, Project Lead).** The repository was moved to **private** (EXT-AUD-001). It supersedes the earlier interim position (stay public until the specification is filled in). Follow-up: GitHub visibility is recorded here as the owner's action; the history and tracked-artifact review (EXT-AUD-018, `git rm -r "Claude outputs"`) and a secrets scan remain recommended before any external sharing or a future public subset.
 
 ## 6. Revision history
 
@@ -443,3 +445,5 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
 | 0.2 | 2026-10-12 | Kritvaos Actuator Team | Pending decision ACT-DEC-023 repository visibility (EXT-AUD-001) |
+| 0.3 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023: interim position (stay public until the specification is filled in; conditions recorded) |
+| 0.4 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023 ACCEPTED: repository private |

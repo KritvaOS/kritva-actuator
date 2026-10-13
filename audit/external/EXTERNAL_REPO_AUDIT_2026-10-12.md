@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-AUD-EXT-20261012 |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.3 (Draft: proposed, pending approval) |
+| Revision | 0.4 (Draft: proposed, pending approval) |
 | Date | 2026-10-12 |
 | Document owner | Project Lead (record keeper); findings owned by the external reviewer |
 | Reviewer / Approver | External reviewer: ChatGPT (remote documentary audit) / Project Lead |
@@ -33,7 +33,7 @@ The disposition states what was changed in the follow-up commit. **CLOSED-BY-AUT
 
 | ID | Sev. | Finding (summary) | Disposition | Status |
 |---|---|---|---|---|
-| EXT-AUD-001 | HIGH | The repository is **public**, but the LICENSE and documents say proprietary and confidential | Needs a Project Lead decision: make the repository private, or split out a public subset with a licence/IP review. Recorded as pending decision **ACT-DEC-023**. README status table flags it. **Interim (2026-10-13): the Project Lead keeps the repository public until the specification is filled in; no sensitive data meanwhile (conditions in ACT-DEC-023)** | **OPEN: accepted risk, deferred** |
+| EXT-AUD-001 | HIGH | The repository is **public**, but the LICENSE and documents say proprietary and confidential | Needs a Project Lead decision: make the repository private, or split out a public subset with a licence/IP review. Recorded as pending decision **ACT-DEC-023**. README status table flags it. **2026-10-13: the Project Lead moved the repository to private (ACT-DEC-023 ACCEPTED).** Reviewer to verify the GitHub setting | **CLOSED-BY-AUTHOR** (verify) |
 | EXT-AUD-002 | HIGH | M0 is NOT VERIFIED. Centre of mass, α, duty cycle, holding duration, peak repetition and limits are TBD. ACT-DEC-008 is PROPOSED | Accepted. These are the M0 blockers (section 3). M0 stays FAIL until they are closed | **OPEN: data / decision** |
 | EXT-AUD-003 | HIGH | The hard-stop model (linear 2E/θ, point-mass J) is not a validated design load | `LOAD_CASES.md` §8.1 added: model limitations; effective-inertia table including the forearm's centroidal inertia and the reflected rotor (2.1–2.8 J instead of 1.90 J); required bumper force–deflection characterisation; +20 % energy margin; approach speed set from the characterised curve; instrumented FI-24/DU-03. The final value still needs CAD inertia plus a bumper test | Doc: CLOSED-BY-AUTHOR. Design: **OPEN** |
 | EXT-AUD-004 | HIGH | The balanced stop is not proven: contact simultaneity, pin/lug/housing/fastener loads, and torque through the gearbox are unchecked | `LOAD_CASES.md` §8.2 added. **Design rule: the single-contact case LC-05 governs** until a tolerance analysis and bench proof show simultaneous engagement. M2 component checks are listed (pins, lugs, housing, fasteners, coupling/gearbox torque, rotor-inertia share). `BEARING_SELECTION`, `SHAFT_STRENGTH`, `MECHANICAL_DESIGN_SPECIFICATION` and the risk register updated | Doc: CLOSED-BY-AUTHOR. Design: **OPEN** |
@@ -65,7 +65,7 @@ The disposition states what was changed in the follow-up commit. **CLOSED-BY-AUT
 | B4 | Final joint range and mass/envelope budget | 009 | Project Lead + Mechanical Intern | M0 |
 | B5 | Numerical limits: position error, repeatability, backlash, thermal-stability criterion | 009 | Project Lead | Before M1 / tests |
 | B6 | ACT-DEC-008 accepted (or explicit blockers recorded) | 002 | Project Lead | M0 |
-| B7 | Repository visibility decision (ACT-DEC-023) | 001 | Project Lead | Immediately |
+| B7 | Repository visibility decision (ACT-DEC-023): **closed 2026-10-13, private** | 001 | Project Lead | Done |
 
 The design items (stop architecture, shaft, bearings, motor/gearbox) are **M1/M2** closures (EXT-AUD-003 to 007, 012) and are tracked in `audit/mechanical/MECHANICAL_DESIGN_AUDIT.md` §5.
 
@@ -86,3 +86,4 @@ Re-verification result (2026-10-13): CI `docs-checks` green at `894860e`. **M0 r
 | 0.1 | 2026-10-12 | Kritvaos Actuator Team | Initial record of external audit EXT-AUD-001..017 with dispositions |
 | 0.2 | 2026-10-13 | Kritvaos Actuator Team | Re-verification of commit 894860e recorded; new findings EXT-AUD-018..021 with dispositions |
 | 0.3 | 2026-10-13 | Kritvaos Actuator Team | EXT-AUD-001: deferral and conditions recorded |
+| 0.4 | 2026-10-13 | Kritvaos Actuator Team | EXT-AUD-001 and blocker B7 closed (repository private) |

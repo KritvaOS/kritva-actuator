@@ -6,13 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-13, ACT-02-002)
+
+- `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` (new): motor and gearbox screening shortlist (CubeMars RI50/60/70/80; Neugart PLE 040/060, PLPE 050; WITTENSTEIN benchmark) with fit calculations. Candidate data are from the ChatGPT session and not yet re-checked against vendor pages; screening only.
+
 ### Changed (2026-10-13, external re-verification of 894860e)
 
 - `check_calcs.py` / `expected_results.json`: regression coverage of the effective-inertia range (rod inertia, low/mid/high rotor cases, rotor share); 24 results checked (EXT-AUD-019).
 - `LOAD_CASES.md`: point-mass 1.90 J marked illustrative only; rotor share corrected to about 2 %–25 %.
 - `BEARING_SELECTION.md` §9: 6202 stated as a candidate, not a released part (EXT-AUD-021).
 - External audit record updated with the re-verification result and EXT-AUD-018..021.
-- ACT-DEC-023 interim position: repository stays public until the specification is filled in, with conditions (EXT-AUD-001).
+- ACT-DEC-023 ACCEPTED: repository moved to private (EXT-AUD-001, blocker B7 closed). M0 decision sheet: reviewer recommendations adopted for B1-B6, values still pending.
 - `planning/v1/M0_DECISION_SHEET.md` (new): decision sheet for M0 blockers B1-B7 with the external reviewer's recommendations.
 
 ### Changed (2026-10-12, external audit follow-up; see audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md)
