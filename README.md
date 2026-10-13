@@ -152,7 +152,7 @@ See [requirements/SAFETY_REQUIREMENTS.md](requirements/SAFETY_REQUIREMENTS.md).
 | Item | Status |
 |---|---|
 | Documentation baseline (requirements, planning, docs, calculations, audit framework) | Draft 0.1, proposed, pending approval; external audit 2026-10-12: M0 FAIL / not ready (see audit/external/) |
-| Repository visibility | **Decision needed:** the repository is public, but the content is marked proprietary and confidential (EXT-AUD-001) |
+| Repository visibility | Public for now (interim decision 2026-10-13, ACT-DEC-023); to be made private once the specification is filled in. Do not commit quotations, CAD, drawings, firmware source or credentials until then (EXT-AUD-001) |
 | A0 | Not started |
 | A1 | Not started |
 | A2 | Not started |
