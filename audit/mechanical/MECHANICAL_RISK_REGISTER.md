@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-AUD-MECH-RISK |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Independent Mechanical Reviewer (with input from the Mechanical Intern) |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -62,7 +62,7 @@ This register records the **mechanical failure modes** of the actuator. For each
 
 ## 4. Top mechanical risks (initial)
 
-1. **MR-01 (45):** shaft under single-sided stop stall. Mitigate with the balanced stop and the EN19 Q&T shaft.
+1. **MR-01 (45):** shaft under single-sided stop stall. Mitigate with the EN19 Q&T shaft, design for single-contact engagement, and the balanced stop credited only after proof (LOAD_CASES §8.2).
 2. **MR-03 (36):** gearbox overload by impact.
 3. **MR-08 (36):** stop lug or bumper failure.
 4. **MR-02 (27):** bearing static overload.
@@ -78,3 +78,4 @@ This register records the **mechanical failure modes** of the actuator. For each
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | MR-01 mitigation updated per EXT-AUD-004 |

@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-DOC-ELEC-MCSPEC |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Electronics/Embedded Intern |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
@@ -28,7 +28,7 @@ The values come from `mechanical/calculations/TORQUE_AND_SPEED.md` (20:1, η = 0
 | Motor torque: hold / continuous / peak 20 / peak 25 | 0.358 / 0.588 / 1.176 / 1.471 N·m |
 | Motor speed at 45 RPM output | 900 RPM |
 
-Phase current I = T_motor / Kt, for illustrative Kt values (TBC):
+Phase current I = T_motor / Kt, using the conventions in `mechanical/calculations/TORQUE_AND_SPEED.md` §2.1: Kt in N·m per A phase-peak; thermal ratings use RMS = peak/√2. The Kt values below are illustrative (TBC). The selected motor's datasheet values are converted with that table, then replaced by the A0 measurements (MC-01–MC-04) before E2:
 
 | Kt (N·m/A) | Continuous | Peak 25 N·m |
 |---|---|---|
@@ -132,3 +132,4 @@ The selected development board is compared row by row with sections 3–5. Devia
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | Reference motor-constant conventions; measured Kt before E2 (EXT-AUD-008) |

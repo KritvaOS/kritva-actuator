@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-AUD-MECH-DESIGN |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Independent Mechanical Reviewer |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -60,7 +60,7 @@ This document is the independent design audit of the Kritva Actuator mechanical 
 | Evidence package | `requirements/SYSTEM_REQUIREMENTS.md`, `ACTUATOR_SPECIFICATION.md`, `MECHANICAL_REQUIREMENTS.md`; `mechanical/calculations/LOAD_CASES.md`; `planning/v1/tasks/ACT-02/ACT-02-001/` |
 | Reviewer | TBD |
 | Date | — |
-| Result | NOT VERIFIED |
+| Result | NOT VERIFIED. External remote review 2026-10-12: **FAIL / not ready** (input only; not a qualified sign-off) |
 
 | # | Check | Result | Comment |
 |---|---|---|---|
@@ -141,7 +141,13 @@ This document is the independent design audit of the Kritva Actuator mechanical 
 
 | ID | Gate | Severity | Finding | Required action | Owner | Due | Closure evidence | Reviewer verified | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| — | | | | | | | | | |
+| EXT-AUD-002 | M0 | HIGH | Key design inputs open (CoM, α, duty, holding, peak definition, limits); ACT-DEC-008 PROPOSED | Close the M0 blockers B1–B6 (audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md §3) | Project Lead / Mechanical Intern | M0 | — | — | OPEN |
+| EXT-AUD-003 | M2 | HIGH | Hard-stop load model idealised (linear bumper, point-mass J) | CAD inertia + J_rotor·N²; characterised bumper curve; approach-speed limit; FI-24/DU-03 (LOAD_CASES §8.1) | Mechanical Intern | Gate A | — | — | OPEN |
+| EXT-AUD-004 | M2 | HIGH | Balanced-stop engagement and load path unproven | Single-contact design rule; tolerance analysis + bench proof; pin, lug, housing, fastener and gearbox checks (LOAD_CASES §8.2) | Mechanical Intern | Gate A | — | — | OPEN |
+| EXT-AUD-005 | M2 | HIGH | Shaft SF conditional on assumed geometry, Kt and material | Recompute with CAD, actual Kt and certified material; stop fatigue case | Mechanical Intern | Gate A | — | — | OPEN |
+| EXT-AUD-006 | M2 | HIGH | Bearing selection screening only | Baseline 6202 on 15 mm seats; vendor data; combined loads, fits, preload | Mechanical Intern | M2 | — | — | OPEN |
+| EXT-AUD-007 | M1 | HIGH | Motor/gearbox operating point not verified | Joint selection with real datasheets (ACT-02-002) | Both interns | M1 | — | — | OPEN |
+| EXT-AUD-012 | M2 | MED | Stop geometry changes the governing load path | Freeze the stop configuration in CAD before closing the shaft and bearing calculations | Mechanical Intern | M2 | — | — | OPEN |
 
 ## 6. Sign-off
 
@@ -156,3 +162,4 @@ This document is the independent design audit of the Kritva Actuator mechanical 
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft (framework and preliminary observations) |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit findings EXT-AUD-002..007/012 entered in the findings register; M0 external result recorded |

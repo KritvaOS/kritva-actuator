@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-TORQUE |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer; Electronics/Embedded Intern (motor electrical) / Project Lead |
@@ -40,6 +40,23 @@ Reflected inertia at the output:  J_reflected = J_rotor · N²
 At 45 RPM, ω_out = 4.712 rad/s. At 10 N·m, the output mechanical power is **P_out = 47.1 W**. Because the output power is fixed, the motor mechanical power (≈ 55.4 W at η = 0.85) is the same for every ratio. The ratio only changes the split between motor speed and torque.
 
 The **75–100 W continuous** motor candidate range covers the 55 W shaft power plus the motor's own copper and iron losses. It also gives thermal margin, because many datasheets rate continuous power at a speed well above 900 RPM. The continuous torque **at the operating speed** is what matters, not the advertised power.
+
+### 2.1 Motor-constant conventions (EXT-AUD-008)
+
+The relation Kt ≈ 8.27/Kv is only valid under a stated convention, and manufacturers differ. **Until the selected motor's data has been converted explicitly, every Kt and current figure in this document is illustrative.**
+
+| Quantity | Convention used in this repository | Conversion when a datasheet uses another convention |
+|---|---|---|
+| Kv | RPM per volt of **line-to-line peak** back-EMF (most hobby and outrunner datasheets publish no-load RPM per supply volt; treat that as ≈ line-to-line peak) | If Kv is given per **line-to-line RMS** volt, multiply it by 1/√2 before using it here |
+| Ke (back-EMF constant) | V_LL,peak per rad/s = 60/(2π·Kv) | If Ke is per phase (line-to-neutral), multiply by √3 to get line-to-line |
+| Kt | N·m per **A phase-peak** (FOC amplitude-invariant Iq, so the Iq magnitude equals the phase-current amplitude) | Kt = (3/2)·p·λ_m. For an ideal sinusoidal machine Kt ≈ (√3/2)·Ke_LL,peak = 8.27/Kv [N·m/A, Kv in RPM/V]. If a datasheet gives Kt per **A RMS**, multiply by 1/√2 to get per A peak |
+| Current limits | Phase-peak amperes (FOC Iq) for the firmware; **RMS** for the thermal ratings of MOSFETs, wires and fuses | I_RMS = I_peak/√2 for sinusoidal current |
+| Phase resistance | Phase-to-neutral (R_LL/2 for a star winding) | Copper loss = (3/2)·I_peak²·R_ph |
+
+**Rules:**
+
+1. The selected motor's Kv, Kt, resistance and inductance are converted with this table, and the conversion is shown in `docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md` §2.
+2. Kt, R and L are **measured in A0** (MC-01 to MC-04) and the measured values replace the datasheet values before the power stage, current sensing and fuse are approved (gate E2).
 
 ## 3. Ratio comparison (η = 0.85)
 
@@ -128,3 +145,4 @@ The ratio decision is therefore **coupled to the motor class**, and must be take
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | Kv/Ke/Kt/current conventions and conversion rules (EXT-AUD-008); Kv margin aligned to 0.70 |

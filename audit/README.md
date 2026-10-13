@@ -17,6 +17,7 @@ Independent reviews, acceptance audits, risk registers and release-gate decision
 | `electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md` | Gates E3–E4 (bring-up verification, final acceptance) | Independent Electrical/Firmware Reviewer |
 | `firmware/FIRMWARE_REVIEW.md` | Gates F0–F2 (requirements, architecture, code review) | Independent Electrical/Firmware Reviewer |
 | `firmware/FIRMWARE_ACCEPTANCE_AUDIT.md` | Gates F3–F4 (HIL / fault injection, release) | Independent Electrical/Firmware Reviewer |
+| `external/EXTERNAL_REPO_AUDIT_<date>.md` | External (remote) repository and design audits, with findings, dispositions and M0 blockers. Input to gates, never a sign-off | External reviewer (findings); Project Lead (record) |
 | `release/RELEASE_AUDIT.md` | Gates A, B and C; milestone exits A0, A1 and A2; release sign-off | Project Lead, with specialist sign-offs |
 
 ## Finding classification

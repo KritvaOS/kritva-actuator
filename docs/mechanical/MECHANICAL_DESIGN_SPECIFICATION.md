@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-DOC-MECH-DESIGN |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -59,7 +59,7 @@ This document defines the **mechanical architecture, load paths, component arran
 |---|---|---|
 | Joint torque | Motor → gearbox → coupling → shaft → flange → forearm. The reaction runs gearbox housing → mounting plate → joint housing → upper-arm/fixture mount | — |
 | Forearm radial, axial and moment loads | Flange → shaft → bearings B1/B2 → joint housing → mount | **Gearbox output bearing, motor bearings** (ACT-DEC-009) |
-| Hard-stop reaction | Stop pins on the flange → stop lugs on the housing → mount (balanced pair: a couple only) | Gearbox, bearings (with the balanced stop) |
+| Hard-stop reaction | Stop pins on the flange → stop lugs on the housing → mount (balanced pair: ideally a couple only) | Gearbox. Bearings carry the stop reaction **until** simultaneous engagement is proven (LOAD_CASES §8.2) |
 | Gravity and handling loads of the actuator | Housing → mount | Encoder, PCB |
 
 The coupling isolates the gearbox output from the bearing-pair misalignment and from shaft bending (LC-09).
@@ -102,7 +102,9 @@ The coupling isolates the gearbox output from the bearing-pair misalignment and 
 
 ### 4.5 Bearings (B1, B2)
 
-- **Proposed:** a pair of deep-groove 2RS bearings, **6001 (12×28×8) or 6201 (12×32×10)**, with a span of ≥ 25 mm and a minimal overhang. This is adequate **with the balanced hard stop** (BEARING_SELECTION §5).
+- **Proposed baseline:** a pair of deep-groove 2RS bearings **6202 (15×35×11) on 15 mm seats**, sized for the single-sided stop case. Span ≥ 25 mm, with a minimal overhang.
+- A **6001/6201 pair on 12 mm seats** may replace it only after the balanced stop is proven to engage both contacts together (LOAD_CASES §8.2, BEARING_SELECTION §5/§9).
+- Final selection uses vendor data and CAD geometry (ACT-DEC-019).
 - One bearing is located (shoulder plus circlip); the other floats, with optional wave-spring preload.
 - Fits are proposed in BEARING_SELECTION §7. Both bores are machined in one set-up for coaxiality.
 
@@ -124,8 +126,10 @@ The coupling isolates the gearbox output from the bearing-pair misalignment and 
 
 - **Balanced, two-sided** stops: two hardened pins on the flange strike two lugs on the housing simultaneously at each end of the range. Polyurethane bumpers (Shore 80–90A) are replaceable.
 - Stop angles: about −5° and about 140° (outside the 0–135° range). Slotted, adjustable lugs allow 120° or 135° (TBC).
-- **Energy management (LOAD_CASES §8):** the 1.9 J at 45 RPM cannot be absorbed within the peak rating by a compact bumper. The design therefore relies on **firmware approach-speed limiting** (≤ 29 RPM at the stop for a 2 mm / 25 mm bumper to stay ≤ 20 N·m; proposed ≤ 50 % v_max within the last 10°), plus the bumper, plus a balanced reaction into the housing.
-- Impact tests are staged (FI-24).
+- **Engagement:** the two contacts are assumed to engage together only after the tolerance analysis and bench proof (LOAD_CASES §8.2). Until then, all stop components and the shaft and bearings are checked for **single-contact engagement**. M2 checks: pin shear and bending, lug bearing stress, housing, fasteners, and the torque passed through the coupling and gearbox.
+- **Energy management (LOAD_CASES §8):** the 1.9 J (point mass; 2.1–2.8 J with forearm and rotor inertia, §8.1) at 45 RPM cannot be absorbed within the peak rating by a compact bumper. The design therefore relies on **firmware approach-speed limiting** (≤ 29 RPM at the stop for a 2 mm / 25 mm bumper to stay ≤ 20 N·m; proposed ≤ 50 % v_max within the last 10°), plus the bumper, plus a balanced reaction into the housing.
+- The approach-speed limit is set from the **characterised** bumper force–deflection curve (LOAD_CASES §8.1), not from the idealised linear value.
+- Impact tests are staged and instrumented (FI-24).
 
 ### 4.9 Output encoder mounting (KA-MEC-0006)
 
@@ -198,3 +202,4 @@ The interface requirements themselves are in `requirements/INTERFACE_REQUIREMENT
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft. Supersedes the first-pass docs/mechanical/A1-mechanical-design.md |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: bearing baseline 6202/15 mm, single-contact stop rule, characterised bumper (EXT-AUD-003/004/006) |

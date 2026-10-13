@@ -78,3 +78,6 @@ results/**/raw/*.dat
 *.log
 !results/**/*.log
 node_modules/
+
+# ---- Assistant / tool export folders (not canonical source; EXT-AUD-016) ----
+Claude outputs/

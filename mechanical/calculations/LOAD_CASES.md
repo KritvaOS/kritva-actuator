@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-LOAD |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -137,6 +137,48 @@ With this bumper, the **maximum approach speed that keeps T_stop ≤ 20 N·m is 
 2. a compliant bumper with enough stroke;
 3. a stop reaction path through the housing, and preferably a **balanced (two-sided) stop** so that no net radial force reaches the bearings (BEARING_SELECTION §5).
 
+### 8.1 Model limitations and required characterisation (EXT-AUD-003)
+
+The stop torques above use an **idealised linear-spring model**, T_peak = 2E/θ_stop. It is a screening estimate, **not a validated design load**. The real peak reaction depends on:
+
+- the bumper's actual force–deflection curve, which is usually stiffening and non-linear for polyurethane;
+- damping and rate effects;
+- contact geometry and tolerances, including whether both stops touch at the same time (§8.2);
+- the full effective inertia.
+
+**Effective inertia sensitivity.** The table combines the rod-plus-point arm model (0.1873 kg·m²) with the reflected motor-rotor inertia J_rotor·N². Rotor values are illustrative; the selected motor's datasheet value replaces them.
+
+| J_rotor (kg·m²) | N = 15 | N = 20 | N = 25 |
+|---|---|---|---|
+| 2×10⁻⁵ | J = 0.192, E = 2.13 J | J = 0.195, E = 2.17 J | J = 0.200, E = 2.22 J |
+| 5×10⁻⁵ | J = 0.199, E = 2.21 J | J = 0.207, E = 2.30 J | J = 0.219, E = 2.43 J |
+| 1×10⁻⁴ | J = 0.210, E = 2.33 J | J = 0.227, E = 2.52 J | J = 0.250, E = 2.77 J |
+
+At 45 RPM the stop energy can therefore be **2.1–2.8 J**, not 1.90 J. The point-mass value omits the forearm's own centroidal inertia and the rotor.
+
+**The rotor energy passes through the gearbox.** The reflected-rotor share, J_rotor·N²/J_total (about 4–25 % here), is decelerated through the gear teeth. It must be included in the gearbox peak and emergency-torque check.
+
+**Required before Gate A** (tracked as M2-05 / EXT-AUD-003):
+
+1. Compute J_total from the CAD mass properties plus the datasheet J_rotor·N².
+2. Obtain the bumper force–deflection curve: from the supplier, or by a static compression test on the bench (load cell plus dial indicator). Compute the peak force by integrating that curve up to the impact energy, with a +20 % energy margin for uncertainty.
+3. Set the approved firmware approach-speed limit, so that the resulting peak stop torque is ≤ the lower of the approved peak rating and the gearbox emergency-torque rating.
+4. Verify the result with the staged instrumented impact test (FI-24, DU-03), measuring the peak torque and stop deflection.
+
+### 8.2 Stop engagement and load path (EXT-AUD-004)
+
+A balanced (two-sided) stop reacts the stop torque as a couple, but **only if both contacts engage together**. Tolerances can let one contact engage first. Until simultaneous engagement is demonstrated, the following rules apply:
+
+- **Design rule.** The **single-sided case (LC-05, 1 000 N at r_s = 25 mm for a 25 N·m stall)** remains the governing case for the shaft, bearings, stop pins and lugs, housing and fasteners. The balanced-stop reduction may be used only after **both** of these are true:
+  - (a) a tolerance analysis shows that the second contact engages within the first bumper's elastic stroke at a force ≤ 20 % of the total (TBC);
+  - (b) a bench measurement confirms it.
+- **Component checks required at M2**, all at the governing stop load with the approved safety factors:
+  - stop-pin shear and bending;
+  - lug bearing (contact) stress in aluminium, with a steel insert if it is exceeded;
+  - lug and housing local stresses;
+  - fastener loads;
+  - the torque passed through the coupling and gearbox, both from the rotor inertia (§8.1) and from motor torque applied up to the current limit during a stall.
+
 ## 9. Results summary
 
 | Result | Value | Used by |
@@ -144,7 +186,7 @@ With this bumper, the **maximum approach speed that keeps T_stop ≤ 20 N·m is 
 | T_g (horizontal) | 6.08 N·m | ACT-REQ, Gate B holding test |
 | Continuous margin | 1.64 × T_g at 10 N·m | ACT-DEC-008 |
 | Arm inertia | 0.171 kg·m² (point), 0.187 (rod) | Stops, control tuning, simulation |
-| Stop energy at 45 RPM | 1.90 J (point), 2.08 J (rod) | Stops, SAF-REQ-041 |
+| Stop energy at 45 RPM | 1.90 J (point), 2.08 J (rod), **2.1–2.8 J with reflected rotor inertia (§8.1)** | Stops, SAF-REQ-041 |
 | Governing radial load | LC-05: 1 000 N (single-sided stop at 25 N·m, r_s = 25 mm) | Bearings, shaft |
 | Governing torque | LC-03 / LC-05: 25 N·m (stretch) | Shaft, gearbox, coupling |
 
@@ -173,3 +215,4 @@ With this bumper, the **maximum approach speed that keeps T_stop ≤ 20 N·m is 
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: hard-stop model limitations, effective inertia with rotor, single-contact design rule (EXT-AUD-003/004) |

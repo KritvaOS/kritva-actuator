@@ -23,5 +23,5 @@ jobs:
         run: make check-trace
       - name: BOM schema
         run: make check-bom
-      - name: Mechanical sizing calculations run
-        run: make calc
+      - name: Calculation regression and document consistency
+        run: make check-calcs

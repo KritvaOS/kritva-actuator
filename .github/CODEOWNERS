@@ -1,0 +1,31 @@
+# Kritva Actuator - code owners (EXT-AUD-015)
+# Proprietary and confidential. Copyright (c) 2026 Kritvaos.
+#
+# Owners are requested for review automatically. Combine with branch protection on
+# `main` (require PR, require code-owner review, require the docs-checks status) so
+# that the independent-review rule (ACT-DEC-014) is enforced by the repository.
+#
+# ACTION: replace the placeholder handles below with the real GitHub accounts or
+# teams of each role. Until then, everything defaults to the repository owner.
+#   @dineshannayya                  -> Project Lead (current repository owner)
+#   <mechanical-intern>             -> Mechanical Intern
+#   <electronics-intern>            -> Electronics/Embedded Intern
+#   <mech-reviewer>                 -> Independent Mechanical Reviewer
+#   <elec-fw-reviewer>              -> Independent Electrical/Firmware Reviewer
+
+*                               @dineshannayya
+
+/requirements/                  @dineshannayya
+/planning/                      @dineshannayya
+/mechanical/                    @dineshannayya
+/docs/mechanical/               @dineshannayya
+/hardware/                      @dineshannayya
+/docs/electronics/              @dineshannayya
+/firmware/                      @dineshannayya
+/docs/firmware/                 @dineshannayya
+/communication/                 @dineshannayya
+/docs/interfaces/               @dineshannayya
+/software/                      @dineshannayya
+/audit/                         @dineshannayya
+/.github/                       @dineshannayya
+/LICENSE                        @dineshannayya

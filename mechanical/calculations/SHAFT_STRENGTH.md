@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-SHAFT |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -109,9 +109,10 @@ Fatigue is **not** governing at the continuous load. Repeated peak or stop event
 ## 7. Recommendations
 
 1. **Material:** specify **EN19 / 42CrMo4 Q&T** (or an equivalent alloy steel with S_y ≥ 650 MPa certified) for the 12 mm shaft. Do not use normalised EN8 at 12 mm unless the single-sided stop load is removed.
-2. **Remove the governing load at its source:** use a **balanced, two-sided hard stop**, two stop pins 180° apart reacting against the housing. This turns the stop torque into a couple with no net radial force, so LC-05 bending disappears (BEARING_SELECTION §5). Alternatively, place the stop reaction close to the near bearing.
+2. **Reduce the governing load at its source:** prefer a **balanced, two-sided hard stop** (two stop pins 180° apart reacting against the housing), or place the stop reaction close to the near bearing. **The LC-05 single-sided case remains the design case** until simultaneous engagement is proven (LOAD_CASES §8.2, EXT-AUD-004). The SF 2.0 result for EN19 at 12 mm is therefore the governing result. It is conditional on the assumed geometry, the assumed Kt and indicative material data, so the shaft is **not frozen** on this result (EXT-AUD-005).
 3. **Detail design:** avoid a keyway at the maximum-moment section. Prefer a **D-flat or spline at the coupling end** and a **bolted flange** for torque transfer. Use generous shoulder fillets (r ≥ 0.5 mm, TBC with the bearing chamfer).
-4. **Recompute** with the CAD values of a, r_s, the free length and the actual Kt, and record the final SF in this document before Gate A.
+4. **Recompute** with the CAD values of a, r_s, the free length and the actual Kt, and with **certified** material properties. Record the final SF in this document before Gate A.
+5. **Treat repeated stop and impact events as a separate fatigue case** once their count per lifetime is defined (the duty cycle is open). Use the stop torque from the characterised bumper model (LOAD_CASES §8.1), not the idealised linear value.
 
 ## 8. Verification
 
@@ -137,3 +138,4 @@ Fatigue is **not** governing at the continuous load. Repeated peak or stop event
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: LC-05 remains design case; result conditional, not frozen; stop fatigue case (EXT-AUD-005/012) |

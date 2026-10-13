@@ -6,6 +6,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed (2026-10-12, external audit follow-up; see audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md)
+
+- `LOAD_CASES.md` §8.1/§8.2: hard-stop model limitations; effective inertia with the reflected rotor (2.1–2.8 J); single-contact design rule (EXT-AUD-003/004).
+- `BEARING_SELECTION.md`: baseline changed to **6202 on 15 mm seats**; 6001/6201 only after the balanced stop is proven (EXT-AUD-006). BOM MB-004 updated.
+- `SHAFT_STRENGTH.md`: LC-05 remains the design case; the result is conditional and not frozen; stop fatigue case added (EXT-AUD-005).
+- `TORQUE_AND_SPEED.md` §2.1: motor-constant conventions (EXT-AUD-008).
+- README: baseline labelled "NOT approved, NOT frozen"; repository-visibility decision flagged (EXT-AUD-001/013).
+
+### Added (2026-10-12)
+
+- `scripts/validation/check_calcs.py` and `mechanical/calculations/expected_results.json`; `make check-calcs`, also in CI (EXT-AUD-011).
+- Traceability gate rule: PASS/FAIL claims need concrete evidence and a specific procedure (EXT-AUD-010).
+- `.github/CODEOWNERS` (EXT-AUD-015); warning and summary when the firmware CI job is skipped (EXT-AUD-014).
+- `audit/external/` external audit record.
+
+### Removed
+
+- `Claude outputs/` (delivery archive) is ignored from now on; the committed copy must be removed with `git rm` (EXT-AUD-016).
+
 ### Added (2026-10-11 documentation baseline)
 
 **Requirements** (proposed, pending approval):

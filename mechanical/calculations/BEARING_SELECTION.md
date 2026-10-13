@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-CALC-BEARING |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -73,7 +73,7 @@ Ratings are typical catalogue values; verify them with the vendor.
 1. **Life is not the issue.** At these low speeds and normal loads, L10 life far exceeds any requirement. The selection is governed by **static capacity under the stop/stall case**, plus stiffness and size.
 2. With a **single-sided** stop and 12 mm bearings, s0 < 2 at LC-05. Only a 15 mm bore (6202) meets s0 ≥ 2. That would mean stepping the shaft up to 15 mm at the bearing seats.
 
-## 5. Balanced (two-sided) stop: recommended
+## 5. Balanced (two-sided) stop: preferred, but credit only after proof
 
 If the hard stop uses **two stop features 180° apart**, the stop torque reacts as a **couple**. The net radial force on the shaft is ideally zero; in practice it is limited to the share mismatch from tolerances, say ≤ 20 % (TBC). With that arrangement:
 
@@ -82,7 +82,9 @@ If the hard stop uses **two stop features 180° apart**, the stop torque reacts 
 | Balanced stop, 20 % mismatch (200 N at the flange) | 360 N | 6.6 | 8.6 |
 | No stop load (LC-03) | 88 N | 26.7 | 35.1 |
 
-With a balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is ample**. This keeps the shaft at 12 mm throughout (consistent with SHAFT_STRENGTH §7).
+With a **proven** balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is ample**.
+
+**Condition (EXT-AUD-004/006).** The balanced-stop reduction may be credited **only after** the simultaneous-engagement proof required by `LOAD_CASES.md` §8.2: a tolerance analysis plus a bench measurement. Until that proof exists, the single-sided case LC-05 governs the selection (§4), and the baseline below is sized for it.
 
 ## 6. Bearing type options
 
@@ -109,12 +111,13 @@ With a balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is ample**. This 
 - The housing seat must not be 3D-printed (SAF-REQ-043). Use aluminium with the bores machined directly, or a steel bearing carrier.
 - Bearing clearance plus shaft deflection must stay within the output-encoder air-gap and runout tolerance.
 
-## 9. Recommendation
+## 9. Recommendation (screening; final selection at M2 with vendor data)
 
-1. Adopt a **balanced, two-sided hard stop**, reacting into the housing.
-2. Use a **pair of 6001-size (12 × 28 × 8) or 6201-size (12 × 32 × 10) deep-groove 2RS bearings** on the 12 mm shaft, with a span of **≥ 25 mm** and the shortest practical overhang.
-3. If a single-sided stop cannot be avoided, step the bearing seats to **15 mm** and use 6202-size bearings, or use an angular-contact pair. Re-run SHAFT_STRENGTH.md in that case.
-4. Record the final choice as ACT-DEC-019 with the vendor catalogue values.
+1. **Baseline, sized for the single-sided case LC-05:** step the bearing seats to **15 mm** and use a pair of **6202-size (15 × 35 × 11) deep-groove 2RS bearings**, s0 ≈ 2.1. Alternatively, use an angular-contact pair if stiffness or axial load requires it. The 12 mm shaft diameter is kept between the seats and at the coupling end, so the shaft check in SHAFT_STRENGTH still applies at its 12 mm sections.
+2. Adopt a **balanced, two-sided hard stop** reacting into the housing as the preferred design. If simultaneous engagement is later proven (LOAD_CASES §8.2), a **6001/6201 pair on 12 mm seats** may be adopted through a recorded decision (ACT-DEC-019), with this document re-run.
+3. Bearing span **≥ 25 mm**, with the shortest practical overhang.
+4. Replace the typical catalogue ratings with the **selected vendor's catalogue values**. Add the axial and combined-load cases (static equivalent load P0 = X0·Fr + Y0·Fa), fits, clearance and preload, and the stiffness and encoder-alignment checks, using the CAD geometry.
+5. Record the final choice as **ACT-DEC-019**.
 
 ## 10. Verification
 
@@ -140,3 +143,4 @@ With a balanced stop, **a 6001 or 6201 pair on the 12 mm shaft is ample**. This 
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-11 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-12 | Kritvaos Actuator Team | External audit fixes: single-sided case governs until balanced engagement proven; baseline 6202 on 15 mm seats; vendor/combined-load checks (EXT-AUD-004/006/012) |

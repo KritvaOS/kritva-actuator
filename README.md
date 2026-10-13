@@ -16,9 +16,9 @@ The project follows **Option C**: an *educational motor-control platform* that e
 | **A1** | Humanoid Smart Actuator | Motor + commercial planetary gearbox + independent output shaft and bearings + output encoder + custom controller PCB + CAN; elbow load case validated | Mechanical Intern + Electronics/Embedded Intern |
 | **A2** | KritvaOS Integration | Actuator interface, KritvaOS driver, Kritva Edge integration, diagnostics, system tests | Project Lead / Integration Owner |
 
-### 1.1 Current design baseline
+### 1.1 Proposed design baseline (NOT approved, NOT frozen)
 
-Every value below is a **proposed target, pending approval** (see [planning/v1/DECISIONS.md](planning/v1/DECISIONS.md)).
+> **Status:** every value below is a **proposed target, pending approval**. ACT-DEC-008 (load and performance) and ACT-DEC-009 (output shaft) are still `PROPOSED`, and gate M0 is open. Nothing here may be used to buy components or release drawings until the decisions are `ACCEPTED` in [planning/v1/DECISIONS.md](planning/v1/DECISIONS.md) and Gate A has passed.
 
 | Parameter | Proposed target |
 |---|---|
@@ -30,7 +30,7 @@ Every value below is a **proposed target, pending approval** (see [planning/v1/D
 | Supply | 24 V DC nominal |
 | Motor | Commercial BLDC/PMSM, 75–100 W continuous mechanical (candidate range) |
 | Reduction | Commercial planetary; 20:1 first candidate, 15:1 and 25:1 alternatives |
-| Output | Independent 12 mm shaft (initial CAD) on a dedicated bearing pair |
+| Output | Independent 12 mm shaft (initial CAD, not frozen) on a dedicated bearing pair (baseline 6202 on 15 mm seats until the balanced stop is proven) |
 | Feedback | Output-side encoder plus motor-side feedback for FOC |
 | Control | FOC with current sensing; position, velocity and torque control |
 | Communication | USB/UART (A0); CAN (A1) |
@@ -130,6 +130,7 @@ make check-docs    # document headers and revision history
 make check-links   # relative links
 make check-trace   # traceability CSV versus requirement IDs
 make check-bom     # mechanical and electrical BOM schema
+make check-calcs   # calculation regression + document consistency
 make bom-summary   # BOM cost totals by milestone and category
 make calc          # run the mechanical sizing calculations
 ```
@@ -150,7 +151,8 @@ See [requirements/SAFETY_REQUIREMENTS.md](requirements/SAFETY_REQUIREMENTS.md).
 
 | Item | Status |
 |---|---|
-| Documentation baseline (requirements, planning, docs, calculations, audit framework) | Draft 0.1, proposed, pending approval |
+| Documentation baseline (requirements, planning, docs, calculations, audit framework) | Draft 0.1, proposed, pending approval; external audit 2026-10-12: M0 FAIL / not ready (see audit/external/) |
+| Repository visibility | **Decision needed:** the repository is public, but the content is marked proprietary and confidential (EXT-AUD-001) |
 | A0 | Not started |
 | A1 | Not started |
 | A2 | Not started |

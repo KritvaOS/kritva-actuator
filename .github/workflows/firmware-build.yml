@@ -18,7 +18,7 @@ jobs:
       - name: Check for firmware build system
         id: detect
         run: |
-          if [ -f firmware/CMakeLists.txt ]; then echo "present=true" >> "$GITHUB_OUTPUT"; else echo "present=false" >> "$GITHUB_OUTPUT"; echo "firmware/CMakeLists.txt not found - skipping"; fi
+          if [ -f firmware/CMakeLists.txt ]; then echo "present=true" >> "$GITHUB_OUTPUT"; else echo "present=false" >> "$GITHUB_OUTPUT"; echo "firmware/CMakeLists.txt not found - skipping"; echo "::warning title=Firmware build SKIPPED::No firmware build system yet. This job did NOT build, analyse or test firmware; a green status is not a firmware pass (EXT-AUD-014)."; { echo "## Firmware build: SKIPPED (not applicable)"; echo "No firmware/CMakeLists.txt at this commit. No build, static analysis or unit tests were run. Do not record this as a firmware PASS in audit/firmware/."; } >> "$GITHUB_STEP_SUMMARY"; fi
       - name: Install ARM toolchain
         if: steps.detect.outputs.present == 'true'
         run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi cmake ninja-build cppcheck

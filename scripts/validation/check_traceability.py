@@ -91,6 +91,10 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 PHASE_TOKEN_RE = re.compile(r"A[0-2]")
 PHASE_BAD_TOKEN_RE = re.compile(r"\bA[3-9]\b")
 METHOD_RE = re.compile(r"^[TAID](?:\s*[,/ ]\s*[TAID])*$")
+GATE_STATUSES = {"PASS", "PASS_WITH_ACTIONS", "FAIL"}
+PLACEHOLDER_RE = re.compile(r"\b(TBD|TBC|TODO|placeholder)\b", re.IGNORECASE)
+GENERIC_PROCEDURES = {"docs/validation/VALIDATION_PLAN.md", "docs/validation"}
+TEST_ID_RE = re.compile(r"\b(BU|MC|GB|MI|PC|FI|CT|CAN|INT|DU|C)-?\d{1,2}\b|#|§|\b[A-Z]{2,5}-\d{2,3}\b")
 FENCE_RE = re.compile(r"^\s*(```|~~~)")
 
 # Owning document and allowed number range per prefix (baseline brief section 6).
@@ -116,6 +120,9 @@ class Report:
 
     def warn(self, where: str, msg: str) -> None:
         self.warnings.append(f"WARNING {where}: {msg}")
+
+    def info(self, where: str, msg: str) -> None:
+        print(f"INFO    {where}: {msg}")
 
 
 def clean_cell(cell: str) -> str:
@@ -222,6 +229,7 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
         return None
 
     records: Dict[str, Dict[str, str]] = {}
+    placeholder_rows: List[str] = []
     for lineno, raw in enumerate(rows[1:], start=2):
         if not any(c.strip() for c in raw):
             continue  # blank line
@@ -269,6 +277,23 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
                                "disposition or actions in notes")
         if row["verification_status"] in {"PASS", "PASS_WITH_ACTIONS"} and not row["verification_procedure"]:
             report.warn(where, "verified requirement without verification_procedure")
+        # Gate-readiness rule (EXT-AUD-010): a requirement may only claim a verification
+        # result when it links to a requirement-specific procedure and a concrete evidence
+        # record, never to placeholders or the generic validation plan alone.
+        if row["verification_status"] in GATE_STATUSES:
+            if (not row["evidence_location"] or PLACEHOLDER_RE.search(row["evidence_location"])
+                    or not any(t.startswith("results/") for t in split_ids(row["evidence_location"]))):
+                report.error(where, f"verification_status {row['verification_status']} requires a "
+                                    "concrete results/ evidence record (no TBD/placeholder)")
+            proc = row["verification_procedure"]
+            if (not proc or PLACEHOLDER_RE.search(proc)
+                    or proc.strip().rstrip("/") in GENERIC_PROCEDURES
+                    or not TEST_ID_RE.search(proc)):
+                report.error(where, f"verification_status {row['verification_status']} requires a "
+                                    "requirement-specific procedure with a test/analysis ID "
+                                    "(e.g. 'docs/validation/PERFORMANCE_CHARACTERIZATION.md#PC-03')")
+        elif PLACEHOLDER_RE.search(row["evidence_location"] or "TBD"):
+            placeholder_rows.append(rid)
         src = row["source_document"]
         if src and not (root / src).exists():
             report.warn(where, f"source_document '{src}' does not exist yet")
@@ -279,6 +304,9 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
                     if target and not (root / target).exists():
                         report.warn(where, f"{field} '{item}' does not exist")
         records[rid] = row
+    if placeholder_rows:
+        report.info(rel, f"{len(placeholder_rows)} requirement(s) still have placeholder evidence "
+                         "(allowed while NOT_STARTED/IN_PROGRESS/NOT_VERIFIED; blocks PASS/FAIL claims)")
     return records
 
 
