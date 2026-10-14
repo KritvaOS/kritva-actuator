@@ -6,9 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-14)
+
+- `docs/architecture/COMPONENTS_SOURCING_AND_COST.md` (new): component breakdown, candidate sources, draft pricing structure (listing, estimate, TBD) and phased localisation, based on the stated in/out of scope.
+
 ### Added (2026-10-13, ACT-02-002)
 
-- `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` (new): motor and gearbox screening shortlist (CubeMars RI50/60/70/80; Neugart PLE 040/060, PLPE 050; WITTENSTEIN benchmark) with fit calculations. Candidate data are from the ChatGPT session and not yet re-checked against vendor pages; screening only.
+- `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` (new): motor and gearbox screening shortlist (CubeMars RI50/60/70/80; Neugart PLE 040/060, PLPE 050; WITTENSTEIN benchmark) with fit calculations. Candidate data are from the ChatGPT session and not yet re-checked against vendor pages; screening only. Rev 0.2 adds an online price check (CubeMars store, Robokits India); no gearbox prices exist online.
 
 ### Changed (2026-10-13, external re-verification of 894860e)
 
