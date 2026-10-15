@@ -60,33 +60,39 @@ The project follows **Option C**: an *educational motor-control platform* that e
 3. **[planning/v1/ROADMAP.md](planning/v1/ROADMAP.md)**, **[MILESTONE.md](planning/v1/MILESTONE.md)** and **[TASKS.md](planning/v1/TASKS.md)**: the plan, the gates and who does what.
 4. **[docs/architecture/SYSTEM_ARCHITECTURE.md](docs/architecture/SYSTEM_ARCHITECTURE.md)**: how it fits together.
 5. Your workstream folder in [planning/v1/tasks/](planning/v1/tasks/).
-6. **Restructure to a parent plus four submodules (proposed):** [REPOSITORY_ARCHITECTURE](docs/architecture/REPOSITORY_ARCHITECTURE.md), [ACTUATOR_FAMILY_SPEC](docs/architecture/ACTUATOR_FAMILY_SPEC.md) and [planning/v2/](planning/v2/README.md). The layout below is the current (pre-migration) structure; no files have moved yet.
+6. **Restructure to a parent plus four submodules (proposed):** [REPOSITORY_ARCHITECTURE](docs/architecture/REPOSITORY_ARCHITECTURE.md), [ACTUATOR_FAMILY_SPEC](docs/architecture/ACTUATOR_FAMILY_SPEC.md) and [planning/v2/](planning/v2/README.md). Migration Stages 1 to 4 are done; Stage 5 adds the submodules.
 
 ## 3. Repository structure
 
+This is the parent (program and integration) repository. Four child repositories are Git submodules (ACT-DEC-024). Clone with `git clone --recurse-submodules`.
+
 ```
-kritva-actuator/
-├── README.md, LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, Makefile, .gitignore, .gitattributes
+kritva-actuator/                              parent
+├── README.md, LICENSE, CONTRIBUTING.md, CODE_OF_CONDUCT.md, CHANGELOG.md, Makefile, .gitignore, .gitattributes, .gitmodules
 ├── requirements/        What the actuator must do (canonical): SYSTEM, ACTUATOR_SPECIFICATION, MECHANICAL,
 │                        ELECTRICAL, FIRMWARE, INTERFACE, SAFETY requirements
 ├── planning/v1/         Roadmap, milestones, task register, decisions, risks; tasks/ACT-01..03 task records
+├── planning/v2/         Four-submodule plan: migration plan and manifest, task ID mapping, workstreams, 24-week roadmap
 ├── docs/
-│   ├── architecture/    System and actuator architecture, software/hardware boundary
-│   ├── mechanical/      Mechanical design specification, materials, assembly, fabrication
-│   ├── electronics/     Electronics architecture, motor-controller specification, hardware bring-up
-│   ├── firmware/        Firmware architecture, motor control, calibration
-│   ├── interfaces/      Actuator interface (API, parameters), CAN protocol, unit conventions
+│   ├── architecture/    System, actuator, repository and family architecture, sourcing and cost
+│   ├── interfaces/      Interface control document, actuator interface (API), CAN protocol, unit conventions
+│   ├── mechanical/      Common mechanical specification, materials, assembly, fabrication
+│   ├── standards/       CAD naming, BOM, design review, release, submodule workflow
 │   └── validation/      Validation plan, test equipment, performance characterisation
-├── mechanical/          CAD (assembly, housing, shafts, brackets, encoder_mount), drawings,
-│                        calculations (load cases, torque/speed, shaft, bearings, gearbox), BOM, assembly
-├── hardware/            Motor controller (development board, custom PCB), power stage, sensing, connectors, BOM
-├── firmware/            platform, foc, motor_control, encoder, joint_control, diagnostics, communication
-├── communication/can/   CAN protocol definitions, shared firmware and tools
+├── mechanical/
+│   ├── common-sizing/   Shared sizing engine and reference results
+│   ├── calculations/    A0 reference baseline calculations (elbow case)
+│   ├── actuator-s/      submodule: KritvaOS/kritva-actuator-s  (Kritva-S)
+│   ├── actuator-m/      submodule: KritvaOS/kritva-actuator-m  (Kritva-M, A0 reference)
+│   └── actuator-l/      submodule: KritvaOS/kritva-actuator-l  (Kritva-L)
+├── embedded/
+│   └── kritva-actuator-embedded/   submodule: firmware, controller hardware, electronics and firmware docs, electrical BOM
+├── communication/can/   CAN protocol definitions (protocol/, tools/)
 ├── software/            actuator_interface, kritva_driver, host_tools, simulation
-├── tests/               unit, firmware, hardware, mechanical, integration, performance, safety (test code and procedures)
+├── tests/               integration, performance, safety (system-level test procedures)
 ├── audit/               Independent reviews: traceability, mechanical/electronics/firmware audits, release audit
-├── results/             Measured evidence: mechanical, motor_control, thermal, integration
-├── scripts/             validation (doc, link and traceability checks), bom (BOM checks and summaries)
+├── results/             System-level evidence: integration, thermal
+├── scripts/             validation (doc, link, traceability, calculation, manifest checks), bom, integration (submodule and migration tools)
 └── .github/             Issue and PR templates, CI workflows
 ```
 

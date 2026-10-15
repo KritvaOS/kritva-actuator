@@ -202,10 +202,16 @@ class Checker:
                              "does not exist yet")
 
 
+SUBMODULE_DIRS = ("embedded/kritva-actuator-embedded/", "mechanical/actuator-s/",
+                  "mechanical/actuator-m/", "mechanical/actuator-l/")   # checked by the children's own CI
+
+
 def iter_markdown(root: Path):
     for path in sorted(root.rglob("*.md")):
         rel_parts = path.relative_to(root).parts
         if any(part in SKIP_DIR_NAMES for part in rel_parts):
+            continue
+        if path.relative_to(root).as_posix().startswith(SUBMODULE_DIRS):
             continue
         if path.is_file():
             yield path

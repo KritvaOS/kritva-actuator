@@ -164,3 +164,5 @@ tests/safety/.gitkeep,Integration Owner,KEEP,parent,tests/safety/.gitkeep,N/A,Pa
 tests/unit/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/unit/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/unit/.gitkeep
 scripts/integration/stage4_parent_moves.sh,Integration Owner,KEEP,parent,scripts/integration/stage4_parent_moves.sh,N/A,Parent-owned (added at Stage 4 M)
 mechanical/common-sizing/README.md,Integration Owner,KEEP,parent,mechanical/common-sizing/README.md,N/A,Parent-owned (added at Stage 4 M)
+scripts/integration/fix_child_links.py,Integration Owner,KEEP,parent,scripts/integration/fix_child_links.py,N/A,Parent-owned (added at Stage 5)
+scripts/integration/stage5_fix_child_links.sh,Integration Owner,KEEP,parent,scripts/integration/stage5_fix_child_links.sh,N/A,Parent-owned (added at Stage 5)

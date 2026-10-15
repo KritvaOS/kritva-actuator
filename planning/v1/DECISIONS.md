@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.6 (Draft: proposed, pending approval) |
+| Revision | 0.7 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -466,6 +466,8 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | Peak torque rating (20 vs 25 N·m) and duration | ACT-DEC-021 | Project Lead | Motor/gearbox freeze |
 | CAN payload encoding (scaled integers vs float) | ACT-DEC-022 | Project Lead / Integration Owner | F1 |
 
+**ACT-DEC-023 amendment (2026-10-15, Project Lead).** The parent and the four child repositories were made **temporarily public** so that tooling and the external reviewer can read them while the restructure is finished. This is a time-limited exception to the private position; the repositories must return to private before any further proprietary content is added (see `docs/architecture/REPOSITORY_ARCHITECTURE.md` open item 5 for the CI token). Everything currently in them is proprietary and confidential by classification.
+
 **ACT-DEC-023 resolved (2026-10-13, Project Lead).** The repository was moved to **private** (EXT-AUD-001). It supersedes the earlier interim position (stay public until the specification is filled in). Follow-up: GitHub visibility is recorded here as the owner's action; the history and tracked-artifact review (EXT-AUD-018, `git rm -r "Claude outputs"`) and a secrets scan remain recommended before any external sharing or a future public subset.
 
 ## 6. Revision history
@@ -478,3 +480,4 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 0.4 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023 ACCEPTED: repository private |
 | 0.5 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-024 to 026 PROPOSED: four-submodule architecture, actuator family, shared sizing engine |
 | 0.6 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-026: A0 reference calculation documents stay in the parent |
+| 0.7 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-023 amendment: repositories temporarily public |

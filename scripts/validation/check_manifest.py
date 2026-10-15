@@ -27,13 +27,18 @@ STATUSES = {"PLANNED", "IN_PROGRESS", "MIGRATED", "N/A"}
 SKIP_DIRS = {".git", "__pycache__", "child-repos"}
 # Not listed in the manifest on purpose: placeholders and user-owned assets (kept in the parent).
 IGNORE_UNLISTED_PREFIXES = ("docs/images/", "docs/training/")
-IGNORE_UNLISTED_NAMES = (".gitkeep",)
+IGNORE_UNLISTED_NAMES = (".gitkeep", ".gitmodules")
+
+
+SUBMODULE_DIRS = ("embedded/kritva-actuator-embedded", "mechanical/actuator-s",
+                  "mechanical/actuator-m", "mechanical/actuator-l")
 
 
 def tree(root):
     out = set()
     for d, ds, fs in os.walk(root):
-        ds[:] = [x for x in ds if x not in SKIP_DIRS]
+        ds[:] = [x for x in ds if x not in SKIP_DIRS
+                 and os.path.relpath(os.path.join(d, x), root).replace(os.sep, "/") not in SUBMODULE_DIRS]
         for f in fs:
             if f.endswith(".pyc"):
                 continue

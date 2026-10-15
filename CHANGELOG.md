@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-15, restructure Stage 5 preparation)
+
+- `scripts/integration/stage5_fix_child_links.sh` and `fix_child_links.py`: point links in moved documents at the parent on GitHub.
+- `add_submodules.sh` uses HTTPS URLs on branch `main`. CI (`docs-checks.yml`) checks out submodules recursively with `CHILD_REPOS_TOKEN` when present and requires all four submodules.
+- Checks skip the submodule folders for links and the manifest, scan their documents, and read their BOMs and evidence paths. README repository structure rewritten for the submodule layout. ACT-DEC-023 amendment (temporarily public).
+
 ### Changed (2026-10-15, restructure Stage 4 for M)
 
 - `actuator_sizing.py` accepts `--inputs FILE.json` (per-variant inputs); engine and `expected_results.json` move to `mechanical/common-sizing/` (script `stage4_parent_moves.sh`). `check_calcs.py` finds them in either location and warns if `mechanical/actuator-m/sizing/inputs.json` drifts from the baseline.

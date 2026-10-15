@@ -9,12 +9,20 @@ jobs:
   checks:
     runs-on: ubuntu-latest
     steps:
+      # The four child repositories are submodules. While they are public the default
+      # token is enough. Once they are private, create a fine-grained personal access
+      # token (or GitHub App token) with read-only "Contents" access to the four
+      # child repositories and store it as the secret CHILD_REPOS_TOKEN.
       - uses: actions/checkout@v4
         with:
+          submodules: recursive
+          token: ${{ secrets.CHILD_REPOS_TOKEN || github.token }}
           lfs: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Submodule layout (all four required)
+        run: python3 scripts/integration/check_submodules.py --root . --require
       - name: Documentation headers and revision history
         run: make check-docs
       - name: Relative links
@@ -27,12 +35,3 @@ jobs:
         run: make check-calcs
       - name: Migration manifest
         run: make check-manifest
-      - name: Submodule layout
-        run: make check-submodules
-      # After migration Stage 5, enable recursive checkout of the private child
-      # repositories (deploy key per child or a scoped GitHub App token; the
-      # default GITHUB_TOKEN cannot read other private repositories):
-      #   - uses: actions/checkout@v4
-      #     with:
-      #       submodules: recursive
-      #       ssh-key: ${{ secrets.CHILD_REPOS_DEPLOY_KEY }}

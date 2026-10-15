@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-MIGRATION |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.4 |
+| Revision | 0.5 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Reviewer |
@@ -61,7 +61,7 @@ Remaining Stage 3 work: run `scripts/integration/bootstrap_children.sh` (pushes 
 
 - Confirm the four repositories are **private** (Settings, General).
 - Copy the matching scaffold from `child-repos/` (delivered separately) as the first commit.
-- Add a read-only deploy key per child to the parent, or a scoped GitHub App token. `GITHUB_TOKEN` cannot read other private repositories.
+- CI access: submodules use HTTPS URLs. While the children are public nothing is needed. When they are private again, store a read-only fine-grained token as the secret `CHILD_REPOS_TOKEN` (the default `GITHUB_TOKEN` cannot read other private repositories).
 - Enable branch protection and CODEOWNERS in each child.
 
 ### Stage 4: migrate by workstream
@@ -78,7 +78,15 @@ Order: embedded, M, then S and L.
 - Expected after the embedded move: `check_docs` warns that `firmware/` and `hardware/` are absent, and `check_bom` / traceability warn that evidence files are not present until Stage 5 adds the submodule. These warnings are temporary.
 
 ### Stage 5: integrate as submodules
-Paths: `mechanical/actuator-s`, `mechanical/actuator-m`, `mechanical/actuator-l`, `embedded/kritva-actuator-embedded`. Use `scripts/integration/check_submodules.py` to verify `.gitmodules`, pinned SHAs and the absence of credentials in URLs.
+Paths: `mechanical/actuator-s`, `mechanical/actuator-m`, `mechanical/actuator-l`, `embedded/kritva-actuator-embedded`.
+
+1. `scripts/integration/stage5_fix_child_links.sh embedded`: pushes branch `stage5/fix-links` that points the moved documents' links at the parent on GitHub. Merge that pull request before pinning.
+2. Commit the parent tooling and the new CI workflow (`.github/workflows/docs-checks.yml` checks out submodules recursively).
+3. `scripts/integration/add_submodules.sh`: adds the four submodules with HTTPS URLs on branch `main` and runs `check_submodules.py --require`.
+4. `make check`; commit `.gitmodules` and the four pointers; push; confirm CI is green.
+5. Turn on branch protection in all four children and the parent.
+
+The parent tooling skips the submodule folders for link and manifest checks (the children check themselves) and reads their BOMs, documents and evidence paths when checked out.
 
 ### Stage 6: audit and release
 - Manifest has no PLANNED rows.
@@ -103,13 +111,9 @@ git filter-repo --path firmware --path hardware --path docs/electronics --path d
 # then push this to the embedded repo, or import as one documented commit
 
 # Stage 5 (in the parent, after the content is in the children)
-git submodule add git@github.com:KritvaOS/kritva-actuator-embedded.git embedded/kritva-actuator-embedded
-git submodule add git@github.com:KritvaOS/kritva-actuator-m.git mechanical/actuator-m
-git submodule add git@github.com:KritvaOS/kritva-actuator-s.git mechanical/actuator-s
-git submodule add git@github.com:KritvaOS/kritva-actuator-l.git mechanical/actuator-l
+scripts/integration/stage5_fix_child_links.sh embedded   # merge its pull request
+scripts/integration/add_submodules.sh
 ```
-
-`scripts/integration/add_submodules.sh` runs the four `submodule add` commands once the children hold their content.
 
 Move files in the parent with `git mv`, never delete and recreate.
 
@@ -131,3 +135,4 @@ Move files in the parent with `git mv`, never delete and recreate.
 | 0.2 | 2026-10-15 | Kritvaos Actuator Team | Stage 3: four child repositories created; bootstrap and submodule scripts added |
 | 0.3 | 2026-10-15 | Kritvaos Actuator Team | Stage 4 script for MOVE rows (embedded, m) |
 | 0.4 | 2026-10-15 | Kritvaos Actuator Team | Stage 4 for M: two-part script, calculation documents stay in the parent, engine takes variant inputs |
+| 0.5 | 2026-10-15 | Kritvaos Actuator Team | Stage 5 detail: link fix, HTTPS submodules, token-based CI access |

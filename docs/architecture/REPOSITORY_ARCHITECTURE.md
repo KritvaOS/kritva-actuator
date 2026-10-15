@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-ARCH-REPO |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 (Draft: proposed, pending approval) |
+| Revision | 0.3 (Draft: proposed, pending approval) |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer |
@@ -104,7 +104,7 @@ A directory whose contents span ownership is **split by file**. Each destination
 | Submodule integrity | `scripts/integration/check_submodules.py`: four expected submodules, no credentials in URLs, pins valid | n/a |
 | Firmware build, unit tests, static analysis | No | Embedded repository |
 
-Parent CI checks out submodules recursively. The default `GITHUB_TOKEN` cannot read other private repositories, so use a **read-only deploy key per child** or a narrowly scoped GitHub App installation token. Secrets live in Actions secrets and never in `.gitmodules`, URLs, logs or artefacts.
+Parent CI checks out submodules recursively over HTTPS. While the children are public the default token is enough. When they are private, the default `GITHUB_TOKEN` cannot read them, so use a **fine-grained personal access token or GitHub App token with read-only Contents access to the four children**, stored as the Actions secret `CHILD_REPOS_TOKEN` (the workflow uses it when present). Secrets live in Actions secrets and never in `.gitmodules`, URLs, logs or artefacts.
 
 ## 7. Open items
 
@@ -114,7 +114,7 @@ Parent CI checks out submodules recursively. The default `GITHUB_TOKEN` cannot r
 | 2 | Create the four child repositories from the scaffolds | Project Lead | Stage 3 |
 | 3 | Choose the history method (filtered history or documented import commit) | Project Lead | Stage 4 |
 | 4 | Make `software/` ownership final once ACT-03-001 is approved | Project Lead / Embedded Intern | Stage 4 |
-| 5 | Configure deploy keys or an app token for parent CI | Repository administrator | Stage 5 |
+| 5 | When the children return to private: create the read-only token and store it as `CHILD_REPOS_TOKEN` | Repository administrator | Before making the repositories private again |
 
 ## 8. Revision history
 
@@ -122,3 +122,4 @@ Parent CI checks out submodules recursively. The default `GITHUB_TOKEN` cannot r
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial proposal: parent plus four submodules, ownership rules, CI split |
 | 0.2 | 2026-10-15 | Kritvaos Actuator Team | Child repositories created on GitHub; bootstrap step recorded |
+| 0.3 | 2026-10-15 | Kritvaos Actuator Team | CI access via HTTPS submodules and a read-only token instead of deploy keys |

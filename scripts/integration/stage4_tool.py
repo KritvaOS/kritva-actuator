@@ -79,7 +79,10 @@ def settle_m():
     listed = {x["path"] for x in rs} | {x["destination_path"] for x in rs if x["destination_repo"] == "parent"}
     added = 0
     for d, ds, fs in os.walk("."):
-        ds[:] = [y for y in ds if y not in (".git", "__pycache__", "child-repos")]
+        ds[:] = [y for y in ds if y not in (".git", "__pycache__", "child-repos")
+                 and os.path.relpath(os.path.join(d, y), ".").replace(os.sep, "/") not in (
+                     "embedded/kritva-actuator-embedded", "mechanical/actuator-s",
+                     "mechanical/actuator-m", "mechanical/actuator-l")]
         for fn in fs:
             q = os.path.relpath(os.path.join(d, fn), ".").replace(os.sep, "/")
             if (q in listed or fn == ".gitkeep" or fn.endswith(".pyc") or q.startswith(("docs/images/", "docs/training/", "Claude outputs/"))):

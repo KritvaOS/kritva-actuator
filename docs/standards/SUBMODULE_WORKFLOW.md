@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-STD-SUBMODULE |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 |
+| Revision | 0.2 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
@@ -27,7 +27,7 @@
 ## 2. Daily work
 
 ```text
-git clone --recurse-submodules git@github.com:KritvaOS/kritva-actuator.git
+git clone --recurse-submodules https://github.com/KritvaOS/kritva-actuator.git
 git submodule update --init --recursive
 ```
 
@@ -47,8 +47,8 @@ git commit -m "Pin kritva-actuator-m to <tag>"
 
 1. Never commit in a submodule while on a detached HEAD without a branch.
 2. Push the child before the parent; the parent must never point to an unpushed commit.
-3. No credentials in `.gitmodules` or in URLs. Use SSH URLs.
-4. Parent CI uses a recursive checkout with a read-only deploy key per child or a scoped GitHub App token. `GITHUB_TOKEN` cannot read other private repositories.
+3. No credentials in `.gitmodules` or in URLs. `.gitmodules` uses HTTPS URLs; to push over SSH from your machine run once: `git config --global url."git@github.com:".pushInsteadOf "https://github.com/"`.
+4. Parent CI uses a recursive checkout. While the children are public the default token works. When they are private, store a fine-grained personal access token (or GitHub App token) with read-only Contents access to the four children as the secret `CHILD_REPOS_TOKEN`. The default `GITHUB_TOKEN` cannot read other private repositories.
 5. Interface changes start in the parent, not in a child.
 
 ## Revision history
@@ -56,3 +56,4 @@ git commit -m "Pin kritva-actuator-m to <tag>"
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-15 | Kritvaos Actuator Team | HTTPS submodule URLs and token-based CI access |
