@@ -1,0 +1,16 @@
+[submodule "embedded/kritva-actuator-embedded"]
+	path = embedded/kritva-actuator-embedded
+	url = https://github.com/KritvaOS/kritva-actuator-embedded.git
+	branch = main
+[submodule "mechanical/actuator-m"]
+	path = mechanical/actuator-m
+	url = https://github.com/KritvaOS/kritva-actuator-m.git
+	branch = main
+[submodule "mechanical/actuator-s"]
+	path = mechanical/actuator-s
+	url = https://github.com/KritvaOS/kritva-actuator-s.git
+	branch = main
+[submodule "mechanical/actuator-l"]
+	path = mechanical/actuator-l
+	url = https://github.com/KritvaOS/kritva-actuator-l.git
+	branch = main
