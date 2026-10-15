@@ -1,0 +1,41 @@
+legacy_id,title,new_id,repository,owner,initial_status
+ACT-01-001,Define electrical and motor-control requirements,ACT-EMB-001,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-002,Select the MCU and development board; bring up the motor and FOC on the development board,ACT-EMB-002,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-002a,Development board evaluation and decision,ACT-EMB-002a,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-002b,"Motor characterisation (R, L, Kt, pole pairs, thermal)",ACT-EMB-002b,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-002c,FOC current loop and calibration,ACT-EMB-002c,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-003,Integrate encoder feedback and implement joint control,ACT-EMB-003,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-004,Diagnostics and fault handling,ACT-EMB-004,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-005,Custom controller PCB (A1),ACT-EMB-005,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-006,CAN communication firmware (A1),ACT-EMB-006,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-01-007,"Firmware robustness, regression and release",ACT-EMB-007,kritva-actuator-embedded,Embedded Intern,inherit
+ACT-02-001,Define elbow load cases and mechanical requirements,ACT-M-001,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-001,Define elbow load cases and mechanical requirements,ACT-S-001,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-001,Define elbow load cases and mechanical requirements,ACT-L-001,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-002,Motor/gearbox interface constraints and gearbox candidate comparison,ACT-M-002,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-002,Motor/gearbox interface constraints and gearbox candidate comparison,ACT-S-002,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-002,Motor/gearbox interface constraints and gearbox candidate comparison,ACT-L-002,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-003,"Shaft, bearing and housing calculations",ACT-M-003,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-003,"Shaft, bearing and housing calculations",ACT-S-003,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-003,"Shaft, bearing and housing calculations",ACT-L-003,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-004,Mechanical CAD assembly and fabrication drawings,ACT-M-004,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-004,Mechanical CAD assembly and fabrication drawings,ACT-S-004,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-004,Mechanical CAD assembly and fabrication drawings,ACT-L-004,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-005,Fabrication and assembly,ACT-M-005,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-005,Fabrication and assembly,ACT-S-005,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-005,Fabrication and assembly,ACT-L-005,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-006,"Mechanical characterisation (backlash, repeatability, load, thermal support)",ACT-M-006,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-006,"Mechanical characterisation (backlash, repeatability, load, thermal support)",ACT-S-006,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-006,"Mechanical characterisation (backlash, repeatability, load, thermal support)",ACT-L-006,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-007,Test fixture design and build,ACT-M-007,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-007,Test fixture design and build,ACT-S-007,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-007,Test fixture design and build,ACT-L-007,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-02-008,"Mechanical fixes, CAD release and documentation",ACT-M-008,kritva-actuator-m,Mechanical Intern 2 (Kritva-M),inherit (elbow baseline)
+ACT-02-008,"Mechanical fixes, CAD release and documentation",ACT-S-008,kritva-actuator-s,Mechanical Intern 1 (Kritva-S),NOT_STARTED
+ACT-02-008,"Mechanical fixes, CAD release and documentation",ACT-L-008,kritva-actuator-l,Mechanical Intern 3 (Kritva-L),NOT_STARTED
+ACT-03-001,Define the actuator software interface and KritvaOS integration contract,ACT-INT-001,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-03-002,CAN protocol specification,ACT-INT-002,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-03-003,KritvaOS driver and host tools,ACT-INT-003,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-03-004,Simulation model (SimulatedActuator),ACT-INT-004,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-03-005,System validation and A2 demonstration,ACT-INT-005,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-03-006,Traceability and audit coordination,ACT-INT-006,kritva-actuator (parent),Project Lead / Integration Owner,inherit

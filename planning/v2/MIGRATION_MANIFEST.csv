@@ -1,0 +1,164 @@
+path,owner,action,destination_repo,destination_path,status,note
+.gitattributes,Integration Owner,KEEP,parent,.gitattributes,PLANNED,Parent-owned
+.github/CODEOWNERS,Integration Owner,KEEP,parent,.github/CODEOWNERS,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/audit_finding.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/audit_finding.md,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/bug_report.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/bug_report.md,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/config.yml,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/config.yml,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/design_change_request.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/design_change_request.md,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/task.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/task.md,PLANNED,Parent-owned
+.github/ISSUE_TEMPLATE/test_failure.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/test_failure.md,PLANNED,Parent-owned
+.github/PULL_REQUEST_TEMPLATE.md,Integration Owner,KEEP,parent,.github/PULL_REQUEST_TEMPLATE.md,PLANNED,Parent-owned
+.github/workflows/docs-checks.yml,Integration Owner,KEEP,parent,.github/workflows/docs-checks.yml,PLANNED,Parent-owned
+.github/workflows/firmware-build.yml,Integration Owner,KEEP,parent,.github/workflows/firmware-build.yml,PLANNED,Parent-owned
+.gitignore,Integration Owner,KEEP,parent,.gitignore,PLANNED,Parent-owned
+CHANGELOG.md,Integration Owner,KEEP,parent,CHANGELOG.md,PLANNED,Parent-owned
+CODE_OF_CONDUCT.md,Integration Owner,KEEP,parent,CODE_OF_CONDUCT.md,PLANNED,Parent-owned
+CONTRIBUTING.md,Integration Owner,KEEP,parent,CONTRIBUTING.md,PLANNED,Parent-owned
+LICENSE,Integration Owner,KEEP,parent,LICENSE,PLANNED,Parent-owned
+Makefile,Integration Owner,KEEP,parent,Makefile,PLANNED,Parent-owned
+README.md,Integration Owner,KEEP,parent,README.md,PLANNED,Parent-owned
+audit/README.md,Integration Owner,KEEP,parent,audit/README.md,PLANNED,Parent-owned
+audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
+audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
+audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,Integration Owner,KEEP,parent,audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,PLANNED,Parent-owned
+audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
+audit/firmware/FIRMWARE_REVIEW.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_REVIEW.md,PLANNED,Audit record stays in parent; evidence links point to child
+audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent
+audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,PLANNED,Audit record stays in parent
+audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,PLANNED,Audit record stays in parent
+audit/mechanical/MECHANICAL_RISK_REGISTER.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RISK_REGISTER.md,PLANNED,Audit record stays in parent
+audit/release/RELEASE_AUDIT.md,Integration Owner,KEEP,parent,audit/release/RELEASE_AUDIT.md,PLANNED,Parent-owned
+audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,Integration Owner,KEEP,parent,audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,PLANNED,Parent-owned
+communication/can/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,communication/can/firmware/.gitkeep,PLANNED,Embedded workstream
+communication/can/protocol/.gitkeep,Integration Owner,KEEP,parent,communication/can/protocol/.gitkeep,PLANNED,Parent-owned
+communication/can/tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,communication/can/tools/.gitkeep,PLANNED,Decide per file when populated
+docs/architecture/ACTUATOR_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_ARCHITECTURE.md,PLANNED,Parent-owned
+docs/architecture/ACTUATOR_FAMILY_SPEC.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_FAMILY_SPEC.md,PLANNED,Parent-owned
+docs/architecture/COMPONENTS_SOURCING_AND_COST.md,Integration Owner,KEEP,parent,docs/architecture/COMPONENTS_SOURCING_AND_COST.md,PLANNED,Parent-owned
+docs/architecture/REPOSITORY_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/REPOSITORY_ARCHITECTURE.md,PLANNED,Parent-owned
+docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,Integration Owner,KEEP,parent,docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,PLANNED,Parent-owned
+docs/architecture/SYSTEM_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/SYSTEM_ARCHITECTURE.md,PLANNED,Parent-owned
+docs/electronics/ELECTRONICS_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/ELECTRONICS_ARCHITECTURE.md,PLANNED,Embedded workstream
+docs/electronics/HARDWARE_BRINGUP.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/HARDWARE_BRINGUP.md,PLANNED,Embedded workstream
+docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,PLANNED,Embedded workstream
+docs/firmware/CALIBRATION_PROCEDURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/CALIBRATION_PROCEDURE.md,PLANNED,Embedded workstream
+docs/firmware/FIRMWARE_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/FIRMWARE_ARCHITECTURE.md,PLANNED,Embedded workstream
+docs/firmware/MOTOR_CONTROL.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/MOTOR_CONTROL.md,PLANNED,Embedded workstream
+docs/interfaces/ACTUATOR_INTERFACE.md,Integration Owner,KEEP,parent,docs/interfaces/ACTUATOR_INTERFACE.md,PLANNED,Parent-owned
+docs/interfaces/CAN_PROTOCOL.md,Integration Owner,KEEP,parent,docs/interfaces/CAN_PROTOCOL.md,PLANNED,Parent-owned
+docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,Integration Owner,KEEP,parent,docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,PLANNED,Parent-owned
+docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,Integration Owner,KEEP,parent,docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,PLANNED,Parent-owned
+docs/mechanical/ASSEMBLY_PROCEDURE.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/ASSEMBLY_PROCEDURE.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
+docs/mechanical/FABRICATION_GUIDELINES.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/FABRICATION_GUIDELINES.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
+docs/mechanical/MATERIAL_SELECTION.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/MATERIAL_SELECTION.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
+docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md,Mechanical Interns,SPLIT,actuator-s|m|l,docs/design/MECHANICAL_DESIGN_SPECIFICATION.md,PLANNED,Parent keeps common method; each variant gets a variant spec
+docs/standards/BOM_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/BOM_STANDARD.md,PLANNED,Parent-owned
+docs/standards/CAD_NAMING_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/CAD_NAMING_STANDARD.md,PLANNED,Parent-owned
+docs/standards/DESIGN_REVIEW_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/DESIGN_REVIEW_CHECKLIST.md,PLANNED,Parent-owned
+docs/standards/RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/RELEASE_CHECKLIST.md,PLANNED,Parent-owned
+docs/standards/SUBMODULE_WORKFLOW.md,Integration Owner,KEEP,parent,docs/standards/SUBMODULE_WORKFLOW.md,PLANNED,Parent-owned
+docs/validation/PERFORMANCE_CHARACTERIZATION.md,Integration Owner,KEEP,parent,docs/validation/PERFORMANCE_CHARACTERIZATION.md,PLANNED,Parent-owned
+docs/validation/TEST_EQUIPMENT.md,Integration Owner,KEEP,parent,docs/validation/TEST_EQUIPMENT.md,PLANNED,Parent-owned
+docs/validation/VALIDATION_PLAN.md,Integration Owner,KEEP,parent,docs/validation/VALIDATION_PLAN.md,PLANNED,Parent-owned
+firmware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/README.md,PLANNED,Electronics/firmware workstream
+firmware/communication/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/communication/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/diagnostics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/diagnostics/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/encoder/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/encoder/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/foc/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/foc/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/joint_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/joint_control/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/motor_control/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/platform/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/platform/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/README.md,PLANNED,Electronics/firmware workstream
+hardware/bom/ELECTRICAL_BOM.csv,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/bom/ELECTRICAL_BOM.csv,PLANNED,Electronics/firmware workstream
+hardware/connectors/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/connectors/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/motor_controller/custom_pcb/pcb/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/pcb/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/motor_controller/custom_pcb/schematics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/schematics/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/motor_controller/development_board/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/development_board/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/power_stage/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/power_stage/.gitkeep,PLANNED,Electronics/firmware workstream
+hardware/sensing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/sensing/.gitkeep,PLANNED,Electronics/firmware workstream
+mechanical/README.md,Integration Owner,KEEP,parent,mechanical/README.md,PLANNED,Rewritten at Stage 4 as pointer to submodules
+mechanical/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/bom/MECHANICAL_BOM.csv,Mechanical Intern 2,MOVE,kritva-actuator-m,bom/MECHANICAL_BOM.csv,PLANNED,M baseline BOM; S/L start from a copy of the schema
+mechanical/cad/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/cad/brackets/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/brackets/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/cad/encoder_mount/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/encoder_mount/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/cad/housing/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/housing/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/cad/shafts/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/shafts/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/calculations/BEARING_SELECTION.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
+mechanical/calculations/GEARBOX_SELECTION.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
+mechanical/calculations/LOAD_CASES.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
+mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/,PLANNED,Method stays; M-specific results move to actuator-m
+mechanical/calculations/SHAFT_STRENGTH.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
+mechanical/calculations/TORQUE_AND_SPEED.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
+mechanical/calculations/actuator_sizing.py,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/actuator_sizing.py,PLANNED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
+mechanical/calculations/expected_results.json,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/expected_results.json,PLANNED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
+mechanical/drawings/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,drawings/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+planning/v1/DECISIONS.md,Integration Owner,KEEP,parent,planning/v1/DECISIONS.md,PLANNED,Parent-owned
+planning/v1/M0_DECISION_SHEET.md,Integration Owner,KEEP,parent,planning/v1/M0_DECISION_SHEET.md,PLANNED,Parent-owned
+planning/v1/MILESTONE.md,Integration Owner,KEEP,parent,planning/v1/MILESTONE.md,PLANNED,Parent-owned
+planning/v1/RISKS_AND_DEPENDENCIES.md,Integration Owner,KEEP,parent,planning/v1/RISKS_AND_DEPENDENCIES.md,PLANNED,Parent-owned
+planning/v1/ROADMAP.md,Integration Owner,KEEP,parent,planning/v1/ROADMAP.md,PLANNED,Parent-owned
+planning/v1/TASKS.md,Integration Owner,KEEP,parent,planning/v1/TASKS.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-01/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/README.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-02/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/README.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,PLANNED,Parent-owned
+planning/v1/tasks/ACT-03/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/README.md,PLANNED,Parent-owned
+planning/v2/MIGRATION_MANIFEST.csv,Integration Owner,KEEP,parent,planning/v2/MIGRATION_MANIFEST.csv,PLANNED,Restructure artefact
+planning/v2/MIGRATION_PLAN.md,Integration Owner,KEEP,parent,planning/v2/MIGRATION_PLAN.md,PLANNED,Restructure artefact
+planning/v2/README.md,Integration Owner,KEEP,parent,planning/v2/README.md,PLANNED,Restructure artefact
+planning/v2/ROADMAP_24_WEEKS.md,Integration Owner,KEEP,parent,planning/v2/ROADMAP_24_WEEKS.md,PLANNED,Restructure artefact
+planning/v2/TASK_ID_MAPPING.csv,Integration Owner,KEEP,parent,planning/v2/TASK_ID_MAPPING.csv,PLANNED,Restructure artefact
+planning/v2/WORKSTREAMS.md,Integration Owner,KEEP,parent,planning/v2/WORKSTREAMS.md,PLANNED,Restructure artefact
+requirements/ACTUATOR_SPECIFICATION.md,Integration Owner,KEEP,parent,requirements/ACTUATOR_SPECIFICATION.md,PLANNED,Parent-owned
+requirements/ELECTRICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/ELECTRICAL_REQUIREMENTS.md,PLANNED,Parent-owned
+requirements/FIRMWARE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/FIRMWARE_REQUIREMENTS.md,PLANNED,Parent-owned
+requirements/INTERFACE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/INTERFACE_REQUIREMENTS.md,PLANNED,Parent-owned
+requirements/MECHANICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/MECHANICAL_REQUIREMENTS.md,PLANNED,Parent-owned
+requirements/SAFETY_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SAFETY_REQUIREMENTS.md,PLANNED,Parent-owned
+requirements/SYSTEM_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SYSTEM_REQUIREMENTS.md,PLANNED,Parent-owned
+results/integration/.gitkeep,Integration Owner,KEEP,parent,results/integration/.gitkeep,PLANNED,Parent-owned
+results/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,results/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+results/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,results/motor_control/.gitkeep,PLANNED,Embedded workstream
+results/thermal/.gitkeep,Integration Owner,SPLIT,parent|embedded,results/thermal/.gitkeep,PLANNED,Decide per file when populated
+scripts/bom/.gitkeep,Integration Owner,KEEP,parent,scripts/bom/.gitkeep,PLANNED,Parent-owned
+scripts/bom/README.md,Integration Owner,KEEP,parent,scripts/bom/README.md,PLANNED,Parent-owned
+scripts/bom/bom_summary.py,Integration Owner,KEEP,parent,scripts/bom/bom_summary.py,PLANNED,Parent-owned
+scripts/bom/check_bom.py,Integration Owner,KEEP,parent,scripts/bom/check_bom.py,PLANNED,Parent-owned
+scripts/integration/add_submodules.sh,Integration Owner,KEEP,parent,scripts/integration/add_submodules.sh,PLANNED,Parent-owned
+scripts/integration/bootstrap_children.sh,Integration Owner,KEEP,parent,scripts/integration/bootstrap_children.sh,PLANNED,Parent-owned
+scripts/integration/check_submodules.py,Integration Owner,KEEP,parent,scripts/integration/check_submodules.py,PLANNED,Parent-owned
+scripts/integration/stage4_migrate.sh,Integration Owner,KEEP,parent,scripts/integration/stage4_migrate.sh,PLANNED,Parent-owned
+scripts/integration/stage4_tool.py,Integration Owner,KEEP,parent,scripts/integration/stage4_tool.py,PLANNED,Parent-owned
+scripts/validation/.gitkeep,Integration Owner,KEEP,parent,scripts/validation/.gitkeep,PLANNED,Parent-owned
+scripts/validation/README.md,Integration Owner,KEEP,parent,scripts/validation/README.md,PLANNED,Parent-owned
+scripts/validation/check_calcs.py,Integration Owner,KEEP,parent,scripts/validation/check_calcs.py,PLANNED,Parent-owned
+scripts/validation/check_docs.py,Integration Owner,KEEP,parent,scripts/validation/check_docs.py,PLANNED,Parent-owned
+scripts/validation/check_links.py,Integration Owner,KEEP,parent,scripts/validation/check_links.py,PLANNED,Parent-owned
+scripts/validation/check_manifest.py,Integration Owner,KEEP,parent,scripts/validation/check_manifest.py,PLANNED,Parent-owned
+scripts/validation/check_traceability.py,Integration Owner,KEEP,parent,scripts/validation/check_traceability.py,PLANNED,Parent-owned
+software/actuator_interface/.gitkeep,Integration Owner,KEEP,parent,software/actuator_interface/.gitkeep,PLANNED,Parent-owned
+software/host_tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/host_tools/.gitkeep,PLANNED,Decide per file when populated
+software/kritva_driver/.gitkeep,Integration Owner,KEEP,parent,software/kritva_driver/.gitkeep,PLANNED,Parent-owned
+software/simulation/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/simulation/.gitkeep,PLANNED,Decide per file when populated
+tests/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/firmware/.gitkeep,PLANNED,Embedded workstream
+tests/hardware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/hardware/.gitkeep,PLANNED,Embedded workstream
+tests/integration/.gitkeep,Integration Owner,KEEP,parent,tests/integration/.gitkeep,PLANNED,Parent-owned
+tests/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,tests/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+tests/performance/.gitkeep,Integration Owner,KEEP,parent,tests/performance/.gitkeep,PLANNED,Parent-owned
+tests/safety/.gitkeep,Integration Owner,KEEP,parent,tests/safety/.gitkeep,PLANNED,Parent-owned
+tests/unit/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/unit/.gitkeep,PLANNED,Embedded workstream

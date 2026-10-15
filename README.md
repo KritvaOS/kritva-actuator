@@ -60,6 +60,7 @@ The project follows **Option C**: an *educational motor-control platform* that e
 3. **[planning/v1/ROADMAP.md](planning/v1/ROADMAP.md)**, **[MILESTONE.md](planning/v1/MILESTONE.md)** and **[TASKS.md](planning/v1/TASKS.md)**: the plan, the gates and who does what.
 4. **[docs/architecture/SYSTEM_ARCHITECTURE.md](docs/architecture/SYSTEM_ARCHITECTURE.md)**: how it fits together.
 5. Your workstream folder in [planning/v1/tasks/](planning/v1/tasks/).
+6. **Restructure to a parent plus four submodules (proposed):** [REPOSITORY_ARCHITECTURE](docs/architecture/REPOSITORY_ARCHITECTURE.md), [ACTUATOR_FAMILY_SPEC](docs/architecture/ACTUATOR_FAMILY_SPEC.md) and [planning/v2/](planning/v2/README.md). The layout below is the current (pre-migration) structure; no files have moved yet.
 
 ## 3. Repository structure
 

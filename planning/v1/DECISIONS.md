@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.4 (Draft: proposed, pending approval) |
+| Revision | 0.5 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -79,6 +79,9 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-014 | Independent review rule and the NOT_VERIFIED gate block | ACCEPTED | 2026-10-11 |
 | ACT-DEC-015 | Restrained-fixture testing; no human-interactive testing without a safety review | ACCEPTED | 2026-10-11 |
 | ACT-DEC-023 | Repository visibility: private (EXT-AUD-001) | ACCEPTED | 2026-10-13 |
+| ACT-DEC-024 | Repository architecture: parent plus four submodules | PROPOSED | 2026-10-15 |
+| ACT-DEC-025 | Actuator family S/M/L; M is the A0 reference | PROPOSED | 2026-10-15 |
+| ACT-DEC-026 | Shared sizing engine in the parent | PROPOSED | 2026-10-15 |
 
 ---
 
@@ -425,6 +428,32 @@ Not every MCU or board is suitable.
 
 See `requirements/SAFETY_REQUIREMENTS.md`.
 
+### ACT-DEC-024: Repository architecture (parent plus four submodules)
+
+**Status:** PROPOSED (external reviewer recommendation 2026-10-15; the Project Lead adopted the plan of three Mechanical Interns and one Embedded Intern).
+
+**Decision.** `KritvaOS/kritva-actuator` stays the parent (program and integration). Four private child repositories are added as submodules: `kritva-actuator-s`, `-m`, `-l` (mechanical, one intern each) and `kritva-actuator-embedded`. The parent owns requirements, interface contracts, common sizing, planning, audits and integration tests, and pins reviewed child commits. Migration is staged and non-destructive (`planning/v2/MIGRATION_PLAN.md`). Details: `docs/architecture/REPOSITORY_ARCHITECTURE.md`.
+
+**Supersedes in part.** The two-intern split in `planning/v1/TASKS.md` for new work. Legacy IDs remain valid (`planning/v2/TASK_ID_MAPPING.csv`). ACT-DEC-001 (project direction) is not changed.
+
+---
+
+### ACT-DEC-025: Actuator family S, M, L
+
+**Status:** PROPOSED.
+
+**Decision.** The three mechanical interns build three variants of one platform. M is the elbow reference baseline and the A0 reference. S and L start from the M template after M passes the design review checklist. The S, M and L torque and speed classes in `docs/architecture/ACTUATOR_FAMILY_SPEC.md` are **provisional planning envelopes, not approved requirements**.
+
+---
+
+### ACT-DEC-026: Shared sizing engine
+
+**Status:** PROPOSED.
+
+**Decision.** One sizing engine (`actuator_sizing.py`) and its regression expected values live in the parent at `mechanical/common-sizing/`. Each variant supplies its own `sizing/inputs.json`. Results are stored in the variant repository with the parent commit used. The standard-library-only constraint is kept, hence JSON inputs.
+
+---
+
 ## 5. Pending decisions (to be raised)
 
 | Topic | Expected ID | Owner | Needed by |
@@ -447,3 +476,4 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 0.2 | 2026-10-12 | Kritvaos Actuator Team | Pending decision ACT-DEC-023 repository visibility (EXT-AUD-001) |
 | 0.3 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023: interim position (stay public until the specification is filled in; conditions recorded) |
 | 0.4 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023 ACCEPTED: repository private |
+| 0.5 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-024 to 026 PROPOSED: four-submodule architecture, actuator family, shared sizing engine |

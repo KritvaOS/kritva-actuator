@@ -25,3 +25,14 @@ jobs:
         run: make check-bom
       - name: Calculation regression and document consistency
         run: make check-calcs
+      - name: Migration manifest
+        run: make check-manifest
+      - name: Submodule layout
+        run: make check-submodules
+      # After migration Stage 5, enable recursive checkout of the private child
+      # repositories (deploy key per child or a scoped GitHub App token; the
+      # default GITHUB_TOKEN cannot read other private repositories):
+      #   - uses: actions/checkout@v4
+      #     with:
+      #       submodules: recursive
+      #       ssh-key: ${{ secrets.CHILD_REPOS_DEPLOY_KEY }}

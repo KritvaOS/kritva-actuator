@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-15, restructure Stages 1-3; ACT-DEC-024 to 026 PROPOSED)
+
+- Four-submodule plan (three mechanical variants S, M, L plus embedded): `docs/architecture/REPOSITORY_ARCHITECTURE.md`, `ACTUATOR_FAMILY_SPEC.md`, `docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md`.
+- `planning/v2/`: migration plan with runbook, migration manifest (every file with owner and destination), legacy-to-new task ID mapping, workstreams, 24-week roadmap.
+- `docs/standards/`: CAD naming, BOM, design review checklist, release checklist, submodule workflow.
+- `scripts/validation/check_manifest.py` and `scripts/integration/check_submodules.py`; Makefile targets `check-manifest` and `check-submodules`; CI steps added.
+- Child-repository scaffolds delivered separately (`child-repos/`). **No existing file has been moved or deleted.** File moves are Stage 4.
+
 ### Added (2026-10-14)
 
 - `docs/architecture/COMPONENTS_SOURCING_AND_COST.md` (new): component breakdown, candidate sources, draft pricing structure (listing, estimate, TBD) and phased localisation, based on the stated in/out of scope.
