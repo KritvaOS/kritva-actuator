@@ -85,7 +85,7 @@ MILESTONES = ("A0", "A1", "A2")
 COST_STATUS = ("ESTIMATE", "QUOTED", "PURCHASED", "TBD")
 ITEM_STATUS = ("CANDIDATE", "SELECTED", "ORDERED", "RECEIVED", "REJECTED")
 DEFAULT_FILES = [
-    ("mechanical/bom/MECHANICAL_BOM.csv", "MB"),
+    ("mechanical/actuator-m/bom/MECHANICAL_BOM.csv", "MB"),
     ("embedded/kritva-actuator-embedded/hardware/bom/ELECTRICAL_BOM.csv", "EB"),
     ("mechanical/actuator-s/bom/MECHANICAL_BOM.csv", "MB-S"),
     ("mechanical/actuator-l/bom/MECHANICAL_BOM.csv", "MB-L"),

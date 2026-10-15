@@ -79,7 +79,7 @@ hardware/power_stage/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hard
 hardware/sensing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/sensing/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/sensing/.gitkeep
 mechanical/README.md,Integration Owner,KEEP,parent,mechanical/README.md,PLANNED,Rewritten at Stage 4 as pointer to submodules
 mechanical/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/bom/MECHANICAL_BOM.csv,Mechanical Intern 2,MOVE,kritva-actuator-m,bom/MECHANICAL_BOM.csv,PLANNED,M baseline BOM; S/L start from a copy of the schema
+mechanical/bom/MECHANICAL_BOM.csv,Mechanical Intern 2,MOVE,kritva-actuator-m,bom/MECHANICAL_BOM.csv,MIGRATED,M baseline BOM; S/L start from a copy of the schema; now in mechanical/actuator-m/bom/MECHANICAL_BOM.csv
 mechanical/cad/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
 mechanical/cad/brackets/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/brackets/.gitkeep,PLANNED,Folder skeleton replicated to each variant
 mechanical/cad/encoder_mount/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/encoder_mount/.gitkeep,PLANNED,Folder skeleton replicated to each variant
