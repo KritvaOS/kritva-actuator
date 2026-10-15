@@ -84,7 +84,7 @@ COST_STATUS = ("ESTIMATE", "QUOTED", "PURCHASED", "TBD")
 ITEM_STATUS = ("CANDIDATE", "SELECTED", "ORDERED", "RECEIVED", "REJECTED")
 DEFAULT_FILES = [
     ("mechanical/bom/MECHANICAL_BOM.csv", "MB"),
-    ("hardware/bom/ELECTRICAL_BOM.csv", "EB"),
+    ("embedded/kritva-actuator-embedded/hardware/bom/ELECTRICAL_BOM.csv", "EB"),
 ]
 TOLERANCE = Decimal("0.01")
 NUMBER_RE = re.compile(r"^\d+(?:\.\d+)?$")

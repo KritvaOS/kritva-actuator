@@ -11,7 +11,9 @@ Rules (ERROR unless stated)
 * rows with status PLANNED must still exist in the parent tree (nothing is
   moved before its row is updated);
 * rows with status MIGRATED must NOT exist at the old path;
-* tracked files that are absent from the manifest are a WARNING
+* files absent from the manifest are a WARNING, except .gitkeep placeholders and
+  docs/images/, docs/training/ (user-owned assets kept in the parent)
+  
   (an ERROR with --strict).
 
 Standard library only. Python 3.8+. Exit 0 when no errors, 1 on errors.
@@ -23,6 +25,9 @@ COLUMNS = ["path", "owner", "action", "destination_repo", "destination_path", "s
 ACTIONS = {"KEEP", "MOVE", "SPLIT", "COPY_TEMPLATE", "MOVE_WITHIN_PARENT"}
 STATUSES = {"PLANNED", "IN_PROGRESS", "MIGRATED", "N/A"}
 SKIP_DIRS = {".git", "__pycache__", "child-repos"}
+# Not listed in the manifest on purpose: placeholders and user-owned assets (kept in the parent).
+IGNORE_UNLISTED_PREFIXES = ("docs/images/", "docs/training/")
+IGNORE_UNLISTED_NAMES = (".gitkeep",)
 
 
 def tree(root):
@@ -74,6 +79,8 @@ def main(argv=None):
         elif row["status"] == "MIGRATED" and exists:
             errors.append(f"{where}: MIGRATED row but file still exists at the old path")
     for p in sorted(present - seen):
+        if p.startswith(IGNORE_UNLISTED_PREFIXES) or os.path.basename(p) in IGNORE_UNLISTED_NAMES:
+            continue
         warnings.append(f"{p}: not listed in the manifest")
     for m in errors:
         print("ERROR:", m)

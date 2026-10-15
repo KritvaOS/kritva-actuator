@@ -92,6 +92,8 @@ PHASE_TOKEN_RE = re.compile(r"A[0-2]")
 PHASE_BAD_TOKEN_RE = re.compile(r"\bA[3-9]\b")
 METHOD_RE = re.compile(r"^[TAID](?:\s*[,/ ]\s*[TAID])*$")
 GATE_STATUSES = {"PASS", "PASS_WITH_ACTIONS", "FAIL"}
+SUBMODULE_PATH_RE = re.compile(r"^(embedded/kritva-actuator-embedded|mechanical/actuator-[sml])/")
+SUBMODULE_RESULTS_RE = re.compile(r"^(embedded/kritva-actuator-embedded|mechanical/actuator-[sml])/results/")
 PLACEHOLDER_RE = re.compile(r"\b(TBD|TBC|TODO|placeholder)\b", re.IGNORECASE)
 GENERIC_PROCEDURES = {"docs/validation/VALIDATION_PLAN.md", "docs/validation"}
 TEST_ID_RE = re.compile(r"\b(BU|MC|GB|MI|PC|FI|CT|CAN|INT|DU|C)-?\d{1,2}\b|#|§|\b[A-Z]{2,5}-\d{2,3}\b")
@@ -230,6 +232,7 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
 
     records: Dict[str, Dict[str, str]] = {}
     placeholder_rows: List[str] = []
+    submodule_unchecked = 0
     for lineno, raw in enumerate(rows[1:], start=2):
         if not any(c.strip() for c in raw):
             continue  # blank line
@@ -282,7 +285,7 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
         # record, never to placeholders or the generic validation plan alone.
         if row["verification_status"] in GATE_STATUSES:
             if (not row["evidence_location"] or PLACEHOLDER_RE.search(row["evidence_location"])
-                    or not any(t.startswith("results/") for t in split_ids(row["evidence_location"]))):
+                    or not any(t.startswith("results/") or SUBMODULE_RESULTS_RE.match(t) for t in split_ids(row["evidence_location"]))):
                 report.error(where, f"verification_status {row['verification_status']} requires a "
                                     "concrete results/ evidence record (no TBD/placeholder)")
             proc = row["verification_procedure"]
@@ -302,8 +305,14 @@ def check_csv(csv_path: Path, root: Path, report: Report) -> Optional[Dict[str, 
                 if "/" in item and not item.startswith(("http://", "https://")):
                     target = item.split("#", 1)[0]
                     if target and not (root / target).exists():
-                        report.warn(where, f"{field} '{item}' does not exist")
+                        if SUBMODULE_PATH_RE.match(target):
+                            submodule_unchecked += 1   # child repository not checked out
+                        else:
+                            report.warn(where, f"{field} '{item}' does not exist")
         records[rid] = row
+    if submodule_unchecked:
+        report.info(rel, f"{submodule_unchecked} evidence path(s) point into child repositories that are "
+                         "not checked out (run git submodule update --init to check them)")
     if placeholder_rows:
         report.info(rel, f"{len(placeholder_rows)} requirement(s) still have placeholder evidence "
                          "(allowed while NOT_STARTED/IN_PROGRESS/NOT_VERIFIED; blocks PASS/FAIL claims)")

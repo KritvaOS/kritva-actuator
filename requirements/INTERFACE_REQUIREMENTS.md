@@ -467,7 +467,7 @@ The safety function (stop category, reaction times, restart rules) is defined in
 | IF-REQ-174 | The actuator shall provide a **synchronisation output** (GPIO trigger, TBC) or a timestamped event that test instruments can use to align logged data. | Aligning oscilloscope, DAQ and actuator logs. | D | Trigger visible on the oscilloscope and logged event time correlated. | `results/integration/` | SYS-REQ-103 | A1 | L |
 | IF-REQ-175 | The fixture e-stop shall be wired to IF-12 and placed within reach of the operator outside the clear zone. | Safe test procedure ([R6]). | I | Pre-test checklist record. | `tests/safety/` | SYS-REQ-081, SYS-REQ-083 | A1 | M |
 
-IF-REQ-180 to IF-REQ-199 are reserved.
+Interface requirement numbers 180 to 199 are reserved for future use.
 
 ## 9. Verification summary
 

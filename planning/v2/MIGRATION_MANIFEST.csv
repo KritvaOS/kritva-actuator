@@ -29,7 +29,7 @@ audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,a
 audit/mechanical/MECHANICAL_RISK_REGISTER.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RISK_REGISTER.md,PLANNED,Audit record stays in parent
 audit/release/RELEASE_AUDIT.md,Integration Owner,KEEP,parent,audit/release/RELEASE_AUDIT.md,PLANNED,Parent-owned
 audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,Integration Owner,KEEP,parent,audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,PLANNED,Parent-owned
-communication/can/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,communication/can/firmware/.gitkeep,PLANNED,Embedded workstream
+communication/can/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,communication/can/firmware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/communication/can/firmware/.gitkeep
 communication/can/protocol/.gitkeep,Integration Owner,KEEP,parent,communication/can/protocol/.gitkeep,PLANNED,Parent-owned
 communication/can/tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,communication/can/tools/.gitkeep,PLANNED,Decide per file when populated
 docs/architecture/ACTUATOR_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_ARCHITECTURE.md,PLANNED,Parent-owned
@@ -38,12 +38,12 @@ docs/architecture/COMPONENTS_SOURCING_AND_COST.md,Integration Owner,KEEP,parent,
 docs/architecture/REPOSITORY_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/REPOSITORY_ARCHITECTURE.md,PLANNED,Parent-owned
 docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,Integration Owner,KEEP,parent,docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,PLANNED,Parent-owned
 docs/architecture/SYSTEM_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/SYSTEM_ARCHITECTURE.md,PLANNED,Parent-owned
-docs/electronics/ELECTRONICS_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/ELECTRONICS_ARCHITECTURE.md,PLANNED,Embedded workstream
-docs/electronics/HARDWARE_BRINGUP.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/HARDWARE_BRINGUP.md,PLANNED,Embedded workstream
-docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,PLANNED,Embedded workstream
-docs/firmware/CALIBRATION_PROCEDURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/CALIBRATION_PROCEDURE.md,PLANNED,Embedded workstream
-docs/firmware/FIRMWARE_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/FIRMWARE_ARCHITECTURE.md,PLANNED,Embedded workstream
-docs/firmware/MOTOR_CONTROL.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/MOTOR_CONTROL.md,PLANNED,Embedded workstream
+docs/electronics/ELECTRONICS_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/ELECTRONICS_ARCHITECTURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/ELECTRONICS_ARCHITECTURE.md
+docs/electronics/HARDWARE_BRINGUP.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/HARDWARE_BRINGUP.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/HARDWARE_BRINGUP.md
+docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md
+docs/firmware/CALIBRATION_PROCEDURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/CALIBRATION_PROCEDURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/CALIBRATION_PROCEDURE.md
+docs/firmware/FIRMWARE_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/FIRMWARE_ARCHITECTURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/FIRMWARE_ARCHITECTURE.md
+docs/firmware/MOTOR_CONTROL.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/MOTOR_CONTROL.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/MOTOR_CONTROL.md
 docs/interfaces/ACTUATOR_INTERFACE.md,Integration Owner,KEEP,parent,docs/interfaces/ACTUATOR_INTERFACE.md,PLANNED,Parent-owned
 docs/interfaces/CAN_PROTOCOL.md,Integration Owner,KEEP,parent,docs/interfaces/CAN_PROTOCOL.md,PLANNED,Parent-owned
 docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,Integration Owner,KEEP,parent,docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,PLANNED,Parent-owned
@@ -60,23 +60,23 @@ docs/standards/SUBMODULE_WORKFLOW.md,Integration Owner,KEEP,parent,docs/standard
 docs/validation/PERFORMANCE_CHARACTERIZATION.md,Integration Owner,KEEP,parent,docs/validation/PERFORMANCE_CHARACTERIZATION.md,PLANNED,Parent-owned
 docs/validation/TEST_EQUIPMENT.md,Integration Owner,KEEP,parent,docs/validation/TEST_EQUIPMENT.md,PLANNED,Parent-owned
 docs/validation/VALIDATION_PLAN.md,Integration Owner,KEEP,parent,docs/validation/VALIDATION_PLAN.md,PLANNED,Parent-owned
-firmware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/README.md,PLANNED,Electronics/firmware workstream
-firmware/communication/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/communication/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/diagnostics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/diagnostics/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/encoder/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/encoder/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/foc/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/foc/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/joint_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/joint_control/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/motor_control/.gitkeep,PLANNED,Electronics/firmware workstream
-firmware/platform/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/platform/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/README.md,PLANNED,Electronics/firmware workstream
-hardware/bom/ELECTRICAL_BOM.csv,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/bom/ELECTRICAL_BOM.csv,PLANNED,Electronics/firmware workstream
-hardware/connectors/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/connectors/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/motor_controller/custom_pcb/pcb/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/pcb/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/motor_controller/custom_pcb/schematics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/schematics/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/motor_controller/development_board/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/development_board/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/power_stage/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/power_stage/.gitkeep,PLANNED,Electronics/firmware workstream
-hardware/sensing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/sensing/.gitkeep,PLANNED,Electronics/firmware workstream
+firmware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/README.md,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/README.md
+firmware/communication/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/communication/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/communication/.gitkeep
+firmware/diagnostics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/diagnostics/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/diagnostics/.gitkeep
+firmware/encoder/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/encoder/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/encoder/.gitkeep
+firmware/foc/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/foc/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/foc/.gitkeep
+firmware/joint_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/joint_control/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/joint_control/.gitkeep
+firmware/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/motor_control/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/motor_control/.gitkeep
+firmware/platform/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/platform/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/platform/.gitkeep
+hardware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/README.md,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/README.md
+hardware/bom/ELECTRICAL_BOM.csv,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/bom/ELECTRICAL_BOM.csv,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/bom/ELECTRICAL_BOM.csv
+hardware/connectors/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/connectors/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/connectors/.gitkeep
+hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/manufacturing/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/motor_controller/custom_pcb/manufacturing/.gitkeep
+hardware/motor_controller/custom_pcb/pcb/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/pcb/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/motor_controller/custom_pcb/pcb/.gitkeep
+hardware/motor_controller/custom_pcb/schematics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/custom_pcb/schematics/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/motor_controller/custom_pcb/schematics/.gitkeep
+hardware/motor_controller/development_board/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/development_board/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/motor_controller/development_board/.gitkeep
+hardware/power_stage/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/power_stage/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/power_stage/.gitkeep
+hardware/sensing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/sensing/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/sensing/.gitkeep
 mechanical/README.md,Integration Owner,KEEP,parent,mechanical/README.md,PLANNED,Rewritten at Stage 4 as pointer to submodules
 mechanical/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
 mechanical/bom/MECHANICAL_BOM.csv,Mechanical Intern 2,MOVE,kritva-actuator-m,bom/MECHANICAL_BOM.csv,PLANNED,M baseline BOM; S/L start from a copy of the schema
@@ -133,7 +133,7 @@ requirements/SAFETY_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/S
 requirements/SYSTEM_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SYSTEM_REQUIREMENTS.md,PLANNED,Parent-owned
 results/integration/.gitkeep,Integration Owner,KEEP,parent,results/integration/.gitkeep,PLANNED,Parent-owned
 results/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,results/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-results/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,results/motor_control/.gitkeep,PLANNED,Embedded workstream
+results/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,results/motor_control/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/results/motor_control/.gitkeep
 results/thermal/.gitkeep,Integration Owner,SPLIT,parent|embedded,results/thermal/.gitkeep,PLANNED,Decide per file when populated
 scripts/bom/.gitkeep,Integration Owner,KEEP,parent,scripts/bom/.gitkeep,PLANNED,Parent-owned
 scripts/bom/README.md,Integration Owner,KEEP,parent,scripts/bom/README.md,PLANNED,Parent-owned
@@ -155,10 +155,10 @@ software/actuator_interface/.gitkeep,Integration Owner,KEEP,parent,software/actu
 software/host_tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/host_tools/.gitkeep,PLANNED,Decide per file when populated
 software/kritva_driver/.gitkeep,Integration Owner,KEEP,parent,software/kritva_driver/.gitkeep,PLANNED,Parent-owned
 software/simulation/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/simulation/.gitkeep,PLANNED,Decide per file when populated
-tests/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/firmware/.gitkeep,PLANNED,Embedded workstream
-tests/hardware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/hardware/.gitkeep,PLANNED,Embedded workstream
+tests/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/firmware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/firmware/.gitkeep
+tests/hardware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/hardware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/hardware/.gitkeep
 tests/integration/.gitkeep,Integration Owner,KEEP,parent,tests/integration/.gitkeep,PLANNED,Parent-owned
 tests/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,tests/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
 tests/performance/.gitkeep,Integration Owner,KEEP,parent,tests/performance/.gitkeep,PLANNED,Parent-owned
 tests/safety/.gitkeep,Integration Owner,KEEP,parent,tests/safety/.gitkeep,PLANNED,Parent-owned
-tests/unit/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/unit/.gitkeep,PLANNED,Embedded workstream
+tests/unit/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/unit/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/unit/.gitkeep

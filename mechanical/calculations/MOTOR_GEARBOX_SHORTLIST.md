@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-MECH-CALC-SHORTLIST |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 (Draft: proposed, pending approval) |
+| Revision | 0.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-13 |
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
@@ -38,12 +38,31 @@ Label meaning: **DV** = reported as appearing in the linked manufacturer specifi
 
 | Model | Rated torque (N·m) | Peak torque (N·m) | Kv (RPM/V) | Kt (N·m/A) | R phase-phase (Ω) | Rated speed at 24 V (RPM) | Rated power (W) | Mass (g) | Price and availability |
 |---|---|---|---|---|---|---|---|---|---|
-| RI50 KV100 | 0.58 DV | 1.67 DV | 100 DV | 0.120 DV | 1.420 DV | 1 090 DV | 100 max continuous DV | 180.8 DV | UV: quotation needed |
-| RI60 KV120 | 0.57 DV | 1.63 DV | 120 DV | 0.100 DV | 0.900 DV | 1 440 DV | 85 DV | 155.9 DV | UV: US$98.90 on manufacturer page when checked; India retailer about ₹12,208 |
-| RI70 KV95 | 0.94 DV | 2.68 DV | 95 DV | UV (not confirmed) | 0.418 DV | 1 270 DV | 125 DV | 270.4 DV | UV: quotation needed |
-| RI80 V2.0 KV75 | 1.45 DV | 4.1 DV | 75 DV | 0.155 DV | 0.330 DV | 1 135 DV | 172 DV | 411 DV | UV: India retailer about ₹22,929 |
+| RI50 KV100 | 0.58 DV | 1.67 DV | 100 DV | 0.120 DV | 1.420 DV | 1 090 DV | 100 max continuous DV | 180.8 DV | See §2.2 |
+| RI60 KV120 | 0.57 DV | 1.63 DV | 120 DV | 0.100 DV | 0.900 DV | 1 440 DV | 85 DV | 155.9 DV | See §2.2 |
+| RI70 KV95 | 0.94 DV | 2.68 DV | 95 DV | UV (not confirmed) | 0.418 DV | 1 270 DV | 125 DV | 270.4 DV | See §2.2 |
+| RI80 V2.0 KV75 | 1.45 DV | 4.1 DV | 75 DV | 0.155 DV | 0.330 DV | 1 135 DV | 172 DV | 411 DV | See §2.2 |
 
-### 2.2 Planetary gearboxes (2-stage, 20:1 available; series-level ranges, not part-number ratings)
+### 2.2 Online pricing check (2026-10-13, author, built-in browser)
+
+Prices read directly from the listing pages on 2026-10-13. Listings change; they are **not quotations**. Neither shipping, import duty nor GST was visible without starting a checkout, which was not done.
+
+| Motor | CubeMars store (USD, "from", ex shipping) | Robokits India (INR, "with Hall sensor" listing) | Other |
+|---|---|---|---|
+| RI50 KV100 | $61.90 | ₹8,245 | none checked |
+| RI60 KV120 | $98.90 | ₹12,208 | IndiaMART supplier listing ₹16,520; DigiKey India lists it (page blocked by a bot check, price not read) |
+| RI70 KV95 | $123.90 (style: without or with Hall sensor) | ₹14,885 | none checked |
+| RI80 V2.0 KV75 | $132.90 | ₹19,327 | none checked |
+
+Observations:
+
+1. The Robokits INR prices match the figures the ChatGPT session reported for the RI60 (₹12,208) and differ for the RI80 (₹19,327 now, ₹22,929 reported), so the session's retail figures are **not reliable for the RI80**. Use this section, and re-check before ordering.
+2. The cost gap between RI60 and RI70 is about ₹2,700 at Robokits. That is small against the benefit of the RI70's continuous-torque margin (§3.1).
+3. Price differences between the CubeMars store (US$, "from" price, likely the without-Hall variant) and the Indian retailer (with Hall sensor, local stock) cannot be compared without shipping, duty and GST; ask for a delivered quotation.
+4. **No online price was found for any gearbox.** Neugart and WITTENSTEIN list configured products by quotation. The gearbox is likely to be the largest cost item and the one most at risk against the A1 budget (₹20,000 to ₹30,000 cumulative, `MECHANICAL_BOM.csv`); no figure is assumed here.
+5. The motors are frameless kits sold as rotor and stator. Any housing, bearings, coupling and encoder come on top (see §3.4).
+
+### 2.3 Planetary gearboxes (2-stage, 20:1 available; series-level ranges, not part-number ratings)
 
 | Model | Continuous (N·m) | Maximum (N·m) | Emergency stop (N·m) | Backlash (arcmin) | Efficiency | Mass (kg) | Price and availability |
 |---|---|---|---|---|---|---|---|
@@ -122,6 +141,7 @@ The motors are frameless kits. A frameless rotor and stator have no housing or b
 
 | # | Item | Owner | Needed by |
 |---|---|---|---|
+| 0 | Obtain gearbox quotations (no online price exists); compare with the A1 budget | Mechanical Intern | M1 |
 | 1 | Re-check every candidate figure against the vendor pages; record datasheets in `mechanical/bom/` (no vendor documents are committed yet) | Mechanical Intern | M1 |
 | 2 | Obtain quotations and confirm 20:1 configurations and prices | Mechanical Intern | M1 |
 | 3 | Vendor definition of Kt; reconcile with `TORQUE_AND_SPEED.md` §2.1 | Electronics/Embedded Intern | Before E2 |
@@ -134,3 +154,4 @@ The motors are frameless kits. A frameless rotor and stator have no housing or b
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-13 | Kritvaos Actuator Team | Initial shortlist from the ChatGPT session data, with fit calculations |
+| 0.2 | 2026-10-13 | Kritvaos Actuator Team | Online price check added (§2.2): CubeMars store and Robokits India; no gearbox prices available online |

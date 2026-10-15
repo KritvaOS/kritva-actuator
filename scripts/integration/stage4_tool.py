@@ -12,7 +12,7 @@ Subcommands (run from the parent repository root):
 
 <key> is one of: embedded, m.  Standard library only.
 """
-import csv, sys
+import csv, re, sys
 from pathlib import Path
 
 TARGETS = {
@@ -60,6 +60,21 @@ def main(argv):
         moved = {x["path"]: f"{prefix}/{x['destination_path']}" for x in rs
                  if x["action"] == "MOVE" and x["destination_repo"] == TARGETS[key][0]
                  and x["status"] == "MIGRATED"}
+        dirs = set()
+        for m in moved:
+            parts = m.split("/")[:-1]
+            for i in range(1, len(parts) + 1):
+                dirs.add("/".join(parts[:i]) + "/")
+        tok = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_./-]*")
+
+        def fix(match):
+            t = match.group(0)
+            if t in moved:
+                return moved[t]
+            if t.endswith("/") and t in dirs and not Path(t).exists():
+                return f"{prefix}/{t}"
+            return t
+
         n = 0
         if TRACE.is_file():
             with TRACE.open(newline="", encoding="utf-8") as f:
@@ -67,8 +82,9 @@ def main(argv):
                 tf, tr = r.fieldnames, list(r)
             for row in tr:
                 v = row.get("evidence_location", "")
-                if v in moved:
-                    row["evidence_location"] = moved[v]
+                nv = tok.sub(fix, v)
+                if nv != v:
+                    row["evidence_location"] = nv
                     n += 1
             with TRACE.open("w", newline="", encoding="utf-8") as f:
                 w = csv.DictWriter(f, fieldnames=tf, lineterminator="\n")

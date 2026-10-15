@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-MIGRATION |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 |
+| Revision | 0.3 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Reviewer |
@@ -73,6 +73,8 @@ Order: embedded, M, then S and L.
 - **Shared sizing.** `actuator_sizing.py` and `expected_results.json` move inside the parent to `mechanical/common-sizing/`; update `scripts/validation/check_calcs.py` paths in the same commit.
 - **S and L.** Start from a copy of the M skeleton; `sizing/inputs.json` carries the variant inputs. Status is Concept.
 - After each move set the manifest row status to MIGRATED and run `make check`.
+- **Scripted for MOVE rows:** `scripts/integration/stage4_migrate.sh embedded` (or `m`) pushes the files to a branch `stage4/import-from-parent` of the child (open a pull request), then `git rm`s them in the parent, marks the manifest rows MIGRATED and rewrites traceability and BOM references to the submodule path. Merge the child pull request first, then commit the parent. SPLIT and COPY_TEMPLATE rows are done by hand.
+- Expected after the embedded move: `check_docs` warns that `firmware/` and `hardware/` are absent, and `check_bom` / traceability warn that evidence files are not present until Stage 5 adds the submodule. These warnings are temporary.
 
 ### Stage 5: integrate as submodules
 Paths: `mechanical/actuator-s`, `mechanical/actuator-m`, `mechanical/actuator-l`, `embedded/kritva-actuator-embedded`. Use `scripts/integration/check_submodules.py` to verify `.gitmodules`, pinned SHAs and the absence of credentials in URLs.
@@ -126,3 +128,4 @@ Move files in the parent with `git mv`, never delete and recreate.
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft: six-stage migration plan and runbook (ACT-DEC-024) |
 | 0.2 | 2026-10-15 | Kritvaos Actuator Team | Stage 3: four child repositories created; bootstrap and submodule scripts added |
+| 0.3 | 2026-10-15 | Kritvaos Actuator Team | Stage 4 script for MOVE rows (embedded, m) |

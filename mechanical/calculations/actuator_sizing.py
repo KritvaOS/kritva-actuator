@@ -96,6 +96,23 @@ def rpm_to_rad(n):
     return n * 2.0 * math.pi / 60.0
 
 
+# ---------------------------------------------------------------- effective inertia
+def effective_inertia(p=INPUTS):
+    """Rod-plus-point arm inertia plus reflected rotor inertia J_rotor*N^2 (EXT-AUD-003/019).
+
+    Rotor values are illustrative; the selected motor's datasheet value replaces them.
+    Returns {(J_rotor, N): {"J": kg*m^2, "E": J, "rotor_share": fraction}}.
+    """
+    lc = load_cases(p)
+    w = lc["omega"]
+    out = {}
+    for jr in (2e-5, 5e-5, 1e-4):
+        for n in (15, 20, 25):
+            j = lc["J_rod"] + jr * n ** 2
+            out[(jr, n)] = {"J": j, "E": 0.5 * j * w ** 2, "rotor_share": jr * n ** 2 / j}
+    return out
+
+
 # ---------------------------------------------------------------- load cases
 def load_cases(p=INPUTS):
     Tg_arm = p["m_arm_kg"] * G * p["r_arm_m"]
