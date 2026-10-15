@@ -22,7 +22,7 @@ This document defines the **elbow load cases** that size the motor, gearbox, out
 All numbers are reproduced by:
 
 ```
-python3 mechanical/calculations/actuator_sizing.py --section load
+python3 mechanical/common-sizing/actuator_sizing.py --section load
 ```
 
 The script's `INPUTS` block holds the values. After changing any input, re-run the script and update this document in the same pull request.

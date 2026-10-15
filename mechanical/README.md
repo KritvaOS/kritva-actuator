@@ -1,39 +1,17 @@
 # mechanical/
 
-Mechanical implementation of the Kritva Actuator: CAD, drawings, calculations, BOM and assembly records. Owner: **Mechanical Intern**. Reviewer for safety-critical items: **Independent Mechanical Reviewer**.
+Mechanical work of the Kritva Actuator family, after the restructure to a parent plus four submodules (ACT-DEC-024, see [docs/architecture/REPOSITORY_ARCHITECTURE.md](../docs/architecture/REPOSITORY_ARCHITECTURE.md) and [planning/v2/MIGRATION_PLAN.md](../planning/v2/MIGRATION_PLAN.md)).
 
-The design intent and rationale are in [docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md](../docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md). Requirements are in [requirements/MECHANICAL_REQUIREMENTS.md](../requirements/MECHANICAL_REQUIREMENTS.md).
-
-| Folder | Contents | Rules |
+| Path | Owner | Content |
 |---|---|---|
-| `cad/assembly/` | Top-level actuator assembly; test-fixture assembly | Native CAD plus a STEP export per release (Git LFS) |
-| `cad/housing/` | Joint housing, motor/gearbox plate, covers | |
-| `cad/shafts/` | Output shaft, coupling interfaces | |
-| `cad/brackets/` | Mounting brackets, fixture parts | |
-| `cad/encoder_mount/` | Magnet holder, encoder PCB bracket | |
-| `drawings/` | Released fabrication drawings (PDF) with revision letters | Drawn per [FABRICATION_GUIDELINES.md](../docs/mechanical/FABRICATION_GUIDELINES.md) |
-| `calculations/` | Load cases, torque and speed, shaft strength, bearing selection, gearbox selection, plus `actuator_sizing.py` | Run `make calc`. The documents must match the script output |
-| `bom/MECHANICAL_BOM.csv` | Mechanical bill of materials | Schema in [scripts/bom/README.md](../scripts/bom/README.md); `make check-bom` |
-| `assembly/` | As-built records, photos, inspection sheets, tightening logs | Procedure in [ASSEMBLY_PROCEDURE.md](../docs/mechanical/ASSEMBLY_PROCEDURE.md) |
+| `common-sizing/` | Integration Owner (parent) | Shared sizing engine `actuator_sizing.py` and its approved reference `expected_results.json` (ACT-DEC-026). Run `make calc` or `make check-calcs`. Per-variant run: `python3 mechanical/common-sizing/actuator_sizing.py --inputs mechanical/actuator-m/sizing/inputs.json` |
+| `calculations/` | Integration Owner (parent) | A0 reference baseline calculations (elbow case): load cases, torque and speed, shaft, bearing, gearbox selection, motor/gearbox shortlist. They stay in the parent because requirements, decisions and traceability cite them, and `check_calcs.py` keeps them consistent with the engine |
+| `actuator-s/` | Mechanical Intern 1 | Submodule `KritvaOS/kritva-actuator-s` (added at migration Stage 5) |
+| `actuator-m/` | Mechanical Intern 2 | Submodule `KritvaOS/kritva-actuator-m`: the M variant and A0 reference. Holds `bom/MECHANICAL_BOM.csv` |
+| `actuator-l/` | Mechanical Intern 3 | Submodule `KritvaOS/kritva-actuator-l` (added at migration Stage 5) |
 
-## Part numbering
+CAD, drawings, assembly records, the mechanical BOM and mechanical test evidence live in each variant repository, not here. Design intent and common requirements remain in [docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md](../docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md) and [requirements/MECHANICAL_REQUIREMENTS.md](../requirements/MECHANICAL_REQUIREMENTS.md).
 
-`KA-MEC-NNNN` for actuator parts and `KA-FIX-NNNN` for fixture parts. Revisions use letters (A, B, ...). File names follow `<part-number>_<name>_rev<X>.<ext>`.
+Part numbers for new parts follow [docs/standards/CAD_NAMING_STANDARD.md](../docs/standards/CAD_NAMING_STANDARD.md) (`KA-<VAR>-<SYS>-<NNN>`). The earlier `KA-MEC-NNNN` and `KA-FIX-NNNN` numbers in the A0 baseline documents are legacy and are mapped when the M drawings are made.
 
-| Part number | Part |
-|---|---|
-| KA-MEC-0001 | Joint housing |
-| KA-MEC-0002 | Motor and gearbox mounting plate |
-| KA-MEC-0003 | Output shaft |
-| KA-MEC-0004 | Output flange |
-| KA-MEC-0005 | Hard-stop pin/lug set |
-| KA-MEC-0006 | Encoder mount |
-| KA-FIX-0001 | Test fixture |
-
-## Workflow
-
-1. Calculations (ACT-02-003) come before the CAD freeze. CAD and drawings (ACT-02-004) are reviewed at M2 and Gate A.
-2. Nothing is fabricated before Gate A.
-3. After fabrication, inspection records go in `assembly/`, and test evidence goes in `results/mechanical/`.
-
-> The earlier first-pass files `docs/mechanical/A1-mechanical-design.md` and `tools/` are superseded (see CHANGELOG.md) and should be deleted.
+Nothing is fabricated before Gate A, and loaded tests are done only on a restrained, guarded, instrumented fixture.

@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed (2026-10-15, restructure Stage 4 for M)
+
+- `actuator_sizing.py` accepts `--inputs FILE.json` (per-variant inputs); engine and `expected_results.json` move to `mechanical/common-sizing/` (script `stage4_parent_moves.sh`). `check_calcs.py` finds them in either location and warns if `mechanical/actuator-m/sizing/inputs.json` drifts from the baseline.
+- `scripts/integration/stage4_migrate.sh m` imports the M BOM into `kritva-actuator-m`; `stage4_parent_moves.sh` removes the parent's mechanical placeholders and settles the manifest. `check_bom.py` lists the S, M, L and embedded BOMs when checked out as submodules; `check_manifest.py` accepts parent destination paths.
+- `mechanical/README.md` rewritten for the submodule layout.
+
 ### Added (2026-10-15, restructure Stages 1-3; ACT-DEC-024 to 026 PROPOSED)
 
 - Four-submodule plan (three mechanical variants S, M, L plus embedded): `docs/architecture/REPOSITORY_ARCHITECTURE.md`, `ACTUATOR_FAMILY_SPEC.md`, `docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md`.

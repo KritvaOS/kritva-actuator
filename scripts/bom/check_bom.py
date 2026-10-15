@@ -5,8 +5,10 @@ Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
 
 Files checked (by default)
 --------------------------
-* ``mechanical/bom/MECHANICAL_BOM.csv``  (owner: Mechanical Intern)
-* ``hardware/bom/ELECTRICAL_BOM.csv``    (owner: Electronics/Embedded Intern)
+* the BOMs of the child repositories when checked out as submodules
+  (``mechanical/actuator-{m,s,l}/bom/MECHANICAL_BOM.csv``,
+  ``embedded/kritva-actuator-embedded/hardware/bom/ELECTRICAL_BOM.csv``); before
+  migration the M BOM is read from ``mechanical/bom/MECHANICAL_BOM.csv``
 
 A missing file is a WARNING (the BOMs are created during ACT-01-002 /
 ACT-02-002), never a crash.
@@ -85,7 +87,10 @@ ITEM_STATUS = ("CANDIDATE", "SELECTED", "ORDERED", "RECEIVED", "REJECTED")
 DEFAULT_FILES = [
     ("mechanical/bom/MECHANICAL_BOM.csv", "MB"),
     ("embedded/kritva-actuator-embedded/hardware/bom/ELECTRICAL_BOM.csv", "EB"),
+    ("mechanical/actuator-s/bom/MECHANICAL_BOM.csv", "MB-S"),
+    ("mechanical/actuator-l/bom/MECHANICAL_BOM.csv", "MB-L"),
 ]
+SUBMODULE_BOM_PREFIXES = ("embedded/kritva-actuator-embedded/", "mechanical/actuator-")
 TOLERANCE = Decimal("0.01")
 NUMBER_RE = re.compile(r"^\d+(?:\.\d+)?$")
 
@@ -128,6 +133,8 @@ def load_bom(path: Path, rel: str, prefix: Optional[str], result: BomResult,
         result.warnings.append(f"WARNING {where}: {msg}")
 
     if not path.is_file():
+        if rel.startswith(SUBMODULE_BOM_PREFIXES):
+            return          # child repository not checked out: its own CI checks its BOM
         warn(rel, "BOM file not present yet; skipped")
         return
     try:

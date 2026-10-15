@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.5 (Draft: proposed, pending approval) |
+| Revision | 0.6 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -450,7 +450,7 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 **Status:** PROPOSED.
 
-**Decision.** One sizing engine (`actuator_sizing.py`) and its regression expected values live in the parent at `mechanical/common-sizing/`. Each variant supplies its own `sizing/inputs.json`. Results are stored in the variant repository with the parent commit used. The standard-library-only constraint is kept, hence JSON inputs.
+**Decision.** One sizing engine (`actuator_sizing.py`) and its regression expected values live in the parent at `mechanical/common-sizing/`. Each variant supplies its own `sizing/inputs.json`. Results are stored in the variant repository with the parent commit used. The A0 reference calculation documents stay in the parent (`mechanical/calculations/`). The standard-library-only constraint is kept, hence JSON inputs.
 
 ---
 
@@ -477,3 +477,4 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 0.3 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023: interim position (stay public until the specification is filled in; conditions recorded) |
 | 0.4 | 2026-10-13 | Kritvaos Actuator Team | ACT-DEC-023 ACCEPTED: repository private |
 | 0.5 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-024 to 026 PROPOSED: four-submodule architecture, actuator family, shared sizing engine |
+| 0.6 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-026: A0 reference calculation documents stay in the parent |

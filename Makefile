@@ -37,9 +37,9 @@ bom-summary:  ## Print BOM cost totals by milestone and category
 	$(PYTHON) scripts/bom/bom_summary.py --root $(ROOT) --markdown
 
 calc:  ## Run the mechanical sizing calculations
-	@if [ -f mechanical/calculations/actuator_sizing.py ]; then \
-		$(PYTHON) mechanical/calculations/actuator_sizing.py; \
-	else echo "mechanical/calculations/actuator_sizing.py not present"; fi
+	@if [ -f mechanical/common-sizing/actuator_sizing.py ]; then \
+		$(PYTHON) mechanical/common-sizing/actuator_sizing.py; \
+	else echo "mechanical/common-sizing/actuator_sizing.py not present"; fi
 
 clean:  ## Remove Python caches and generated reports
 	find . -name "__pycache__" -type d -prune -exec rm -rf {} +

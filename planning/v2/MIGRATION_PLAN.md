@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-MIGRATION |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.3 |
+| Revision | 0.4 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Reviewer |
@@ -69,8 +69,9 @@ Order: embedded, M, then S and L.
 
 - **History.** Preferred: `git filter-repo --path <paths>` on a fresh clone to keep history of moved files. Acceptable: one documented import commit that states the source SHA.
 - **Embedded.** `firmware/`, `hardware/`, `docs/electronics`, `docs/firmware`, `tests/firmware|unit|hardware`, `results/motor_control`, `communication/can/firmware`.
-- **M.** `mechanical/bom/MECHANICAL_BOM.csv`, M results split from `mechanical/calculations`, copy of the folder skeleton.
-- **Shared sizing.** `actuator_sizing.py` and `expected_results.json` move inside the parent to `mechanical/common-sizing/`; update `scripts/validation/check_calcs.py` paths in the same commit.
+- **M (scripted in two parts).** (1) `scripts/integration/stage4_migrate.sh m` imports `mechanical/bom/MECHANICAL_BOM.csv` to `bom/` of `kritva-actuator-m` (pull request, merge it). (2) `scripts/integration/stage4_parent_moves.sh` moves the sizing engine and its reference inside the parent to `mechanical/common-sizing/`, removes the parent's CAD, drawings, assembly and mechanical-test placeholders (the child scaffolds carry that skeleton) and settles the manifest. Run (1), merge, commit the parent, then run (2) and commit.
+- **Decision on the calculation documents.** `mechanical/calculations/*.md` and `MOTOR_GEARBOX_SHORTLIST.md` stay in the parent as the A0 reference baseline (elbow case). Requirements, decisions and traceability cite them and `check_calcs.py` keeps them consistent with the engine. Variant-specific results are written in each child repository (`sizing/results/`) when its sizing is done. The same applies to `docs/mechanical/*` and the mechanical design specification: they stay as common documents until variant versions exist.
+- **Shared sizing.** The engine accepts per-variant inputs: `--inputs mechanical/actuator-m/sizing/inputs.json`.
 - **S and L.** Start from a copy of the M skeleton; `sizing/inputs.json` carries the variant inputs. Status is Concept.
 - After each move set the manifest row status to MIGRATED and run `make check`.
 - **Scripted for MOVE rows:** `scripts/integration/stage4_migrate.sh embedded` (or `m`) pushes the files to a branch `stage4/import-from-parent` of the child (open a pull request), then `git rm`s them in the parent, marks the manifest rows MIGRATED and rewrites traceability and BOM references to the submodule path. Merge the child pull request first, then commit the parent. SPLIT and COPY_TEMPLATE rows are done by hand.
@@ -129,3 +130,4 @@ Move files in the parent with `git mv`, never delete and recreate.
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft: six-stage migration plan and runbook (ACT-DEC-024) |
 | 0.2 | 2026-10-15 | Kritvaos Actuator Team | Stage 3: four child repositories created; bootstrap and submodule scripts added |
 | 0.3 | 2026-10-15 | Kritvaos Actuator Team | Stage 4 script for MOVE rows (embedded, m) |
+| 0.4 | 2026-10-15 | Kritvaos Actuator Team | Stage 4 for M: two-part script, calculation documents stay in the parent, engine takes variant inputs |

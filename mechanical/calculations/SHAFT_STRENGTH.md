@@ -25,7 +25,7 @@ This document checks the independent output shaft for:
 
 for every load case in `LOAD_CASES.md`. It identifies the governing case and states the minimum material and diameter. It supports MECH-REQ-002, SYS-REQ-030 and Gate A item 3.
 
-Numbers are reproduced by `python3 mechanical/calculations/actuator_sizing.py --section shaft`.
+Numbers are reproduced by `python3 mechanical/common-sizing/actuator_sizing.py --section shaft`.
 
 ## 2. Shaft model
 

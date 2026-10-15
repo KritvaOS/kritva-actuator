@@ -7,10 +7,10 @@ Addresses external-audit finding EXT-AUD-011 (calculation CI was a smoke run onl
 
 What it does
 ------------
-1. Imports ``mechanical/calculations/actuator_sizing.py`` and evaluates it with its
+1. Imports ``mechanical/common-sizing/actuator_sizing.py`` and evaluates it with its
    committed ``INPUTS``.
 2. **Regression check:** compares key results against the approved reference values
-   in ``mechanical/calculations/expected_results.json`` (relative tolerance per entry).
+   in ``mechanical/common-sizing/expected_results.json`` (relative tolerance per entry).
    A change to INPUTS or formulas that moves a result fails until the reference file
    (and the documents) are deliberately updated in the same pull request.
 3. **Document consistency check:** for each key result, verifies that the formatted
@@ -81,7 +81,9 @@ def main(argv=None) -> int:
                     help="overwrite expected_results.json values with the current results "
                          "(only after a reviewed change; keeps doc patterns)")
     a = ap.parse_args(argv)
-    calc_dir = a.root / "mechanical" / "calculations"
+    calc_dir = a.root / "mechanical" / "common-sizing"
+    if not (calc_dir / "actuator_sizing.py").is_file():          # before migration Stage 4 (M)
+        calc_dir = a.root / "mechanical" / "calculations"
     script = calc_dir / "actuator_sizing.py"
     ref_path = calc_dir / "expected_results.json"
     if not script.is_file() or not ref_path.is_file():
@@ -117,6 +119,15 @@ def main(argv=None) -> int:
             if not any(v in text for v in variants):
                 print(f"ERROR   {key}: '{needle}' not found in {doc} (document out of date?)")
                 errors += 1
+    mod = load_module(script)
+    for var in ("m",):
+        vin = a.root / "mechanical" / f"actuator-{var}" / "sizing" / "inputs.json"
+        if var == "m" and vin.is_file():
+            diff = [k for k, v in json.loads(vin.read_text(encoding="utf-8")).items()
+                    if k in mod.INPUTS and mod.INPUTS[k] != v]
+            if diff:
+                print(f"WARNING actuator-m sizing/inputs.json differs from the engine baseline (INPUTS): "
+                      f"{', '.join(diff)}. The A0 baseline documents use INPUTS; reconcile in a reviewed change.")
     print(f"check_calcs: {len(ref['results'])} key result(s) checked; {errors} error(s).")
     return 1 if errors else 0
 

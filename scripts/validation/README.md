@@ -6,7 +6,7 @@ Repository consistency checks. They use the Python 3.8+ standard library only an
 |---|---|---|
 | `check_docs.py` | `make check-docs` | Every controlled KA- Markdown document (first table contains `Document ID`) has the mandatory header fields, a valid `KA-<AREA>-<NAME>` ID that is unique in the repository, an ISO date, a revision number and a `Revision history` table. It warns about a missing status note, a non-proprietary classification, emoji, or other Markdown files without a header (folder `README.md` files are skipped). |
 | `check_links.py` | `make check-links` | Relative Markdown links resolve to existing files and anchors. With `--code-paths`, it also warns about repository paths in inline code that do not exist yet. |
-| `check_calcs.py` | `make check-calcs` | Runs `mechanical/calculations/actuator_sizing.py`. Compares key results with the approved references in `mechanical/calculations/expected_results.json` (regression), and checks that each value appears in the calculation document that reports it (consistency). It does not validate assumptions. |
+| `check_calcs.py` | `make check-calcs` | Runs `mechanical/common-sizing/actuator_sizing.py`. Compares key results with the approved references in `mechanical/calculations/expected_results.json` (regression), and checks that each value appears in the calculation document that reports it (consistency). It does not validate assumptions. |
 | `check_traceability.py` | `make check-trace` | `audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv` has the schema below, valid IDs, valid status values, parents that exist, and a row for every requirement ID defined in `requirements/*.md`. `--summary` prints counts by status. |
 
 All scripts:

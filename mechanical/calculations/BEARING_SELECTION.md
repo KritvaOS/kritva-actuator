@@ -19,7 +19,7 @@
 
 This document sizes the **dedicated output bearing pair** that carries the forearm's radial, axial and moment loads independently of the gearbox and motor bearings (SYS-REQ-031/032, MECH-REQ-003). It covers static capacity, life, arrangement, fits and preload.
 
-Numbers are reproduced by `python3 mechanical/calculations/actuator_sizing.py --section bearing`.
+Numbers are reproduced by `python3 mechanical/common-sizing/actuator_sizing.py --section bearing`.
 
 ## 2. Arrangement and assumptions
 

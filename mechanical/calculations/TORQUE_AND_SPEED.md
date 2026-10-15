@@ -22,7 +22,7 @@ This document translates the output requirements into **motor-side torque, speed
 The numbers are reproduced by:
 
 ```
-python3 mechanical/calculations/actuator_sizing.py --section torque
+python3 mechanical/common-sizing/actuator_sizing.py --section torque
 ```
 
 ## 2. Relationships

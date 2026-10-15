@@ -61,6 +61,7 @@ def main(argv=None):
         rows = list(r)
     present = tree(root)
     seen = set()
+    dests = {r["destination_path"] for r in rows if r["destination_repo"] == "parent"}
     for i, row in enumerate(rows, start=2):
         p = row["path"]
         where = f"{a.manifest}:{i} ({p})"
@@ -78,7 +79,7 @@ def main(argv=None):
             errors.append(f"{where}: PLANNED row but file is already gone (update the status first)")
         elif row["status"] == "MIGRATED" and exists:
             errors.append(f"{where}: MIGRATED row but file still exists at the old path")
-    for p in sorted(present - seen):
+    for p in sorted(present - seen - dests):
         if p.startswith(IGNORE_UNLISTED_PREFIXES) or os.path.basename(p) in IGNORE_UNLISTED_NAMES:
             continue
         warnings.append(f"{p}: not listed in the manifest")

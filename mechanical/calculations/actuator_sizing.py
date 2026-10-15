@@ -359,9 +359,15 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("--section", choices=["load", "torque", "shaft", "bearing", "stops", "all"], default="all")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--inputs", metavar="FILE.json",
+                    help="variant inputs (e.g. mechanical/actuator-m/sizing/inputs.json); values override INPUTS")
     a = ap.parse_args()
-    res = {"inputs": INPUTS, "load": load_cases(), "torque": torque_speed(), "motor_classes": motor_class_trade(),
-           "shaft": shaft(), "bearing": bearings(), "stops": stops(), "gearbox": gearbox_requirements()}
+    p = dict(INPUTS)
+    if a.inputs:
+        with open(a.inputs, encoding="utf-8") as fh:
+            p.update(json.load(fh))
+    res = {"inputs": p, "load": load_cases(p), "torque": torque_speed(p), "motor_classes": motor_class_trade(p),
+           "shaft": shaft(p), "bearing": bearings(p), "stops": stops(p), "gearbox": gearbox_requirements(p)}
     if a.json:
         print(json.dumps(res, indent=2, default=str))
         return
