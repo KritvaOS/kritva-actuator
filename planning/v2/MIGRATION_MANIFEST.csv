@@ -1,65 +1,65 @@
 path,owner,action,destination_repo,destination_path,status,note
-.gitattributes,Integration Owner,KEEP,parent,.gitattributes,PLANNED,Parent-owned
-.github/CODEOWNERS,Integration Owner,KEEP,parent,.github/CODEOWNERS,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/audit_finding.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/audit_finding.md,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/bug_report.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/bug_report.md,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/config.yml,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/config.yml,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/design_change_request.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/design_change_request.md,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/task.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/task.md,PLANNED,Parent-owned
-.github/ISSUE_TEMPLATE/test_failure.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/test_failure.md,PLANNED,Parent-owned
-.github/PULL_REQUEST_TEMPLATE.md,Integration Owner,KEEP,parent,.github/PULL_REQUEST_TEMPLATE.md,PLANNED,Parent-owned
-.github/workflows/docs-checks.yml,Integration Owner,KEEP,parent,.github/workflows/docs-checks.yml,PLANNED,Parent-owned
-.github/workflows/firmware-build.yml,Integration Owner,KEEP,parent,.github/workflows/firmware-build.yml,PLANNED,Parent-owned
-.gitignore,Integration Owner,KEEP,parent,.gitignore,PLANNED,Parent-owned
-CHANGELOG.md,Integration Owner,KEEP,parent,CHANGELOG.md,PLANNED,Parent-owned
-CODE_OF_CONDUCT.md,Integration Owner,KEEP,parent,CODE_OF_CONDUCT.md,PLANNED,Parent-owned
-CONTRIBUTING.md,Integration Owner,KEEP,parent,CONTRIBUTING.md,PLANNED,Parent-owned
-LICENSE,Integration Owner,KEEP,parent,LICENSE,PLANNED,Parent-owned
-Makefile,Integration Owner,KEEP,parent,Makefile,PLANNED,Parent-owned
-README.md,Integration Owner,KEEP,parent,README.md,PLANNED,Parent-owned
-audit/README.md,Integration Owner,KEEP,parent,audit/README.md,PLANNED,Parent-owned
-audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
-audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
-audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,Integration Owner,KEEP,parent,audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,PLANNED,Parent-owned
-audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent; evidence links point to child
-audit/firmware/FIRMWARE_REVIEW.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_REVIEW.md,PLANNED,Audit record stays in parent; evidence links point to child
-audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,PLANNED,Audit record stays in parent
-audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,PLANNED,Audit record stays in parent
-audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,PLANNED,Audit record stays in parent
-audit/mechanical/MECHANICAL_RISK_REGISTER.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RISK_REGISTER.md,PLANNED,Audit record stays in parent
-audit/release/RELEASE_AUDIT.md,Integration Owner,KEEP,parent,audit/release/RELEASE_AUDIT.md,PLANNED,Parent-owned
-audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,Integration Owner,KEEP,parent,audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,PLANNED,Parent-owned
+.gitattributes,Integration Owner,KEEP,parent,.gitattributes,N/A,Parent-owned
+.github/CODEOWNERS,Integration Owner,KEEP,parent,.github/CODEOWNERS,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/audit_finding.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/audit_finding.md,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/bug_report.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/bug_report.md,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/config.yml,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/config.yml,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/design_change_request.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/design_change_request.md,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/task.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/task.md,N/A,Parent-owned
+.github/ISSUE_TEMPLATE/test_failure.md,Integration Owner,KEEP,parent,.github/ISSUE_TEMPLATE/test_failure.md,N/A,Parent-owned
+.github/PULL_REQUEST_TEMPLATE.md,Integration Owner,KEEP,parent,.github/PULL_REQUEST_TEMPLATE.md,N/A,Parent-owned
+.github/workflows/docs-checks.yml,Integration Owner,KEEP,parent,.github/workflows/docs-checks.yml,N/A,Parent-owned
+.github/workflows/firmware-build.yml,Integration Owner,KEEP,parent,.github/workflows/firmware-build.yml,N/A,Parent-owned
+.gitignore,Integration Owner,KEEP,parent,.gitignore,N/A,Parent-owned
+CHANGELOG.md,Integration Owner,KEEP,parent,CHANGELOG.md,N/A,Parent-owned
+CODE_OF_CONDUCT.md,Integration Owner,KEEP,parent,CODE_OF_CONDUCT.md,N/A,Parent-owned
+CONTRIBUTING.md,Integration Owner,KEEP,parent,CONTRIBUTING.md,N/A,Parent-owned
+LICENSE,Integration Owner,KEEP,parent,LICENSE,N/A,Parent-owned
+Makefile,Integration Owner,KEEP,parent,Makefile,N/A,Parent-owned
+README.md,Integration Owner,KEEP,parent,README.md,N/A,Parent-owned
+audit/README.md,Integration Owner,KEEP,parent,audit/README.md,N/A,Parent-owned
+audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_ACCEPTANCE_AUDIT.md,N/A,Audit record stays in parent; evidence links point to child
+audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/electronics/ELECTRONICS_DESIGN_AUDIT.md,N/A,Audit record stays in parent; evidence links point to child
+audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,Integration Owner,KEEP,parent,audit/external/EXTERNAL_REPO_AUDIT_2026-10-12.md,N/A,Parent-owned
+audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md,N/A,Audit record stays in parent; evidence links point to child
+audit/firmware/FIRMWARE_REVIEW.md,Integration Owner,KEEP,parent,audit/firmware/FIRMWARE_REVIEW.md,N/A,Audit record stays in parent; evidence links point to child
+audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_ACCEPTANCE_AUDIT.md,N/A,Audit record stays in parent
+audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_DESIGN_AUDIT.md,N/A,Audit record stays in parent
+audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RELEASE_CHECKLIST.md,N/A,Audit record stays in parent
+audit/mechanical/MECHANICAL_RISK_REGISTER.md,Integration Owner,KEEP,parent,audit/mechanical/MECHANICAL_RISK_REGISTER.md,N/A,Audit record stays in parent
+audit/release/RELEASE_AUDIT.md,Integration Owner,KEEP,parent,audit/release/RELEASE_AUDIT.md,N/A,Parent-owned
+audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,Integration Owner,KEEP,parent,audit/requirements_traceability/REQUIREMENTS_TRACEABILITY.csv,N/A,Parent-owned
 communication/can/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,communication/can/firmware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/communication/can/firmware/.gitkeep
-communication/can/protocol/.gitkeep,Integration Owner,KEEP,parent,communication/can/protocol/.gitkeep,PLANNED,Parent-owned
-communication/can/tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,communication/can/tools/.gitkeep,PLANNED,Decide per file when populated
-docs/architecture/ACTUATOR_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_ARCHITECTURE.md,PLANNED,Parent-owned
-docs/architecture/ACTUATOR_FAMILY_SPEC.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_FAMILY_SPEC.md,PLANNED,Parent-owned
-docs/architecture/COMPONENTS_SOURCING_AND_COST.md,Integration Owner,KEEP,parent,docs/architecture/COMPONENTS_SOURCING_AND_COST.md,PLANNED,Parent-owned
-docs/architecture/REPOSITORY_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/REPOSITORY_ARCHITECTURE.md,PLANNED,Parent-owned
-docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,Integration Owner,KEEP,parent,docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,PLANNED,Parent-owned
-docs/architecture/SYSTEM_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/SYSTEM_ARCHITECTURE.md,PLANNED,Parent-owned
+communication/can/protocol/.gitkeep,Integration Owner,KEEP,parent,communication/can/protocol/.gitkeep,N/A,Parent-owned
+communication/can/tools/.gitkeep,Integration Owner,KEEP,parent,communication/can/tools/.gitkeep,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+docs/architecture/ACTUATOR_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_ARCHITECTURE.md,N/A,Parent-owned
+docs/architecture/ACTUATOR_FAMILY_SPEC.md,Integration Owner,KEEP,parent,docs/architecture/ACTUATOR_FAMILY_SPEC.md,N/A,Parent-owned
+docs/architecture/COMPONENTS_SOURCING_AND_COST.md,Integration Owner,KEEP,parent,docs/architecture/COMPONENTS_SOURCING_AND_COST.md,N/A,Parent-owned
+docs/architecture/REPOSITORY_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/REPOSITORY_ARCHITECTURE.md,N/A,Parent-owned
+docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,Integration Owner,KEEP,parent,docs/architecture/SOFTWARE_HARDWARE_BOUNDARY.md,N/A,Parent-owned
+docs/architecture/SYSTEM_ARCHITECTURE.md,Integration Owner,KEEP,parent,docs/architecture/SYSTEM_ARCHITECTURE.md,N/A,Parent-owned
 docs/electronics/ELECTRONICS_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/ELECTRONICS_ARCHITECTURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/ELECTRONICS_ARCHITECTURE.md
 docs/electronics/HARDWARE_BRINGUP.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/HARDWARE_BRINGUP.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/HARDWARE_BRINGUP.md
 docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md
 docs/firmware/CALIBRATION_PROCEDURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/CALIBRATION_PROCEDURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/CALIBRATION_PROCEDURE.md
 docs/firmware/FIRMWARE_ARCHITECTURE.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/FIRMWARE_ARCHITECTURE.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/FIRMWARE_ARCHITECTURE.md
 docs/firmware/MOTOR_CONTROL.md,Embedded Intern,MOVE,kritva-actuator-embedded,docs/firmware/MOTOR_CONTROL.md,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/docs/firmware/MOTOR_CONTROL.md
-docs/interfaces/ACTUATOR_INTERFACE.md,Integration Owner,KEEP,parent,docs/interfaces/ACTUATOR_INTERFACE.md,PLANNED,Parent-owned
-docs/interfaces/CAN_PROTOCOL.md,Integration Owner,KEEP,parent,docs/interfaces/CAN_PROTOCOL.md,PLANNED,Parent-owned
-docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,Integration Owner,KEEP,parent,docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,PLANNED,Parent-owned
-docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,Integration Owner,KEEP,parent,docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,PLANNED,Parent-owned
-docs/mechanical/ASSEMBLY_PROCEDURE.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/ASSEMBLY_PROCEDURE.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
-docs/mechanical/FABRICATION_GUIDELINES.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/FABRICATION_GUIDELINES.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
-docs/mechanical/MATERIAL_SELECTION.md,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,docs/MATERIAL_SELECTION.md,PLANNED,Generic procedure kept in parent standards; variant specifics in each child
-docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md,Mechanical Interns,SPLIT,actuator-s|m|l,docs/design/MECHANICAL_DESIGN_SPECIFICATION.md,PLANNED,Parent keeps common method; each variant gets a variant spec
-docs/standards/BOM_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/BOM_STANDARD.md,PLANNED,Parent-owned
-docs/standards/CAD_NAMING_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/CAD_NAMING_STANDARD.md,PLANNED,Parent-owned
-docs/standards/DESIGN_REVIEW_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/DESIGN_REVIEW_CHECKLIST.md,PLANNED,Parent-owned
-docs/standards/RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/RELEASE_CHECKLIST.md,PLANNED,Parent-owned
-docs/standards/SUBMODULE_WORKFLOW.md,Integration Owner,KEEP,parent,docs/standards/SUBMODULE_WORKFLOW.md,PLANNED,Parent-owned
-docs/validation/PERFORMANCE_CHARACTERIZATION.md,Integration Owner,KEEP,parent,docs/validation/PERFORMANCE_CHARACTERIZATION.md,PLANNED,Parent-owned
-docs/validation/TEST_EQUIPMENT.md,Integration Owner,KEEP,parent,docs/validation/TEST_EQUIPMENT.md,PLANNED,Parent-owned
-docs/validation/VALIDATION_PLAN.md,Integration Owner,KEEP,parent,docs/validation/VALIDATION_PLAN.md,PLANNED,Parent-owned
+docs/interfaces/ACTUATOR_INTERFACE.md,Integration Owner,KEEP,parent,docs/interfaces/ACTUATOR_INTERFACE.md,N/A,Parent-owned
+docs/interfaces/CAN_PROTOCOL.md,Integration Owner,KEEP,parent,docs/interfaces/CAN_PROTOCOL.md,N/A,Parent-owned
+docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,Integration Owner,KEEP,parent,docs/interfaces/INTERFACE_CONTROL_DOCUMENT.md,N/A,Parent-owned
+docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,Integration Owner,KEEP,parent,docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md,N/A,Parent-owned
+docs/mechanical/ASSEMBLY_PROCEDURE.md,Mechanical Interns,KEEP,parent,docs/mechanical/ASSEMBLY_PROCEDURE.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+docs/mechanical/FABRICATION_GUIDELINES.md,Mechanical Interns,KEEP,parent,docs/mechanical/FABRICATION_GUIDELINES.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+docs/mechanical/MATERIAL_SELECTION.md,Mechanical Interns,KEEP,parent,docs/mechanical/MATERIAL_SELECTION.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md,Mechanical Interns,KEEP,parent,docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+docs/standards/BOM_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/BOM_STANDARD.md,N/A,Parent-owned
+docs/standards/CAD_NAMING_STANDARD.md,Integration Owner,KEEP,parent,docs/standards/CAD_NAMING_STANDARD.md,N/A,Parent-owned
+docs/standards/DESIGN_REVIEW_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/DESIGN_REVIEW_CHECKLIST.md,N/A,Parent-owned
+docs/standards/RELEASE_CHECKLIST.md,Integration Owner,KEEP,parent,docs/standards/RELEASE_CHECKLIST.md,N/A,Parent-owned
+docs/standards/SUBMODULE_WORKFLOW.md,Integration Owner,KEEP,parent,docs/standards/SUBMODULE_WORKFLOW.md,N/A,Parent-owned
+docs/validation/PERFORMANCE_CHARACTERIZATION.md,Integration Owner,KEEP,parent,docs/validation/PERFORMANCE_CHARACTERIZATION.md,N/A,Parent-owned
+docs/validation/TEST_EQUIPMENT.md,Integration Owner,KEEP,parent,docs/validation/TEST_EQUIPMENT.md,N/A,Parent-owned
+docs/validation/VALIDATION_PLAN.md,Integration Owner,KEEP,parent,docs/validation/VALIDATION_PLAN.md,N/A,Parent-owned
 firmware/README.md,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/README.md,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/README.md
 firmware/communication/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/communication/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/communication/.gitkeep
 firmware/diagnostics/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,firmware/diagnostics/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/firmware/diagnostics/.gitkeep
@@ -77,88 +77,90 @@ hardware/motor_controller/custom_pcb/schematics/.gitkeep,Embedded Intern,MOVE,kr
 hardware/motor_controller/development_board/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/motor_controller/development_board/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/motor_controller/development_board/.gitkeep
 hardware/power_stage/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/power_stage/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/power_stage/.gitkeep
 hardware/sensing/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,hardware/sensing/.gitkeep,MIGRATED,Electronics/firmware workstream; now in embedded/kritva-actuator-embedded/hardware/sensing/.gitkeep
-mechanical/README.md,Integration Owner,KEEP,parent,mechanical/README.md,PLANNED,Rewritten at Stage 4 as pointer to submodules
-mechanical/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/README.md,Integration Owner,KEEP,parent,mechanical/README.md,N/A,Rewritten at Stage 4 as pointer to submodules
+mechanical/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,assembly/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
 mechanical/bom/MECHANICAL_BOM.csv,Mechanical Intern 2,MOVE,kritva-actuator-m,bom/MECHANICAL_BOM.csv,MIGRATED,M baseline BOM; S/L start from a copy of the schema; now in mechanical/actuator-m/bom/MECHANICAL_BOM.csv
-mechanical/cad/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/assembly/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/cad/brackets/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/brackets/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/cad/encoder_mount/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/encoder_mount/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/cad/housing/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/housing/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/cad/shafts/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/shafts/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-mechanical/calculations/BEARING_SELECTION.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
-mechanical/calculations/GEARBOX_SELECTION.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
-mechanical/calculations/LOAD_CASES.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
-mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/,PLANNED,Method stays; M-specific results move to actuator-m
-mechanical/calculations/SHAFT_STRENGTH.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
-mechanical/calculations/TORQUE_AND_SPEED.md,Mechanical Interns,SPLIT,parent|actuator-m,mechanical/common-sizing/ ; sizing/results/,PLANNED,Methodology stays; elbow (M) results move to actuator-m
-mechanical/calculations/actuator_sizing.py,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/actuator_sizing.py,PLANNED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
-mechanical/calculations/expected_results.json,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/expected_results.json,PLANNED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
-mechanical/drawings/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,drawings/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-planning/v1/DECISIONS.md,Integration Owner,KEEP,parent,planning/v1/DECISIONS.md,PLANNED,Parent-owned
-planning/v1/M0_DECISION_SHEET.md,Integration Owner,KEEP,parent,planning/v1/M0_DECISION_SHEET.md,PLANNED,Parent-owned
-planning/v1/MILESTONE.md,Integration Owner,KEEP,parent,planning/v1/MILESTONE.md,PLANNED,Parent-owned
-planning/v1/RISKS_AND_DEPENDENCIES.md,Integration Owner,KEEP,parent,planning/v1/RISKS_AND_DEPENDENCIES.md,PLANNED,Parent-owned
-planning/v1/ROADMAP.md,Integration Owner,KEEP,parent,planning/v1/ROADMAP.md,PLANNED,Parent-owned
-planning/v1/TASKS.md,Integration Owner,KEEP,parent,planning/v1/TASKS.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-01/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/README.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-02/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/README.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,PLANNED,Parent-owned
-planning/v1/tasks/ACT-03/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/README.md,PLANNED,Parent-owned
-planning/v2/MIGRATION_MANIFEST.csv,Integration Owner,KEEP,parent,planning/v2/MIGRATION_MANIFEST.csv,PLANNED,Restructure artefact
-planning/v2/MIGRATION_PLAN.md,Integration Owner,KEEP,parent,planning/v2/MIGRATION_PLAN.md,PLANNED,Restructure artefact
-planning/v2/README.md,Integration Owner,KEEP,parent,planning/v2/README.md,PLANNED,Restructure artefact
-planning/v2/ROADMAP_24_WEEKS.md,Integration Owner,KEEP,parent,planning/v2/ROADMAP_24_WEEKS.md,PLANNED,Restructure artefact
-planning/v2/TASK_ID_MAPPING.csv,Integration Owner,KEEP,parent,planning/v2/TASK_ID_MAPPING.csv,PLANNED,Restructure artefact
-planning/v2/WORKSTREAMS.md,Integration Owner,KEEP,parent,planning/v2/WORKSTREAMS.md,PLANNED,Restructure artefact
-requirements/ACTUATOR_SPECIFICATION.md,Integration Owner,KEEP,parent,requirements/ACTUATOR_SPECIFICATION.md,PLANNED,Parent-owned
-requirements/ELECTRICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/ELECTRICAL_REQUIREMENTS.md,PLANNED,Parent-owned
-requirements/FIRMWARE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/FIRMWARE_REQUIREMENTS.md,PLANNED,Parent-owned
-requirements/INTERFACE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/INTERFACE_REQUIREMENTS.md,PLANNED,Parent-owned
-requirements/MECHANICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/MECHANICAL_REQUIREMENTS.md,PLANNED,Parent-owned
-requirements/SAFETY_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SAFETY_REQUIREMENTS.md,PLANNED,Parent-owned
-requirements/SYSTEM_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SYSTEM_REQUIREMENTS.md,PLANNED,Parent-owned
-results/integration/.gitkeep,Integration Owner,KEEP,parent,results/integration/.gitkeep,PLANNED,Parent-owned
-results/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,results/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
+mechanical/cad/assembly/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/assembly/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+mechanical/cad/brackets/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/brackets/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+mechanical/cad/encoder_mount/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/encoder_mount/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+mechanical/cad/housing/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/housing/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+mechanical/cad/shafts/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,cad/shafts/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+mechanical/calculations/BEARING_SELECTION.md,Mechanical Interns,KEEP,parent,mechanical/calculations/BEARING_SELECTION.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/GEARBOX_SELECTION.md,Mechanical Interns,KEEP,parent,mechanical/calculations/GEARBOX_SELECTION.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/LOAD_CASES.md,Mechanical Interns,KEEP,parent,mechanical/calculations/LOAD_CASES.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md,Mechanical Interns,KEEP,parent,mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/SHAFT_STRENGTH.md,Mechanical Interns,KEEP,parent,mechanical/calculations/SHAFT_STRENGTH.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/TORQUE_AND_SPEED.md,Mechanical Interns,KEEP,parent,mechanical/calculations/TORQUE_AND_SPEED.md,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+mechanical/calculations/actuator_sizing.py,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/actuator_sizing.py,MIGRATED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
+mechanical/calculations/expected_results.json,Integration Owner,MOVE_WITHIN_PARENT,parent,mechanical/common-sizing/expected_results.json,MIGRATED,Shared sizing engine (ACT-DEC-026); check_calcs.py path updated at move
+mechanical/drawings/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,drawings/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+planning/v1/DECISIONS.md,Integration Owner,KEEP,parent,planning/v1/DECISIONS.md,N/A,Parent-owned
+planning/v1/M0_DECISION_SHEET.md,Integration Owner,KEEP,parent,planning/v1/M0_DECISION_SHEET.md,N/A,Parent-owned
+planning/v1/MILESTONE.md,Integration Owner,KEEP,parent,planning/v1/MILESTONE.md,N/A,Parent-owned
+planning/v1/RISKS_AND_DEPENDENCIES.md,Integration Owner,KEEP,parent,planning/v1/RISKS_AND_DEPENDENCIES.md,N/A,Parent-owned
+planning/v1/ROADMAP.md,Integration Owner,KEEP,parent,planning/v1/ROADMAP.md,N/A,Parent-owned
+planning/v1/TASKS.md,Integration Owner,KEEP,parent,planning/v1/TASKS.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/ACCEPTANCE_CRITERIA.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/DESIGN_NOTES.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/REVIEW.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TASKS.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/ACT-01-001/TEST_PLAN.md,N/A,Parent-owned
+planning/v1/tasks/ACT-01/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-01/README.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/ACCEPTANCE_CRITERIA.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/DESIGN_NOTES.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/REVIEW.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TASKS.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/ACT-02-001/TEST_PLAN.md,N/A,Parent-owned
+planning/v1/tasks/ACT-02/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-02/README.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/ACCEPTANCE_CRITERIA.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/DESIGN_NOTES.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/REVIEW.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TASKS.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/ACT-03-001/TEST_PLAN.md,N/A,Parent-owned
+planning/v1/tasks/ACT-03/README.md,Integration Owner,KEEP,parent,planning/v1/tasks/ACT-03/README.md,N/A,Parent-owned
+planning/v2/MIGRATION_MANIFEST.csv,Integration Owner,KEEP,parent,planning/v2/MIGRATION_MANIFEST.csv,N/A,Restructure artefact
+planning/v2/MIGRATION_PLAN.md,Integration Owner,KEEP,parent,planning/v2/MIGRATION_PLAN.md,N/A,Restructure artefact
+planning/v2/README.md,Integration Owner,KEEP,parent,planning/v2/README.md,N/A,Restructure artefact
+planning/v2/ROADMAP_24_WEEKS.md,Integration Owner,KEEP,parent,planning/v2/ROADMAP_24_WEEKS.md,N/A,Restructure artefact
+planning/v2/TASK_ID_MAPPING.csv,Integration Owner,KEEP,parent,planning/v2/TASK_ID_MAPPING.csv,N/A,Restructure artefact
+planning/v2/WORKSTREAMS.md,Integration Owner,KEEP,parent,planning/v2/WORKSTREAMS.md,N/A,Restructure artefact
+requirements/ACTUATOR_SPECIFICATION.md,Integration Owner,KEEP,parent,requirements/ACTUATOR_SPECIFICATION.md,N/A,Parent-owned
+requirements/ELECTRICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/ELECTRICAL_REQUIREMENTS.md,N/A,Parent-owned
+requirements/FIRMWARE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/FIRMWARE_REQUIREMENTS.md,N/A,Parent-owned
+requirements/INTERFACE_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/INTERFACE_REQUIREMENTS.md,N/A,Parent-owned
+requirements/MECHANICAL_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/MECHANICAL_REQUIREMENTS.md,N/A,Parent-owned
+requirements/SAFETY_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SAFETY_REQUIREMENTS.md,N/A,Parent-owned
+requirements/SYSTEM_REQUIREMENTS.md,Integration Owner,KEEP,parent,requirements/SYSTEM_REQUIREMENTS.md,N/A,Parent-owned
+results/integration/.gitkeep,Integration Owner,KEEP,parent,results/integration/.gitkeep,N/A,Parent-owned
+results/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,results/mechanical/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
 results/motor_control/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,results/motor_control/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/results/motor_control/.gitkeep
-results/thermal/.gitkeep,Integration Owner,SPLIT,parent|embedded,results/thermal/.gitkeep,PLANNED,Decide per file when populated
-scripts/bom/.gitkeep,Integration Owner,KEEP,parent,scripts/bom/.gitkeep,PLANNED,Parent-owned
-scripts/bom/README.md,Integration Owner,KEEP,parent,scripts/bom/README.md,PLANNED,Parent-owned
-scripts/bom/bom_summary.py,Integration Owner,KEEP,parent,scripts/bom/bom_summary.py,PLANNED,Parent-owned
-scripts/bom/check_bom.py,Integration Owner,KEEP,parent,scripts/bom/check_bom.py,PLANNED,Parent-owned
-scripts/integration/add_submodules.sh,Integration Owner,KEEP,parent,scripts/integration/add_submodules.sh,PLANNED,Parent-owned
-scripts/integration/bootstrap_children.sh,Integration Owner,KEEP,parent,scripts/integration/bootstrap_children.sh,PLANNED,Parent-owned
-scripts/integration/check_submodules.py,Integration Owner,KEEP,parent,scripts/integration/check_submodules.py,PLANNED,Parent-owned
-scripts/integration/stage4_migrate.sh,Integration Owner,KEEP,parent,scripts/integration/stage4_migrate.sh,PLANNED,Parent-owned
-scripts/integration/stage4_tool.py,Integration Owner,KEEP,parent,scripts/integration/stage4_tool.py,PLANNED,Parent-owned
-scripts/validation/.gitkeep,Integration Owner,KEEP,parent,scripts/validation/.gitkeep,PLANNED,Parent-owned
-scripts/validation/README.md,Integration Owner,KEEP,parent,scripts/validation/README.md,PLANNED,Parent-owned
-scripts/validation/check_calcs.py,Integration Owner,KEEP,parent,scripts/validation/check_calcs.py,PLANNED,Parent-owned
-scripts/validation/check_docs.py,Integration Owner,KEEP,parent,scripts/validation/check_docs.py,PLANNED,Parent-owned
-scripts/validation/check_links.py,Integration Owner,KEEP,parent,scripts/validation/check_links.py,PLANNED,Parent-owned
-scripts/validation/check_manifest.py,Integration Owner,KEEP,parent,scripts/validation/check_manifest.py,PLANNED,Parent-owned
-scripts/validation/check_traceability.py,Integration Owner,KEEP,parent,scripts/validation/check_traceability.py,PLANNED,Parent-owned
-software/actuator_interface/.gitkeep,Integration Owner,KEEP,parent,software/actuator_interface/.gitkeep,PLANNED,Parent-owned
-software/host_tools/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/host_tools/.gitkeep,PLANNED,Decide per file when populated
-software/kritva_driver/.gitkeep,Integration Owner,KEEP,parent,software/kritva_driver/.gitkeep,PLANNED,Parent-owned
-software/simulation/.gitkeep,Integration Owner,SPLIT,parent|embedded,software/simulation/.gitkeep,PLANNED,Decide per file when populated
+results/thermal/.gitkeep,Integration Owner,KEEP,parent,results/thermal/.gitkeep,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+scripts/bom/.gitkeep,Integration Owner,KEEP,parent,scripts/bom/.gitkeep,N/A,Parent-owned
+scripts/bom/README.md,Integration Owner,KEEP,parent,scripts/bom/README.md,N/A,Parent-owned
+scripts/bom/bom_summary.py,Integration Owner,KEEP,parent,scripts/bom/bom_summary.py,N/A,Parent-owned
+scripts/bom/check_bom.py,Integration Owner,KEEP,parent,scripts/bom/check_bom.py,N/A,Parent-owned
+scripts/integration/add_submodules.sh,Integration Owner,KEEP,parent,scripts/integration/add_submodules.sh,N/A,Parent-owned
+scripts/integration/bootstrap_children.sh,Integration Owner,KEEP,parent,scripts/integration/bootstrap_children.sh,N/A,Parent-owned
+scripts/integration/check_submodules.py,Integration Owner,KEEP,parent,scripts/integration/check_submodules.py,N/A,Parent-owned
+scripts/integration/stage4_migrate.sh,Integration Owner,KEEP,parent,scripts/integration/stage4_migrate.sh,N/A,Parent-owned
+scripts/integration/stage4_tool.py,Integration Owner,KEEP,parent,scripts/integration/stage4_tool.py,N/A,Parent-owned
+scripts/validation/.gitkeep,Integration Owner,KEEP,parent,scripts/validation/.gitkeep,N/A,Parent-owned
+scripts/validation/README.md,Integration Owner,KEEP,parent,scripts/validation/README.md,N/A,Parent-owned
+scripts/validation/check_calcs.py,Integration Owner,KEEP,parent,scripts/validation/check_calcs.py,N/A,Parent-owned
+scripts/validation/check_docs.py,Integration Owner,KEEP,parent,scripts/validation/check_docs.py,N/A,Parent-owned
+scripts/validation/check_links.py,Integration Owner,KEEP,parent,scripts/validation/check_links.py,N/A,Parent-owned
+scripts/validation/check_manifest.py,Integration Owner,KEEP,parent,scripts/validation/check_manifest.py,N/A,Parent-owned
+scripts/validation/check_traceability.py,Integration Owner,KEEP,parent,scripts/validation/check_traceability.py,N/A,Parent-owned
+software/actuator_interface/.gitkeep,Integration Owner,KEEP,parent,software/actuator_interface/.gitkeep,N/A,Parent-owned
+software/host_tools/.gitkeep,Integration Owner,KEEP,parent,software/host_tools/.gitkeep,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
+software/kritva_driver/.gitkeep,Integration Owner,KEEP,parent,software/kritva_driver/.gitkeep,N/A,Parent-owned
+software/simulation/.gitkeep,Integration Owner,KEEP,parent,software/simulation/.gitkeep,N/A,stays in the parent as the common/reference document; variant-specific versions are created in the child repositories when their designs start
 tests/firmware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/firmware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/firmware/.gitkeep
 tests/hardware/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/hardware/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/hardware/.gitkeep
-tests/integration/.gitkeep,Integration Owner,KEEP,parent,tests/integration/.gitkeep,PLANNED,Parent-owned
-tests/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,tests/mechanical/.gitkeep,PLANNED,Folder skeleton replicated to each variant
-tests/performance/.gitkeep,Integration Owner,KEEP,parent,tests/performance/.gitkeep,PLANNED,Parent-owned
-tests/safety/.gitkeep,Integration Owner,KEEP,parent,tests/safety/.gitkeep,PLANNED,Parent-owned
+tests/integration/.gitkeep,Integration Owner,KEEP,parent,tests/integration/.gitkeep,N/A,Parent-owned
+tests/mechanical/.gitkeep,Mechanical Interns,COPY_TEMPLATE,actuator-s|m|l,tests/mechanical/.gitkeep,MIGRATED,"skeleton exists in the S, M and L repositories (scaffold); parent placeholder removed"
+tests/performance/.gitkeep,Integration Owner,KEEP,parent,tests/performance/.gitkeep,N/A,Parent-owned
+tests/safety/.gitkeep,Integration Owner,KEEP,parent,tests/safety/.gitkeep,N/A,Parent-owned
 tests/unit/.gitkeep,Embedded Intern,MOVE,kritva-actuator-embedded,tests/unit/.gitkeep,MIGRATED,Embedded workstream; now in embedded/kritva-actuator-embedded/tests/unit/.gitkeep
+scripts/integration/stage4_parent_moves.sh,Integration Owner,KEEP,parent,scripts/integration/stage4_parent_moves.sh,N/A,Parent-owned (added at Stage 4 M)
+mechanical/common-sizing/README.md,Integration Owner,KEEP,parent,mechanical/common-sizing/README.md,N/A,Parent-owned (added at Stage 4 M)
