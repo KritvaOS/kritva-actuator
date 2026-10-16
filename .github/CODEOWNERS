@@ -19,9 +19,11 @@
 /planning/                      @dineshannayya
 /mechanical/                    @dineshannayya
 /docs/mechanical/               @dineshannayya
-/hardware/                      @dineshannayya
+/embedded/                      @dineshannayya
 /docs/electronics/              @dineshannayya
-/firmware/                      @dineshannayya
+/.gitmodules                    @dineshannayya
+/scripts/                       @dineshannayya
+/results/                       @dineshannayya
 /docs/firmware/                 @dineshannayya
 /communication/                 @dineshannayya
 /docs/interfaces/               @dineshannayya
@@ -29,3 +31,11 @@
 /audit/                         @dineshannayya
 /.github/                       @dineshannayya
 /LICENSE                        @dineshannayya
+
+# Submodule paths (mechanical/actuator-s|m|l, embedded/kritva-actuator-embedded) are gitlinks: the parent
+# owner reviews every pointer bump. Content inside each child is governed by that child's own
+# .github/CODEOWNERS (external audit 2026-10-16, finding 6).
+/mechanical/actuator-s          @dineshannayya
+/mechanical/actuator-m          @dineshannayya
+/mechanical/actuator-l          @dineshannayya
+/embedded/kritva-actuator-embedded @dineshannayya

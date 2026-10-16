@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-16, external audit KA-AUD-EXT-20261016)
+
+- `audit/external/EXTERNAL_REPO_AUDIT_2026-10-16.md`: audit record and dispositions.
+- `check_calcs.py` evaluates each variant's `sizing/inputs.json`; `check_bom.py --require-items` release mode; parent CODEOWNERS paths updated; status notes and `ACT-INT-007` mapping row.
+
 ### Added (2026-10-15, restructure Stage 5 preparation)
 
 - `scripts/integration/stage5_fix_child_links.sh` and `fix_child_links.py`: point links in moved documents at the parent on GitHub.

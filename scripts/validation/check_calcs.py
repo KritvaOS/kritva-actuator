@@ -41,14 +41,15 @@ def load_module(path: Path):
     return mod
 
 
-def compute(mod) -> dict:
-    load = mod.load_cases()
-    ts = {r["N"]: r for r in mod.torque_speed()["rows"]}
-    sh = {c["case"]: c for c in mod.shaft()["cases"]}
-    br = mod.bearings()
+def compute(mod, p=None) -> dict:
+    p = dict(mod.INPUTS) if p is None else p
+    load = mod.load_cases(p)
+    ts = {r["N"]: r for r in mod.torque_speed(p)["rows"]}
+    sh = {c["case"]: c for c in mod.shaft(p)["cases"]}
+    br = mod.bearings(p)
     checks = {c["bearing"].split(" ")[0]: c for c in br["checks"]}
-    st = mod.stops()
-    eff = mod.effective_inertia()
+    st = mod.stops(p)
+    eff = mod.effective_inertia(p)
     lo, mid, hi = eff[(2e-5, 15)], eff[(5e-5, 20)], eff[(1e-4, 25)]
     return {
         "J_rod": load["J_rod"],
@@ -60,7 +61,7 @@ def compute(mod) -> dict:
         "T_g": load["Tg"],
         "J_point": load["J_point"],
         "E_stop_45": load["E_stop"],
-        "P_out": mod.torque_speed()["P_out"],
+        "P_out": mod.torque_speed(p)["P_out"],
         "Tm_cont_20": ts[20]["Tm_cont"],
         "Tm_peak25_20": ts[20]["Tm_peak25"],
         "Kv_min_20": ts[20]["Kv_min"],
@@ -120,14 +121,37 @@ def main(argv=None) -> int:
                 print(f"ERROR   {key}: '{needle}' not found in {doc} (document out of date?)")
                 errors += 1
     mod = load_module(script)
-    for var in ("m",):
-        vin = a.root / "mechanical" / f"actuator-{var}" / "sizing" / "inputs.json"
-        if var == "m" and vin.is_file():
-            diff = [k for k, v in json.loads(vin.read_text(encoding="utf-8")).items()
-                    if k in mod.INPUTS and mod.INPUTS[k] != v]
-            if diff:
-                print(f"WARNING actuator-m sizing/inputs.json differs from the engine baseline (INPUTS): "
-                      f"{', '.join(diff)}. The A0 baseline documents use INPUTS; reconcile in a reviewed change.")
+    # Per-variant evaluation (external audit 2026-10-16, finding 4): run the shared engine with each
+    # checked-out variant's own sizing/inputs.json. Variant results are compared with the variant's
+    # own sizing/expected_results.json when it exists (same format as the reference file); otherwise
+    # they are only computed (proves the inputs are usable) and reported. Skipped if not checked out.
+    for var in ("s", "m", "l"):
+        vdir = a.root / "mechanical" / f"actuator-{var}" / "sizing"
+        vin = vdir / "inputs.json"
+        if not vin.is_file():
+            continue
+        try:
+            vp = dict(mod.INPUTS)
+            vp.update(json.loads(vin.read_text(encoding="utf-8")))
+            vres = compute(mod, vp)
+        except Exception as exc:  # noqa: BLE001 - any failure means unusable inputs
+            print(f"ERROR   actuator-{var} sizing/inputs.json cannot be evaluated by the engine: {exc!r}")
+            errors += 1
+            continue
+        diff = [k for k, v in json.loads(vin.read_text(encoding="utf-8")).items()
+                if k in mod.INPUTS and mod.INPUTS[k] != v]
+        vref = vdir / "expected_results.json"
+        if vref.is_file():
+            for key, entry in json.loads(vref.read_text(encoding="utf-8")).get("results", {}).items():
+                got, exp, tol = vres.get(key), entry["value"], entry.get("rel_tol", 1e-3)
+                if got is None or abs(got - exp) > tol * max(abs(exp), 1e-12):
+                    print(f"ERROR   actuator-{var} {key}: engine gives {got}, variant reference is {exp}")
+                    errors += 1
+            print(f"check_calcs: actuator-{var} evaluated and compared with its own reference.")
+        else:
+            print(f"WARNING actuator-{var}: inputs evaluate ({len(diff)} field(s) differ from the A0 baseline) "
+                  f"but no sizing/expected_results.json exists - variant is NOT regression-protected; "
+                  f"keep the variant at Concept until inputs are reviewed and a reference is committed.")
     print(f"check_calcs: {len(ref['results'])} key result(s) checked; {errors} error(s).")
     return 1 if errors else 0
 

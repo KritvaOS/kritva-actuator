@@ -282,6 +282,9 @@ def main(argv: Optional[List[str]] = None) -> int:
                         help="repository root (default: two levels above this script)")
     parser.add_argument("files", nargs="*",
                         help="BOM CSV paths relative to the root (default: both project BOMs)")
+    parser.add_argument("--require-items", action="store_true",
+                        help="release mode: every BOM file that exists must contain at least one item row "
+                             "(external audit 2026-10-16, finding 5)")
     parser.add_argument("--strict", action="store_true", help="treat warnings as errors")
     args = parser.parse_args(argv)
 
@@ -295,6 +298,11 @@ def main(argv: Optional[List[str]] = None) -> int:
         print(line)
     for line in result.errors:
         print(line)
+    if args.require_items:
+        if not result.files_read or not result.rows:
+            msg = "ERROR   release mode requires BOM item rows; no BOM item rows were found"
+            print(msg)
+            result.errors.append(msg)
     print(f"check_bom: {len(result.files_read)} BOM file(s) read, {len(result.rows)} item row(s); "
           f"{len(result.errors)} error(s), {len(result.warnings)} warning(s).")
     if result.errors or (args.strict and result.warnings):

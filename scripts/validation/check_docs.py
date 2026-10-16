@@ -6,7 +6,7 @@ Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
 Scope
 -----
 Every ``.md`` file under the controlled document directories (requirements/,
-planning/, docs/, mechanical/, hardware/, firmware/, audit/) is inspected.
+planning/, docs/, mechanical/, embedded/, audit/) is inspected.
 
 A file is treated as a controlled KA- document when the first Markdown table
 in the file contains a ``Document ID`` row. For such documents the script
@@ -53,8 +53,7 @@ DEFAULT_DIRS = [
     "planning",
     "docs",
     "mechanical",
-    "hardware",
-    "firmware",
+    "embedded",          # submodule kritva-actuator-embedded (when checked out)
     "audit",
 ]
 
@@ -325,7 +324,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     for d in args.dirs:
         directory = root / d
         if not directory.is_dir():
-            report.warn(d + "/", "directory not present yet; skipped")
+            if d != "embedded":      # submodule; absent until checked out
+                report.warn(d + "/", "directory not present yet; skipped")
             continue
         for path in iter_markdown(directory):
             count += 1

@@ -11,7 +11,7 @@
 | Applies to | A0, A1 |
 | Classification | Proprietary and confidential |
 
-> **Status note.** Proposed plan (ACT-DEC-024), pending Project Lead approval. Stages 1 to 3 are delivered as additive files; **no existing file has been moved or deleted**. Stage 4 onward is run by the repository owner with the git steps in section 4.
+> **Status note.** Proposed plan (ACT-DEC-024), pending Project Lead approval. Stages 1 to 4 are complete (files moved per the manifest; 0 PLANNED rows) and Stage 5 (submodules) is implemented but **not yet verified** (parent CI and fresh-clone evidence outstanding, external audit 2026-10-16). Stage 6 has not started. Stage 4 onward is run by the repository owner with the git steps in section 4.
 
 ---
 

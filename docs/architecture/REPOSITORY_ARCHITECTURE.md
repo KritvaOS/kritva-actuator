@@ -11,7 +11,7 @@
 | Applies to | A0, A1, A2 |
 | Classification | Proprietary and confidential |
 
-> **Status note.** This document records the proposed restructuring of this repository for the four-intern implementation plan: three Mechanical Interns (Kritva-S, Kritva-M, Kritva-L) and one Embedded Intern. It follows the external reviewer's recommendation of 2026-10-15 (ChatGPT session, branch of the Kritva OS project) and is **proposed, pending Project Lead approval** (ACT-DEC-024). **No files have been moved yet.** The migration is staged and tracked in `planning/v2/MIGRATION_PLAN.md`; every existing file has a recorded destination in `planning/v2/MIGRATION_MANIFEST.csv`.
+> **Status note.** This document records the proposed restructuring of this repository for the four-intern implementation plan: three Mechanical Interns (Kritva-S, Kritva-M, Kritva-L) and one Embedded Intern. It follows the external reviewer's recommendation of 2026-10-15 (ChatGPT session, branch of the Kritva OS project) and is **proposed, pending Project Lead approval** (ACT-DEC-024). **Status (2026-10-16): Stages 1 to 4 are complete and the four submodules are added (Stage 5 implemented, not yet verified by a passing full parent CI on a fresh recursive clone). Stage 6 (audit and release) has not started.** The migration is staged and tracked in `planning/v2/MIGRATION_PLAN.md`; every existing file has a recorded destination in `planning/v2/MIGRATION_MANIFEST.csv`.
 
 ---
 
