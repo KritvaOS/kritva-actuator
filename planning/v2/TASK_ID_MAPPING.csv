@@ -39,3 +39,4 @@ ACT-03-003,KritvaOS driver and host tools,ACT-INT-003,kritva-actuator (parent),P
 ACT-03-004,Simulation model (SimulatedActuator),ACT-INT-004,kritva-actuator (parent),Project Lead / Integration Owner,inherit
 ACT-03-005,System validation and A2 demonstration,ACT-INT-005,kritva-actuator (parent),Project Lead / Integration Owner,inherit
 ACT-03-006,Traceability and audit coordination,ACT-INT-006,kritva-actuator (parent),Project Lead / Integration Owner,inherit
+ACT-02-SIZING,Common sizing engine golden regression and variant-input handoff (shared work),ACT-INT-007,kritva-actuator (parent: mechanical/common-sizing),Project Lead / Integration Owner,new (shared work inherited from ACT-02; not evidence of S/M/L completion)
