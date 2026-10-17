@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-WORKSTREAMS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 |
+| Revision | 0.2 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
@@ -14,6 +14,8 @@
 > **Status note.** Proposed (ACT-DEC-024). Replaces the two-intern split in `planning/v1/TASKS.md` for new work. Legacy IDs remain valid; see `TASK_ID_MAPPING.csv`.
 
 ---
+
+Program crosswalk: the workstreams ACT-S/M/L/EMB/INT are mapped to kritva-program workstreams in `PROGRAM_CROSSWALK.csv` (proposal; central approval pending). Task facts are published in each repository's `status/status.json`.
 
 ## 1. Workstreams
 
@@ -51,3 +53,4 @@
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-16 | Kritvaos Actuator Team | Program crosswalk and status reporting reference (ACT-DEC-027) |
