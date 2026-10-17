@@ -4,13 +4,13 @@
 PYTHON ?= python3
 ROOT   := $(CURDIR)
 
-.PHONY: help check check-docs check-links check-trace check-bom check-calcs check-manifest check-submodules bom-summary calc clean
+.PHONY: help check check-docs check-links check-trace check-bom check-calcs check-manifest check-submodules bom-summary calc clean check-status
 
 help:  ## List available targets
 	@echo "Kritva Actuator make targets:"
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-14s %s\n", $$1, $$2}'
 
-check: check-docs check-links check-trace check-bom check-calcs check-manifest check-submodules  ## Run all documentation, traceability, BOM and calculation checks
+check: check-docs check-links check-trace check-bom check-calcs check-manifest check-submodules check-status  ## Run all documentation, traceability, BOM and calculation checks
 
 check-docs:  ## Check KA- document headers and revision history
 	$(PYTHON) scripts/validation/check_docs.py --root $(ROOT)
@@ -44,3 +44,6 @@ calc:  ## Run the mechanical sizing calculations
 clean:  ## Remove Python caches and generated reports
 	find . -name "__pycache__" -type d -prune -exec rm -rf {} +
 	find . -name "*.pyc" -delete
+
+check-status:  ## Validate status/status.json (kritva-program status schema 2.0) against status/tasks.csv
+	$(PYTHON) scripts/status/gen_status.py --root $(ROOT) --check

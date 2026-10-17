@@ -1,0 +1,6 @@
+repository,local_workstream,proposed_program_workstream,local_milestones,program_phase,reporting_owner,state
+kritva-actuator,ACT_INT,INTEGRATION_SOFTWARE_VALIDATION,A0;A1;A2,NOT_MAPPED,Project Lead,PROPOSED
+kritva-actuator-embedded,ACT_EMB,ACTUATION_CONTROLS;ELECTRICAL_POWER,A0;A1,NOT_MAPPED,Project Lead,PROPOSED
+kritva-actuator-s,ACT_S,MECHANICAL,A1,NOT_MAPPED,Project Lead,PROPOSED (program HOLD)
+kritva-actuator-m,ACT_M,MECHANICAL,A0;A1,NOT_MAPPED,Project Lead,PROPOSED (program HOLD)
+kritva-actuator-l,ACT_L,MECHANICAL,A1,NOT_MAPPED,Project Lead,PROPOSED (program HOLD)

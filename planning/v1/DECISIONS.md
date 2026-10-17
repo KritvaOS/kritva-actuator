@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.7 (Draft: proposed, pending approval) |
+| Revision | 0.8 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -82,6 +82,7 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-024 | Repository architecture: parent plus four submodules | PROPOSED | 2026-10-15 |
 | ACT-DEC-025 | Actuator family S/M/L; M is the A0 reference | PROPOSED | 2026-10-15 |
 | ACT-DEC-026 | Shared sizing engine in the parent | PROPOSED | 2026-10-15 |
+| ACT-DEC-027 | Align with kritva-program V2: status reporting, crosswalk, mechanical HOLD | PROPOSED | 2026-10-16 |
 
 ---
 
@@ -454,6 +455,14 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 ---
 
+### ACT-DEC-027: Alignment with kritva-program V2
+
+**Status:** PROPOSED (external program audit 2026-10-16; Project Lead approval pending).
+
+**Decision.** The actuator repositories adopt the kritva-program V2 reporting method as a target operating model without giving up their stricter local rules: (1) each repository publishes task facts in `status/status.json` (schema 2.0, generated from `status/tasks.csv` by `scripts/status/gen_status.py`); review and acceptance stay in kritva-program `approvals.json`; (2) the actuator workstreams are mapped to program workstreams and local milestones to program phases only through `planning/v2/PROGRAM_CROSSWALK.csv`, never by similar names or numbers; (3) the status files are not registered in kritva-program `sources.json` until the program owner approves the workstream IDs, baseline tasks and evidence rules (ONBOARDING.md); (4) mechanical work is on HOLD at program level, so the 24-week plan is planning-only until the owner reopens it, and the local safety gates (ACT-DEC-014, ACT-DEC-015, Gates A/B/C) are unaffected by program status. Details: `docs/standards/PROGRAM_ALIGNMENT.md`.
+
+---
+
 ## 5. Pending decisions (to be raised)
 
 | Topic | Expected ID | Owner | Needed by |
@@ -468,6 +477,8 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 **ACT-DEC-023 amendment (2026-10-15, Project Lead).** The parent and the four child repositories were made **temporarily public** so that tooling and the external reviewer can read them while the restructure is finished. This is a time-limited exception to the private position; the repositories must return to private before any further proprietary content is added (see `docs/architecture/REPOSITORY_ARCHITECTURE.md` open item 5 for the CI token). Everything currently in them is proprietary and confidential by classification.
 
+**ACT-DEC-023 amendment, exit conditions (2026-10-16, Project Lead).** The temporary public state continues while task, folder, milestone and status-reporting structure is aligned across the program repositories and the external audits are running. Owner: Project Lead (approval authority). Return to private when that alignment is agreed, or earlier if any supplier quote, controller firmware, fabrication drawing or personal data is about to be committed. Before the change: a secrets and history scan of all five repositories, a review of known forks and cached copies, and an IP and licensing check. Review date: 2026-11-16, or at the next audit, whichever is earlier. A later change to private does not recall copies already made.
+
 **ACT-DEC-023 resolved (2026-10-13, Project Lead).** The repository was moved to **private** (EXT-AUD-001). It supersedes the earlier interim position (stay public until the specification is filled in). Follow-up: GitHub visibility is recorded here as the owner's action; the history and tracked-artifact review (EXT-AUD-018, `git rm -r "Claude outputs"`) and a secrets scan remain recommended before any external sharing or a future public subset.
 
 ## 6. Revision history
@@ -481,3 +492,4 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 0.5 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-024 to 026 PROPOSED: four-submodule architecture, actuator family, shared sizing engine |
 | 0.6 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-026: A0 reference calculation documents stay in the parent |
 | 0.7 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-023 amendment: repositories temporarily public |
+| 0.8 | 2026-10-16 | Kritvaos Actuator Team | ACT-DEC-027 PROPOSED (kritva-program V2 alignment); ACT-DEC-023 exit conditions |

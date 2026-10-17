@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added (2026-10-16, kritva-program V2 alignment)
+
+- `scripts/status/gen_status.py`, `status/` (tasks, workstream, vendored schema 2.0): task-fact reporting for the parent; `make check-status`.
+- `planning/v2/PROGRAM_CROSSWALK.csv` and `docs/standards/PROGRAM_ALIGNMENT.md`; ACT-DEC-027 (proposed); ACT-DEC-023 exit conditions; program HOLD notes in the roadmap.
+
 ### Added (2026-10-16, external audit KA-AUD-EXT-20261016)
 
 - `audit/external/EXTERNAL_REPO_AUDIT_2026-10-16.md`: audit record and dispositions.

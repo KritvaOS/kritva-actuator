@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-ROADMAP24 |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.1 |
+| Revision | 0.2 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
@@ -12,6 +12,8 @@
 | Classification | Proprietary and confidential |
 
 > **Status note.** Proposed schedule (ACT-DEC-024/025). The 12-week A0 checkpoint is the existing v1 milestone applied to the M variant. Weeks are planning estimates, not commitments, and depend on motor and gearbox lead times (ACT-DEC-008 and the M0 blockers).
+
+> **Program HOLD (2026-10-16).** kritva-program V2 keeps mechanical work on HOLD until the owner formally reopens it. Until then this schedule is **planning-only**: it does not authorise procurement, fabrication or loaded testing. Local safety gates (ACT-DEC-014/015, Gates A/B/C) apply independently of program status. See ACT-DEC-027.
 
 ---
 
@@ -44,3 +46,4 @@
 | Rev | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft |
+| 0.2 | 2026-10-16 | Kritvaos Actuator Team | Program HOLD note (ACT-DEC-027) |

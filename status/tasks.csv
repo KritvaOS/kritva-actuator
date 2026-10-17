@@ -1,0 +1,8 @@
+task_id,legacy_id,title,execution,readiness,implementation_commit
+ACT-INT-001,ACT-03-001,Define the actuator software interface and KritvaOS integration contract,NOT_STARTED,PLANNABLE,
+ACT-INT-002,ACT-03-002,CAN protocol specification,NOT_STARTED,PLANNABLE,
+ACT-INT-003,ACT-03-003,KritvaOS driver and host tools,NOT_STARTED,PLANNABLE,
+ACT-INT-004,ACT-03-004,Simulation model (SimulatedActuator),NOT_STARTED,PLANNABLE,
+ACT-INT-005,ACT-03-005,System validation and A2 demonstration,NOT_STARTED,HARDWARE-BLOCKED,
+ACT-INT-006,ACT-03-006,Traceability and audit coordination,IN_PROGRESS,PLANNABLE,
+ACT-INT-007,ACT-02-SIZING,Common sizing engine golden regression and variant-input handoff (shared work),NOT_STARTED,PLANNABLE,
