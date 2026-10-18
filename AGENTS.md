@@ -15,7 +15,7 @@ These instructions apply to the `kritva-actuator` parent repository. Child repos
 
     make check
 
-(`make help` lists the individual targets: docs, links, traceability, BOM, calculations, manifest, submodules, status.)
+(`make help` lists the individual targets: docs, links, traceability, BOM, calculations, manifest, submodules, status.) When `README.md` changes, also run `make check-readme` (Kritva README standard, kritva-program D-055); it checks structure, metadata fields and local links only, not accuracy or approval.
 
 ## Secrets and data
 
