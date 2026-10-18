@@ -4,7 +4,7 @@
 PYTHON ?= python3
 ROOT   := $(CURDIR)
 
-.PHONY: help check check-docs check-links check-trace check-bom check-calcs check-manifest check-submodules bom-summary calc clean check-status
+.PHONY: help check check-docs check-links check-readme check-trace check-bom check-calcs check-manifest check-submodules bom-summary calc clean check-status
 
 help:  ## List available targets
 	@echo "Kritva Actuator make targets:"
@@ -17,6 +17,9 @@ check-docs:  ## Check KA- document headers and revision history
 
 check-links:  ## Check relative Markdown links
 	$(PYTHON) scripts/validation/check_links.py --root $(ROOT)
+
+check-readme:  ## Check README.md against the Kritva README standard (structure, metadata, local links)
+	$(PYTHON) scripts/validation/check_readme.py README.md --root $(ROOT)
 
 check-trace:  ## Validate the traceability CSV against requirement IDs
 	$(PYTHON) scripts/validation/check_traceability.py --root $(ROOT) --summary
