@@ -45,6 +45,8 @@ If a required reviewer is unavailable, the PR may be merged only as a draft reco
 
 ### 4.1 Folder responsibilities (CODEOWNERS-style)
 
+Some paths below are owned by child repositories, not by this parent: `hardware/`, `firmware/`, `docs/electronics/`, `docs/firmware/` and the electronics and firmware tests live in `KritvaOS/kritva-actuator-embedded` (submodule `embedded/kritva-actuator-embedded`), and `mechanical/` variant work lives in `kritva-actuator-s`, `-m` and `-l`. Follow each child repository's own `AGENTS.md` and README for contributions there. Paths that do not exist yet in the parent are planned, not owned today.
+
 | Path | Primary owner | Required reviewer for safety items |
 |---|---|---|
 | `requirements/`, `planning/` | Project Lead | — |

@@ -44,7 +44,7 @@ calc:  ## Run the mechanical sizing calculations
 		$(PYTHON) mechanical/common-sizing/actuator_sizing.py; \
 	else echo "mechanical/common-sizing/actuator_sizing.py not present"; fi
 
-clean:  ## Remove Python caches and generated reports
+clean:  ## Remove Python caches (__pycache__ and *.pyc)
 	find . -name "__pycache__" -type d -prune -exec rm -rf {} +
 	find . -name "*.pyc" -delete
 
