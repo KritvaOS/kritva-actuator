@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-ROADMAP24 |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.2 |
+| Revision | 0.4 |
 | Date | 2026-10-15 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
@@ -13,7 +13,11 @@
 
 > **Status note.** Proposed schedule (ACT-DEC-024/025). The 12-week A0 checkpoint is the existing v1 milestone applied to the M variant. Weeks are planning estimates, not commitments, and depend on motor and gearbox lead times (ACT-DEC-008 and the M0 blockers).
 
-> **Program HOLD (2026-10-16).** kritva-program V2 keeps mechanical work on HOLD until the owner formally reopens it. Until then this schedule is **planning-only**: it does not authorise procurement, fabrication or loaded testing. Local safety gates (ACT-DEC-014/015, Gates A/B/C) apply independently of program status. See ACT-DEC-027.
+> **Update 2026-10-18 (ACT-DEC-029).** The mechanical HOLD was lifted and week 1 is Monday 14 Sep 2026 (week 12 = 30 Nov to 6 Dec 2026; week 24 ends 28 Feb 2027). The gates below still apply, and lifting the HOLD does not by itself authorise procurement, fabrication or loaded testing. The note that follows is the earlier state and is kept for history. See `ROADMAP_12_MONTHS.md`.
+
+> **Reforecast (2026-10-18).** The week-12 "A0 checkpoint (M)" below is superseded as a planning target by `ROADMAP_48_WEEKS.md` rev 0.2: A0 exits at P12 (10 Jan 2027) and the M prototype checkpoint is P23, after Gate A and a two-week release gap (ACT-DEC-032, 033). This 24-week text is retained unchanged for traceability.
+
+> **Program HOLD (2026-10-16, superseded).** kritva-program V2 keeps mechanical work on HOLD until the owner formally reopens it. Until then this schedule is **planning-only**: it does not authorise procurement, fabrication or loaded testing. Local safety gates (ACT-DEC-014/015, Gates A/B/C) apply independently of program status. See ACT-DEC-027.
 
 ---
 
@@ -47,3 +51,5 @@
 |---|---|---|---|
 | 0.1 | 2026-10-15 | Kritvaos Actuator Team | Initial draft |
 | 0.2 | 2026-10-16 | Kritvaos Actuator Team | Program HOLD note (ACT-DEC-027) |
+| 0.3 | 2026-10-18 | Kritvaos Actuator Team | HOLD lifted and week 1 dated (ACT-DEC-029) |
+| 0.4 | 2026-10-18 | Kritvaos Actuator Team | Reforecast note (ACT-DEC-032, 033) |

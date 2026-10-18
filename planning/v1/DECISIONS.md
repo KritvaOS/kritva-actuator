@@ -4,7 +4,7 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 0.8 (Draft: proposed, pending approval) |
+| Revision | 1.2 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
@@ -83,6 +83,12 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-025 | Actuator family S/M/L; M is the A0 reference | PROPOSED | 2026-10-15 |
 | ACT-DEC-026 | Shared sizing engine in the parent | PROPOSED | 2026-10-15 |
 | ACT-DEC-027 | Align with kritva-program V2: status reporting, crosswalk, mechanical HOLD | PROPOSED | 2026-10-16 |
+| ACT-DEC-028 | 12-month roadmap (weeks 25-47) as the planning baseline | ACCEPTED (planning only) | 2026-10-18 |
+| ACT-DEC-029 | Mechanical HOLD lifted; week 1 = 14 Sep 2026 | ACCEPTED | 2026-10-18 |
+| ACT-DEC-030 | 48-week reforecast overlay (P1 = 19 Oct 2026, to 19 Sep 2027) | ACCEPTED (planning only) | 2026-10-18 |
+| ACT-DEC-031 | Resourcing: three mechanical interns and one embedded intern from 1 Nov 2026 | ACCEPTED (planning input) | 2026-10-18 |
+| ACT-DEC-032 | A0 exit extended to P12 (10 Jan 2027) | ACCEPTED (planning only) | 2026-10-18 |
+| ACT-DEC-033 | Gate A to M fabrication gap of two weeks; re-sequenced reforecast | ACCEPTED (items 1-3); 58-week horizon PROPOSED | 2026-10-18 |
 
 ---
 
@@ -463,6 +469,72 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 ---
 
+### ACT-DEC-028: 12-month roadmap as the planning baseline
+
+**Status:** ACCEPTED (planning only), 2026-10-18. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** `planning/v2/ROADMAP_12_MONTHS.md` (rev 0.2) is the planning baseline for weeks 25 to 47 (indicative 5 Apr to 12 Sep 2027), extending `ROADMAP_24_WEEKS.md` to the kritva-program V2 horizon. Weeks 1 to 24 are unchanged. Week numbers are actuator-local; dates are indicative.
+
+**Not decided by this entry** (each remains open and needs its own decision):
+- Lifting the mechanical HOLD (kritva-program D-003), or the week-1 start date.
+- The optional A2-SW checkpoint at week 12, and which of the v1 and v2 calendars applies (crosswalk in `ROADMAP_12_MONTHS.md` section 3.2). A2 remains one milestone; its exit criteria in `planning/v1/MILESTONE.md` are unchanged.
+- ACT-DEC-027, which stays PROPOSED.
+- Resourcing of weeks 25 to 47, and registration of the horizon in `planning/v2/PROGRAM_CROSSWALK.csv`.
+
+**Consequences.** The roadmap stays planning-only. It does not authorise procurement, fabrication, CAD release or loaded testing, does not change any gate, task ID or status file, and creates no program credit. Safety gates (ACT-DEC-014, ACT-DEC-015, Gates A/B/C) apply unchanged. Independent review was not required because the change is planning-only and not safety-relevant.
+
+---
+
+### ACT-DEC-029: Mechanical HOLD lifted; week 1 = 14 Sep 2026
+
+**Status:** ACCEPTED, 2026-10-18. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** The mechanical HOLD (kritva-program D-003, not to be confused with `ACT-DEC-003`, the gearbox decision) is lifted, and actuator program week 1 is Mon 14 Sep 2026. This does not authorise CAD release, procurement, fabrication, design freeze or loaded testing by itself: Gate A, the pending decisions in section 5, ACT-DEC-014 and ACT-DEC-015 apply. The lift must also be recorded in kritva-program, which this repository cannot do. ACT-DEC-027 stays PROPOSED.
+
+---
+
+### ACT-DEC-030: 48-week reforecast overlay
+
+**Status:** ACCEPTED (planning only), 2026-10-18. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** `planning/v2/ROADMAP_48_WEEKS.md` (rev 0.1) is the planning reforecast. (1) Horizon: 48 weeks, P1 = Mon 19 Oct 2026, forecast end 19 Sep 2027. (2) Official week 1 stays 14 Sep 2026 (ACT-DEC-029); the P-weeks are a dated overlay, P(n) = official week n + 5. (3) ACT-DEC-028 is amended only in that its reserve end (12 Sep 2027) is extended by one week; its original text stands. (4) A0 exits at P6, the M prototype checkpoint is P12, and A1 completes only through Gates A/B/C. The custom PCB and CAN firmware remain the A1 baseline; a development-board substitute is a reviewed deviation. (5) One PCB respin window (P23-P27), used only with evidence and Project Lead approval. (6) S/L design and A2-SW may run in parallel after M Gate A. (7) P46-P48 is reserve only.
+
+**Not decided by this entry.** How the M prototype checkpoint (P12) and Gate A (P9-P12) are reconciled; the A0 exit date against actual evidence; the torque classes, which stay as in ACT-DEC-025 (PROPOSED), with no broader range becoming a requirement without an approved load case; candidate shoulder and ankle applications; registration in kritva-program.
+
+**Consequences.** Planning only. No gate, task ID, status file or approved value changes. v1 targets (A1 weeks 11-12, A2 week 12) are superseded as planning targets only; their text stays. Independent review was not required because the change is planning-only and not safety-relevant.
+
+---
+
+### ACT-DEC-031: Resourcing from 1 Nov 2026
+
+**Status:** ACCEPTED (planning input), 2026-10-18. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** Three mechanical interns and one embedded intern work on the project from 1 Nov 2026 (first working day Mon 2 Nov, P3). The assignment of the mechanical interns to M, S and L is not decided here. The embedded intern's ramp-up inside P3 to P6 puts the A0 exit date at risk; confirm or reforecast it from actual evidence. Review capacity is unchanged.
+
+---
+
+### ACT-DEC-032: A0 exit extended to P12
+
+**Status:** ACCEPTED (planning only), 2026-10-18. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** The instruction was to extend the A0 (Educational Motor Control) exit by 4 to 8 weeks beyond P6. P12 (ending Sun 10 Jan 2027, six weeks later) was chosen on the recommendation of an external planning discussion, within the instructed range: the embedded intern starts at P3, so P12 gives about ten weeks for bring-up, debugging and review. A0 exit requires the reviewed evidence package in `planning/v2/ROADMAP_48_WEEKS.md` section 4 and is never declared from the calendar. A0 exit does not prove loaded M torque capability, PCB readiness or A1 Gate B/C acceptance. This amends ACT-DEC-030 item 4 (A0 exit at P6) and mitigates the ramp-up risk in ACT-DEC-031; the original entries stand.
+
+**Consequences.** Planning only. No gate, task ID, status file or approved value changes. The v1 target (A0 at week 6) is superseded as a planning target only; its text stays in `MILESTONE.md`.
+
+---
+
+### ACT-DEC-033: Gate A to fabrication gap; re-sequenced reforecast
+
+**Status:** ACCEPTED (planning only) for items 1 to 3, 2026-10-18; item 4 PROPOSED. Approver: Project Lead (Dinesh). Approval was conveyed in the working session of 2026-10-18 by Sangeetha (sangeetha@kritvaos.in) on the Project Lead's behalf; the Project Lead may confirm it in the pull request.
+
+**Decision.** (1) M fabrication starts after Gate A passes plus a two-week fabrication release and procurement gap, chosen within the instructed 2 to 4 weeks: Gate A by P14 (24 Jan 2027), release and procurement P15-P16, M fabrication and assembly from P17. Nothing is fabricated against an unapproved design. (2) The M prototype checkpoint moves to P23 (22-28 Mar 2027); it is not an A1 release. (3) The sequence in `planning/v2/ROADMAP_48_WEEKS.md` rev 0.2 applies: custom PCB first spin after A0 exit and Gate A (P24-P28), Gate B P29-P33, contingency respin P34-P38, Gate B regression P39-P40, Gate C P41, S/L design from P15, A2-SW from P24, A2-HW P42-P46, qualification P47-P52, release P53-P54, reserve P55-P58. (4) **PROPOSED:** the forecast end becomes Sun 28 Nov 2027 (58 weeks), replacing the 48-week horizon of ACT-DEC-030; the Project Lead is asked to confirm. The respin window and reserve were not squeezed to protect a date.
+
+**Prerequisite for Gate A.** The pending decisions ACT-DEC-016 to 021 (section 5) are recorded, and independent review (ACT-DEC-014) is done. The "needed by" gates in section 5 were set against the earlier plan and should be re-dated to P11-P14.
+
+**Consequences.** Planning only. Gates A/B/C, independent review and restrained-fixture testing are unchanged; a failed gate moves downstream dates and is never waived. The resourcing from ACT-DEC-031 is a planning input; review capacity is unchanged.
+
+---
+
 ## 5. Pending decisions (to be raised)
 
 | Topic | Expected ID | Owner | Needed by |
@@ -493,3 +565,7 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 0.6 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-026: A0 reference calculation documents stay in the parent |
 | 0.7 | 2026-10-15 | Kritvaos Actuator Team | ACT-DEC-023 amendment: repositories temporarily public |
 | 0.8 | 2026-10-16 | Kritvaos Actuator Team | ACT-DEC-027 PROPOSED (kritva-program V2 alignment); ACT-DEC-023 exit conditions |
+| 0.9 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-028 ACCEPTED: 12-month roadmap as planning baseline |
+| 1.0 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-029 ACCEPTED: mechanical HOLD lifted, week 1 = 14 Sep 2026 |
+| 1.1 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-030 (48-week reforecast overlay) and ACT-DEC-031 (resourcing) ACCEPTED |
+| 1.2 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-032 (A0 exit P12) and ACT-DEC-033 (Gate A to fabrication gap, 58-week reforecast proposed) |

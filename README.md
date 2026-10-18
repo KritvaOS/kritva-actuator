@@ -37,6 +37,38 @@ The project follows **Option C**: an *educational motor-control platform* that e
 | MCU | STM32G4-class proposed (TI C2000 alternative), not frozen |
 | Budget (provisional) | A0 ₹10,000–₹15,000; A1 ₹20,000–₹30,000 cumulative |
 
+### 1.1a Stages and variant classes
+
+**Status: provisional planning information. Not approved requirements.** Stage scope is held in `planning/v1/ROADMAP.md` and `planning/v1/MILESTONE.md`; class ranges in `docs/architecture/ACTUATOR_FAMILY_SPEC.md` (ACT-DEC-025, PROPOSED). Budgets are provisional. Nothing here authorises purchase, fabrication or design freeze.
+
+### Stage comparison: A0 and A1
+
+| Item | A0: Educational Motor Control | A1: Humanoid Smart Actuator |
+|---|---|---|
+| Primary objective | Learn and validate motor control; build the reusable electronics and firmware base | Working actuator module: motor, gearbox, output shaft and bearings, output encoder, controller, CAN |
+| Motor | Low-cost commercial BLDC/PMSM | Commercial BLDC/PMSM selected from the sizing results (ACT-DEC-003, 008 pending) |
+| Controller | Motor-control development board (about ₹3,000-₹5,000) | Custom controller PCB (repository baseline) |
+| Position control | FOC with current sensing; basic closed-loop position and speed | Position, velocity and torque control on the actuator |
+| Encoder | Motor-side feedback | Motor-side feedback plus output-side encoder |
+| Communication | USB/UART | CAN (firmware and protocol per the parent ICD) |
+| Diagnostics | Basic status, faults, logging | Fault handling, thermal and current limits, CAN diagnostics |
+| Mechanical design | Mounting and bench fixture only | Commercial planetary gearbox, independent output shaft and bearings, housing (HOLD lifted by ACT-DEC-029; Gate A still required) |
+| Validation | Bench tests on a restrained fixture | Elbow load case; Gates A/B/C with independent review (ACT-DEC-014, 015) |
+| Budget (provisional) | ₹10,000-₹15,000 | ₹20,000-₹30,000, cumulative including A0 |
+| Deliverable | Working motor-control platform with firmware, tests and documents | Validated actuator with CAD, BOM, firmware, test reports |
+
+Planning status (2026-10-18): A0 exits at P12 (10 Jan 2027), six weeks later than the original week-6 target (ACT-DEC-032). The M prototype checkpoint is P23 (22-28 Mar 2027), after Gate A (by P14) and a two-week release and procurement gap (ACT-DEC-033). The custom controller PCB and CAN firmware stay the A1 baseline; a development-board substitute is a reviewed deviation. Stage names above are the official names. Reforecast: `planning/v2/ROADMAP_48_WEEKS.md` (P1 = 19 Oct 2026; 58-week horizon ending 28 Nov 2027 is proposed, awaiting Project Lead confirmation).
+
+### Variant classes (provisional)
+
+| Class | Repository baseline (ACT-DEC-025, PROPOSED) | Wider planning range (under review, not approved) | Typical joints |
+|---|---|---|---|
+| Kritva-S | 2-5 N·m continuous, 5-10 N·m peak, about 60 RPM | 2-5 / 5-10 N·m | Wrist, neck |
+| Kritva-M | 10 N·m continuous, 20-25 N·m peak, 45 RPM (elbow baseline and A0 reference, ACT-DEC-008) | 5-20 / 20-40 N·m | Elbow, shoulder (shoulder not yet in the spec) |
+| Kritva-L | 25-40 N·m continuous, 50-80 N·m peak, about 20-40 RPM | 20-80 / 80-150 N·m | Hip, knee, ankle (ankle not yet in the spec) |
+
+Use the repository baseline column for sizing and reviews. The wider range is a discussion input; it becomes a requirement only after the owner records it in `planning/v1/DECISIONS.md`. For L the two columns differ materially, so confirm the intended load cases first.
+
 ### 1.2 Architecture
 
 ```
@@ -72,7 +104,7 @@ kritva-actuator/                              parent
 ├── requirements/        What the actuator must do (canonical): SYSTEM, ACTUATOR_SPECIFICATION, MECHANICAL,
 │                        ELECTRICAL, FIRMWARE, INTERFACE, SAFETY requirements
 ├── planning/v1/         Roadmap, milestones, task register, decisions, risks; tasks/ACT-01..03 task records
-├── planning/v2/         Four-submodule plan: migration plan and manifest, task ID mapping, workstreams, 24-week roadmap
+├── planning/v2/         Four-submodule plan: migration plan and manifest, task ID mapping, workstreams, 24-week roadmap, reforecast (P1-P58)
 ├── docs/
 │   ├── architecture/    System, actuator, repository and family architecture, sourcing and cost
 │   ├── interfaces/      Interface control document, actuator interface (API), CAN protocol, unit conventions

@@ -43,7 +43,7 @@ Pending independent reviews (mechanical, electrical/firmware, safety) are the op
 
 ## 5. HOLD and safety
 
-Mechanical work is on HOLD at program level. The actuator roadmap is planning-only until the owner reopens it. Program status never overrides the local safety rules: loaded or peak-torque tests only on a restrained, guarded, instrumented fixture (ACT-DEC-015), and CI never promotes a variant to Validated.
+The mechanical HOLD (kritva-program D-003) was lifted for the actuator program in `ACT-DEC-029` (2026-10-18); recording the lift in kritva-program is still pending and cannot be done from this repository. Lifting the HOLD does not authorise procurement, fabrication or loaded testing by itself: Gate A, the pending decisions and independent review apply, and fabrication starts only after Gate A plus the release gap (`ACT-DEC-033`). The actuator roadmap (`ROADMAP_48_WEEKS.md`) remains a planning document. Program status never overrides the local safety rules: loaded or peak-torque tests only on a restrained, guarded, instrumented fixture (ACT-DEC-015), and CI never promotes a variant to Validated.
 
 ---
 
