@@ -302,7 +302,7 @@ See [requirements/SAFETY_REQUIREMENTS.md](requirements/SAFETY_REQUIREMENTS.md).
 
 
 - **Independent review.** No author approves their own safety-critical design. Gates A, B and C and the mechanical (M0 to M4), electronics (E0 to E4) and firmware (F0 to F4) gates stay open until independently reviewed and recorded in [audit/](audit/); software checks and calculations do not close a physical safety gate.
-- **Vulnerabilities.** Report as described in [SECURITY.md](SECURITY.md); its private reporting route is not yet verified, and it says so. Never put details of an unfixed vulnerability in a public issue, pull request or commit message. Never commit secrets; the `secret-scan` workflow runs on every push and pull request.
+- **Vulnerabilities.** Report as described in [SECURITY.md](SECURITY.md): GitHub private vulnerability reporting first, with a direct-contact fallback. The Security Owner reports having tested the route on 18 October 2026 (D-068); that is ATTESTED, not independently verified. Never put details of an unfixed vulnerability in a public issue, pull request or commit message. Never commit secrets; the `secret-scan` workflow runs on every push and pull request.
 
 ## 14. Release and Versioning
 
