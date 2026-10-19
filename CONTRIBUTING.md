@@ -21,8 +21,11 @@ Keep branches short-lived. Rebase onto, or merge from, `main` regularly.
 
 ## 3. Commits
 
-- Prefix the message with the task ID: `ACT-02-003: add combined-stress check for 12 mm shaft`.
-- Use the imperative mood. Write a one-line summary of 72 characters or fewer, a blank line, then the detail.
+- Use the Kritva commit standard (kritva-program D-053, adopted under D-070): header `type(scope): summary` of at most 90 characters, types feat, fix, docs, refactor, test, build, ci, chore, perf, revert, security.
+- End with exactly one footer line, `Task: ACT-02-003` or `Tasks: ACT-02-003, ACT-02-004`. A docs or chore commit that implements no task uses `Tasks: None (reason)`.
+- Example: `feat(shaft): add combined-stress check for 12 mm shaft`, then a blank line, then `Task: ACT-02-003`.
+- Use the imperative mood. Write the detail after a blank line.
+- Check your commits with `python3 scripts/security/check_commit_format.py --range origin/main..HEAD`; the `commit-message-check` workflow runs the same check.
 - Make one logical change per commit. Never commit secrets, credentials or personal data.
 
 ## 4. Pull requests
