@@ -268,7 +268,7 @@ Repository visibility is not a status item: see the metadata table and ACT-DEC-0
 | Submodule layout | `make check-submodules` | check | yes |
 | Status report against `status/tasks.csv` | `make check-status` | check | yes |
 | All of the above | `make check` | check | yes |
-| README standard | `make check-readme` | check | no, run locally |
+| README standard | `make check-readme` | check | yes (`readme-check`; not a required check yet, D-067) |
 | Remove Python caches (`__pycache__`, `*.pyc`) | `make clean` | modify (deletes local cache files only) | no |
 | Firmware build | see the `firmware-build` workflow | build | yes (workflow) |
 
