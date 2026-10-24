@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A0 (fixture and prints), A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** These are proposed guidelines for prototype fabrication in local workshops. Tolerance values are proposals until confirmed by the tolerance analysis at M2. **No part is released for fabrication before Gate A.**
 
@@ -32,7 +32,7 @@ This document sets out how drawings are prepared, which processes are used for w
 | Standard | ISO 128 / ISO 129 for presentation, ISO 1101 for GD&T, ISO 2768-mK for general tolerances, unless noted otherwise |
 | Projection | First-angle (ISO E), stated in the title block |
 | Units | mm |
-| Title block | Part number (KA-MEC-NNNN), name, revision, material **and condition** (for example EN19 Q&T), finish or treatment, mass, drawn/checked/approved names and dates, "Proprietary and confidential – Kritvaos" |
+| Title block | Part number (KA-MEC-NNNN), name, revision, material **and condition** (for example EN19 Q&T), finish or treatment, mass, drawn/checked/approved names and dates, "Copyright Kritvaos, Apache-2.0" |
 | Datums | Bearing bores (housing) and bearing seats (shaft) are the primary datums |
 | Critical features | Marked with a symbol and listed on the inspection sheet |
 | Notes | Deburr all edges 0.2–0.5 × 45°; break sharp edges; remove all swarf; no tool marks on bearing seats |
@@ -104,7 +104,7 @@ Non-conforming parts get a non-conformance record (`test_failure` Issue template
 1. Send the PDF drawing, the STEP file, the quantity, the material and its condition, the required certificates and the target date.
 2. Ask the workshop to confirm that they can hold the critical tolerances **before** ordering.
 3. Agree that out-of-tolerance parts are reported, not reworked silently.
-4. Respect confidentiality: share only the files needed for the part, and mark them "Proprietary and confidential – Kritvaos".
+4. Share only the files needed for the part. Files from this repository are Apache-2.0; mark any third-party or supplier-confidential file with its own terms.
 
 ## 10. Open items
 

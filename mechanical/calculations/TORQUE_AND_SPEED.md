@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer; Electronics/Embedded Intern (motor electrical) / Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The targets (10 N·m continuous, 20–25 N·m peak, 45 RPM, η = 0.85) are proposed and pending approval (ACT-DEC-008). Motor values are illustrative until the motor datasheets are in hand. Nothing here selects a product.
 

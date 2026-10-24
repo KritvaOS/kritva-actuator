@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed working guide, derived from `OPEN_SOURCE_TOOLFLOW.md` (KA-STD-TOOLFLOW), which holds the full reasoning, licence notes and the checked reference list. The toolchain is **not yet frozen**; versions and conventions below are placeholders until the owner records the freeze in `planning/v1/DECISIONS.md`. Tool outputs, exports, FEA runs and CI passes are evidence inputs only. They never close Gate A, B or C. The mechanical HOLD was lifted by ACT-DEC-029, but fabrication, procurement and loaded testing still need Gate A and independent review.
 

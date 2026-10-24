@@ -9,7 +9,7 @@
 | Document owner | Independent Mechanical Reviewer |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the audit framework, ready for gates M0, M1 and M2. **No gate has been reviewed yet.** Section 4 lists *preliminary observations* raised while the documentation baseline was written. They are **not** independent findings, and the reviewer must confirm, reword or reject each one.
 

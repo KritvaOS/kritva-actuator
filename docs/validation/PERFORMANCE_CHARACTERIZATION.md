@@ -9,7 +9,7 @@
 | Document owner | Project Lead (coordination); Mechanical Intern and Electronics/Embedded Intern (execution) |
 | Reviewer / Approver | Independent reviewers / Project Lead |
 | Applies to | A0 (MC tests), A1 (PC tests) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** These are proposed procedures. Numeric pass limits marked "limit approved before test" must be recorded in the relevant task `ACCEPTANCE_CRITERIA.md` **before** execution. The results go to `results/`. This document holds procedures only, never results.
 

@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent reviewers / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is a proposed equipment list. Laboratory equipment is **not** included in the prototype budget (₹10–15k A0, ₹20–30k A1 cumulative). Availability is tracked as RISK-016. Specifications are minimum recommendations, TBC.
 

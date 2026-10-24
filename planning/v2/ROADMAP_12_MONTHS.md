@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Accepted as the planning baseline for weeks 25 to 47 by ACT-DEC-028, and re-dated to a week-1 start of 14 Sep 2026 with the mechanical HOLD lifted by ACT-DEC-029 (both 2026-10-18, Project Lead). The other items in section 9 remain open. It extends `ROADMAP_24_WEEKS.md` (weeks 1 to 24, unchanged) to the kritva-program V2 horizon (14 Sep 2026 to 13 Sep 2027). Weeks 25 to 47 are the planning baseline only. Nothing here changes a gate, renumbers an ID, lifts the HOLD or creates program credit.
 

@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The 12 mm diameter is the initial CAD candidate (ACT-DEC-009, proposed). It is not yet a validated design. Geometry values (overhang, free length) and stress-concentration factors are **assumed** until the CAD and detail design exist. Material properties are indicative minima that must be verified against the standard and the mill certificate. This calculation is safety-relevant and needs independent review (ACT-DEC-014).
 

@@ -4,12 +4,12 @@
 |---|---|
 | Document ID | KA-PLAN-DECISIONS |
 | Repository | `KritvaOS/kritva-actuator` |
-| Revision | 1.2 (Draft: proposed, pending approval) |
+| Revision | 1.4 (Draft: proposed, pending approval) |
 | Date | 2026-10-11 |
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (with specialist reviewers where noted) |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This log is the **only place** where a proposed value or choice becomes binding. A requirement value marked "proposed pending approval" elsewhere in the repository becomes binding only when it is covered by an `ACCEPTED` entry here.
 
@@ -74,11 +74,11 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-009 | Independent 12 mm output shaft on a dedicated bearing pair | PROPOSED | 2026-10-11 |
 | ACT-DEC-010 | Output-side encoder for joint position | ACCEPTED | 2026-10-11 |
 | ACT-DEC-011 | Repository structure and ownership rules | ACCEPTED | 2026-10-11 |
-| ACT-DEC-012 | Licence: proprietary, all rights reserved | ACCEPTED | 2026-10-11 |
+| ACT-DEC-012 | Licence: proprietary, all rights reserved; superseded by ACT-DEC-035 | SUPERSEDED | 2026-10-11 |
 | ACT-DEC-013 | Supply voltage 24 V DC nominal | ACCEPTED | 2026-10-11 |
 | ACT-DEC-014 | Independent review rule and the NOT_VERIFIED gate block | ACCEPTED | 2026-10-11 |
 | ACT-DEC-015 | Restrained-fixture testing; no human-interactive testing without a safety review | ACCEPTED | 2026-10-11 |
-| ACT-DEC-023 | Repository visibility: private (EXT-AUD-001) | ACCEPTED | 2026-10-13 |
+| ACT-DEC-023 | Repository visibility: private (EXT-AUD-001); superseded by ACT-DEC-034 | SUPERSEDED | 2026-10-13 |
 | ACT-DEC-024 | Repository architecture: parent plus four submodules | PROPOSED | 2026-10-15 |
 | ACT-DEC-025 | Actuator family S/M/L; M is the A0 reference | PROPOSED | 2026-10-15 |
 | ACT-DEC-026 | Shared sizing engine in the parent | PROPOSED | 2026-10-15 |
@@ -89,6 +89,8 @@ This log records the project's significant technical and organisational decision
 | ACT-DEC-031 | Resourcing: three mechanical interns and one embedded intern from 1 Nov 2026 | ACCEPTED (planning input) | 2026-10-18 |
 | ACT-DEC-032 | A0 exit extended to P12 (10 Jan 2027) | ACCEPTED (planning only) | 2026-10-18 |
 | ACT-DEC-033 | Gate A to M fabrication gap of two weeks; re-sequenced reforecast | ACCEPTED (items 1-3); 58-week horizon PROPOSED | 2026-10-18 |
+| ACT-DEC-034 | Repositories stay public; supersedes the private position of ACT-DEC-023 | ACCEPTED | 2026-10-24 |
+| ACT-DEC-035 | Licence: Apache-2.0; supersedes ACT-DEC-012 | ACCEPTED | 2026-10-24 |
 
 ---
 
@@ -397,7 +399,7 @@ Not every MCU or board is suitable.
 
 ### ACT-DEC-012: Licence
 
-**Status:** ACCEPTED. **Decision:** the repository is proprietary and confidential, with all rights reserved by Kritvaos (see `LICENSE`). Reuse of third-party open-source code (for example SimpleFOC under MIT, or moteus under Apache-2.0) requires a licence-compatibility review approved by the Project Lead (FW-REQ-074).
+**Status:** SUPERSEDED by ACT-DEC-035 (Apache-2.0), 2026-10-24. Original decision (2026-10-11): the repository is proprietary and confidential, with all rights reserved by Kritvaos. Reuse of third-party open-source code (for example SimpleFOC under MIT, or moteus under Apache-2.0) requires a licence-compatibility review approved by the Project Lead (FW-REQ-074).
 
 ---
 
@@ -439,7 +441,7 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 **Status:** PROPOSED (external reviewer recommendation 2026-10-15; the Project Lead adopted the plan of three Mechanical Interns and one Embedded Intern).
 
-**Decision.** `KritvaOS/kritva-actuator` stays the parent (program and integration). Four private child repositories are added as submodules: `kritva-actuator-s`, `-m`, `-l` (mechanical, one intern each) and `kritva-actuator-embedded`. The parent owns requirements, interface contracts, common sizing, planning, audits and integration tests, and pins reviewed child commits. Migration is staged and non-destructive (`planning/v2/MIGRATION_PLAN.md`). Details: `docs/architecture/REPOSITORY_ARCHITECTURE.md`.
+**Decision.** `KritvaOS/kritva-actuator` stays the parent (program and integration). Four child repositories are added as submodules: `kritva-actuator-s`, `-m`, `-l` (mechanical, one intern each) and `kritva-actuator-embedded`. The parent owns requirements, interface contracts, common sizing, planning, audits and integration tests, and pins reviewed child commits. Migration is staged and non-destructive (`planning/v2/MIGRATION_PLAN.md`). Details: `docs/architecture/REPOSITORY_ARCHITECTURE.md`.
 
 **Supersedes in part.** The two-intern split in `planning/v1/TASKS.md` for new work. Legacy IDs remain valid (`planning/v2/TASK_ID_MAPPING.csv`). ACT-DEC-001 (project direction) is not changed.
 
@@ -533,6 +535,22 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 
 **Consequences.** Planning only. Gates A/B/C, independent review and restrained-fixture testing are unchanged; a failed gate moves downstream dates and is never waived. The resourcing from ACT-DEC-031 is a planning input; review capacity is unchanged.
 
+### ACT-DEC-034: Repositories stay public
+
+**Status:** ACCEPTED, 2026-10-24. Approver: Project Lead (Dinesh), stated in the working session of 2026-10-24.
+
+**Decision.** `KritvaOS/kritva-actuator` and the four child repositories (`kritva-actuator-s`, `-m`, `-l`, `-embedded`) stay **public**. This supersedes the private position of ACT-DEC-023 and its amendments (the planned return to private, exit conditions and review date of 2026-11-16 no longer apply).
+
+**Consequences.** Documents that described the repository as private were updated on 2026-10-24 (README, SECURITY.md, REPOSITORY_ARCHITECTURE.md, SUBMODULE_WORKFLOW.md, MIGRATION_PLAN.md, the docs-checks workflow comment). The default `GITHUB_TOKEN` is enough for submodule checkout; `CHILD_REPOS_TOKEN` is needed only if a child is ever made private. Because the repositories are public, nothing that must stay confidential (supplier quotes, personal data, credentials, third-party datasheets without redistribution rights) may be committed. The licence is handled separately in ACT-DEC-035.
+
+### ACT-DEC-035: Licence is Apache-2.0
+
+**Status:** ACCEPTED, 2026-10-24. Approver: Project Lead (Dinesh), stated in the working session of 2026-10-24. Supersedes ACT-DEC-012.
+
+**Decision.** The parent repository is licensed under the **Apache License, Version 2.0** (`LICENSE`, `NOTICE`), for code, firmware, hardware design files and documentation alike. Copyright is held by Kritvaos. Contributions are accepted under the same licence. Reuse of third-party code still needs a licence-compatibility review approved by the Project Lead (FW-REQ-074); permissive licences (MIT, BSD, Apache-2.0) are compatible, and copyleft code (GPL, and LGPL without a linking review) must not be included without a recorded decision.
+
+**Consequences.** The `LICENSE` text, source-file headers, the document `Classification` field (now `Public (Apache-2.0, see LICENSE)`), `check_docs.py`, CONTRIBUTING, CODE_OF_CONDUCT and the licence wording in the requirements and standards were updated on 2026-10-24. Apache-2.0 is a software-oriented licence; if a hardware-specific licence (for example CERN-OHL) is wanted for CAD and PCB files later, that is a new decision. The four child repositories need their own `LICENSE` and `NOTICE`; this decision does not change them. Files that already carried a third-party licence keep it. Historical audit records under `audit/` are not rewritten.
+
 ---
 
 ## 5. Pending decisions (to be raised)
@@ -569,3 +587,5 @@ See `requirements/SAFETY_REQUIREMENTS.md`.
 | 1.0 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-029 ACCEPTED: mechanical HOLD lifted, week 1 = 14 Sep 2026 |
 | 1.1 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-030 (48-week reforecast overlay) and ACT-DEC-031 (resourcing) ACCEPTED |
 | 1.2 | 2026-10-18 | Kritvaos Actuator Team | ACT-DEC-032 (A0 exit P12) and ACT-DEC-033 (Gate A to fabrication gap, 58-week reforecast proposed) |
+| 1.3 | 2026-10-24 | Kritvaos Actuator Team | ACT-DEC-034 ACCEPTED: repositories stay public; supersedes ACT-DEC-023 |
+| 1.4 | 2026-10-24 | Kritvaos Actuator Team | ACT-DEC-035 ACCEPTED: Apache-2.0 licence; supersedes ACT-DEC-012 |

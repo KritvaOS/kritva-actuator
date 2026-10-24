@@ -10,7 +10,7 @@
 | Contributors | Mechanical Intern, Electronics/Embedded Intern |
 | Approver | Project Lead |
 | Applies to | Kritva Actuator Development Platform, milestones A0, A1, A2 |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every numerical value in this document is a **proposed target pending approval**, not an accepted release specification. The values for continuous torque (10 N·m), peak torque (20–25 N·m), speed (45 RPM), gearbox ratio (20:1 first candidate) and output shaft (12 mm) may change. They depend on load calculations, component datasheets and prototype validation. They become binding only when the Project Lead approves them and records the approval in `planning/v1/DECISIONS.md`.
 
@@ -228,7 +228,7 @@ All values are at the output and the 24 V nominal supply, at the reference ambie
 | SYS-REQ-051 | The firmware shall implement **position, velocity and current/torque control**, with **torque, speed and acceleration limits** enforced in firmware. | Safe, stable motion. | T | A0/A1 | M |
 | SYS-REQ-052 | Position control shall use the **output-side encoder**. Motor-side feedback shall be used for commutation and motor-side measurement. | Accounts for transmission effects. | I, T | A1 | M |
 | SYS-REQ-053 | The firmware shall provide **encoder alignment and calibration** for the motor and output encoders. | Correct commutation and absolute joint angle. | D | A0/A1 | M |
-| SYS-REQ-054 | Development **may start from a proven motor-control library or reference** (for example SimpleFOC or moteus as references), progressively replaced or adapted in-house. Licences of reused code shall be compatible with Kritvaos's proprietary licence. | Reduces A0 risk; supports learning. | I | A0 | H |
+| SYS-REQ-054 | Development **may start from a proven motor-control library or reference** (for example SimpleFOC or moteus as references), progressively replaced or adapted in-house. Licences of reused code shall be compatible with the repository's Apache-2.0 licence. | Reduces A0 risk; supports learning. | I | A0 | H |
 | SYS-REQ-055 | The motor-control MCU shall have motor-control-grade peripherals: synchronised ADC sampling, complementary PWM with dead-time insertion, a hardware fault/break input and enough processing capacity for FOC. The MCU family (STM32G4-class or TI C2000 recommended) shall be selected and recorded in DECISIONS.md. | Not every MCU or board is suitable for FOC. | I, A | A0 | M |
 
 ### 8.7 Communication and software integration

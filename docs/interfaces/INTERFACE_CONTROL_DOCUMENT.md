@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead; Independent Reviewers |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed index and skeleton (ACT-DEC-024). It does not replace the canonical interface documents; it states which interfaces are common to S, M and L and which dimensions each variant must publish. All dimension values are **TBD** until the variant design closes.
 

@@ -9,7 +9,7 @@
 | Document owner | Project Lead (maintains status); assignees update progress |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The task IDs, owners and weeks below are **proposed** and pending approval. A task folder is created only after the task's scope and dependencies are confirmed in this register. The Project Lead approves scope changes and records significant ones in `planning/v1/DECISIONS.md`.
 

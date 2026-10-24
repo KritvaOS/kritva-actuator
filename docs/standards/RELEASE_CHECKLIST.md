@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Reviewers |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed standard (ACT-DEC-024). It applies to all four repositories once approved.
 

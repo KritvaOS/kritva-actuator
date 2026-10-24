@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Reviewer: Independent Mechanical Reviewer. Contributor (control implications, PCB/connector constraints): Electronics/Embedded Intern. Approver: Project Lead |
 | Applies to | Milestone A1 (Humanoid Smart Actuator); A0 for motor mounting and bench fixture items |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every numerical value in this document is a **proposed target pending approval**. Values marked TBC or TBD are not design values. Nothing here is a measured result. A requirement or limit becomes binding only when the Project Lead approves it and records the approval in `planning/v1/DECISIONS.md` (for example ACT-DEC-008 load case, ACT-DEC-009 output shaft). The author of a mechanical design may not be the sole approver of its safety-critical aspects (ACT-DEC-014). If no qualified independent reviewer is available, the review is recorded as `NOT_VERIFIED` and the gate stays blocked.
 

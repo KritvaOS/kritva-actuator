@@ -9,7 +9,7 @@
 | Document owner | Independent Mechanical Reviewer (with input from the Mechanical Intern) |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the initial set of mechanical failure modes, prepared with the documentation baseline. The reviewer must confirm the ratings, and they are re-assessed at M2 and M3. Ratings use the scale below: S × O, with a detection factor D for prioritisation.
 

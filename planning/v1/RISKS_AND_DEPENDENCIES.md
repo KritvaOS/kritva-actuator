@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The risk scores and mitigations are a proposed initial assessment, pending approval. They are reviewed weekly. Binding decisions arising from this register are recorded in `planning/v1/DECISIONS.md`.
 
@@ -73,7 +73,7 @@ Likelihood (L) and Impact (I) are each scored 1–5. Score = L × I.
 | RISK-023 | Integration | CAN protocol changes break host tools | Protocol not frozen | Rework; incompatibility | 3 | 2 | 6 Low | Protocol versioning; conformance tests | Version negotiation | Project Lead | Late protocol changes | Open |
 | RISK-024 | Documentation | Documents diverge from implementation | Duplicated content; no update discipline | Wrong decisions; failed audits | 3 | 3 | 9 Medium | One canonical home; CI checks (`make check`); traceability CSV updates are part of the definition of done | Documentation sprint in week 11 | Project Lead | check-trace or check-links failures | Open |
 | RISK-025 | Documentation | Large CAD and binary files bloat the repository | Committing exports and builds | Slow repository; lost history | 3 | 2 | 6 Low | `.gitignore`, `.gitattributes` (LFS); CONTRIBUTING policy | Move to LFS; history clean-up | Mechanical Intern | Repository > 500 MB | Open |
-| RISK-026 | Legal / IP | Open-source code reused without a licence review | Copying from references | IP contamination of the proprietary code | 2 | 4 | 8 Medium | FW-REQ-074 third-party register; PR checklist | Rewrite affected modules | Electronics/Embedded Intern | Third-party code found in review | Open |
+| RISK-026 | Legal / IP | Open-source code reused without a licence review | Copying from references | IP contamination of the Apache-2.0 code | 2 | 4 | 8 Medium | FW-REQ-074 third-party register; PR checklist | Rewrite affected modules | Electronics/Embedded Intern | Third-party code found in review | Open |
 | RISK-027 | Requirements | Load-model assumptions (180 mm centre of mass, payload) prove wrong | Arm CAD not available | Torque targets wrong | 3 | 4 | 12 Medium | Replace with CAD or measurement (SYS-REQ-011); sensitivity table in ACTUATOR_SPECIFICATION | Re-run the sizing; choose a different ratio | Mechanical Intern | CAD centre of mass differs by > 10 % | Open |
 | RISK-028 | Requirements | Missing dynamic requirements (acceleration, duty cycle) | Not yet defined | Motor undersized for dynamics | 4 | 3 | 12 Medium | Define them before the motor/gearbox freeze (SYS-REQ-013) | Margin in the peak torque | Project Lead | Not defined by week 2 | Open |
 

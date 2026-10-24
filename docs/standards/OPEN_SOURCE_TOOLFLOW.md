@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed standard, not approved. No decision number is assigned: the owner records the toolchain freeze in `planning/v1/DECISIONS.md`. The flow was drafted in a review with an external planning discussion (ChatGPT, 2026-10-18) and then checked here: each repository and link in section 6 was opened and its description and licence read on 2026-10-18. Items not verified are marked. Versions are not chosen here. Tool outputs, exports, simulations and CI passes are evidence inputs only; none closes Gate A, B or C or replaces independent review (ACT-DEC-014) or restrained-fixture testing (ACT-DEC-015).
 
@@ -21,7 +21,7 @@
 2. The existing flow stays: Python sizing engine, `make check` (docs, links, traceability, BOM, calculations, manifest, submodules, status), GitHub Actions. New checks are added as owner-approved `make` targets, not by replacing existing ones.
 3. Interfaces, units, CAN protocol and shared limits stay in the parent (`docs/interfaces/`, `requirements/`).
 4. Each release records the source commit, tool versions, component revisions and checksums of generated files. The parent pins reviewed child SHAs.
-5. Generated designs, manufacturing data and test logs stay private. Do not publish them as public CI artifacts, and do not commit third-party datasheets without checking redistribution rights.
+5. The repository is public (ACT-DEC-034), so commit generated designs, manufacturing data and test logs only when they are meant to be public. Do not publish them as CI artifacts without review, and do not commit third-party datasheets without checking redistribution rights.
 
 ## 2. Mechanical flow
 
@@ -85,13 +85,13 @@ Each release emits the ELF and binary or HEX image, linker map, build log, confi
 | SimpleFOC | MIT | Learning and concept reference |
 | moteus | Apache-2.0 | Controller architecture, diagnostics and host-tool reference |
 | ODrive (legacy v3.x firmware) | MIT | Historical reference; not a default dependency |
-| VESC firmware | GPL-3.0 | Study only. Do not copy code into proprietary firmware without an explicit licence decision |
+| VESC firmware | GPL-3.0 | Study only. Do not copy code into this Apache-2.0 repository without an explicit licence decision |
 
 Before reusing any source, record the component, licence, version or commit, modified files and required notices. A reference implementation is not validated for Kritva hardware.
 
 ## 5. Licence policy
 
-Using an open-source application to make a design does not by itself put the CAD, PCB or firmware under that application's licence. Incorporating or linking library source into distributed firmware is a different question. Apache-2.0, MIT and BSD components are generally straightforward (keep notices). LGPL needs a linking and relink review. GPL code must not enter proprietary firmware without a decision. Packages such as STM32CubeG4 carry component-by-component licences, so read `LICENSE.md` for what is actually used. Keep a third-party licence inventory with the toolchain freeze. This is an engineering summary, not legal advice; the owner may want a legal check before distribution.
+Using an open-source application to make a design does not by itself put the CAD, PCB or firmware under that application's licence. Incorporating or linking library source into distributed firmware is a different question. Apache-2.0, MIT and BSD components are generally straightforward (keep notices). LGPL needs a linking and relink review. GPL code must not enter this Apache-2.0 repository or its firmware without a decision. Packages such as STM32CubeG4 carry component-by-component licences, so read `LICENSE.md` for what is actually used. Keep a third-party licence inventory with the toolchain freeze. This is an engineering summary, not legal advice; the owner may want a legal check before distribution.
 
 ## 6. References
 

@@ -1,14 +1,14 @@
 # Kritva Actuator
 
-> Kritva Actuator Development Platform: an in-house smart rotary actuator for the elbow of the Kritva humanoid. It covers the motor-control electronics, FOC firmware, mechanical integration, CAN communication and KritvaOS integration. This is a private repository.
+> Kritva Actuator Development Platform: an in-house smart rotary actuator for the elbow of the Kritva humanoid. It covers the motor-control electronics, FOC firmware, mechanical integration, CAN communication and KritvaOS integration. This is a public repository.
 
 | Property | Value |
 |---|---|
 | Project | KritvaOS |
 | Repository | `KritvaOS/kritva-actuator` |
 | Repository Type | Hardware interface (parent repository of the actuator family) |
-| Visibility Class | PRIVATE (future private; ACT-DEC-023, D-037, D-039) |
-| GitHub Setting | PUBLIC (verified 2026-10-18; temporary, ACT-DEC-023 amendments and D-028: owner action returns it to private) |
+| Visibility Class | PUBLIC (ACT-DEC-034 supersedes the private position of ACT-DEC-023) |
+| GitHub Setting | PUBLIC (verified 2026-10-18; kept public by decision, ACT-DEC-034, 2026-10-24) |
 | Lifecycle Status | ACTIVE (mechanical HOLD lifted by ACT-DEC-029; Gate A still required) |
 | Repository Owner | Project Lead / Integration Owner ([role table](#15-ownership-and-escalation)) |
 | Security Owner | Security Owner role ([SECURITY.md](SECURITY.md), program decision D-032) |
@@ -17,9 +17,9 @@
 | Tasks | [planning/v1/TASKS.md](planning/v1/TASKS.md) and [status/tasks.csv](status/tasks.csv) |
 | Acceptance Criteria | [requirements/SYSTEM_REQUIREMENTS.md](requirements/SYSTEM_REQUIREMENTS.md) and [docs/validation/](docs/validation/) |
 | Status Reporting | [status/status.json](status/status.json) (generated, planning only) and [docs/standards/PROGRAM_ALIGNMENT.md](docs/standards/PROGRAM_ALIGNMENT.md) |
-| License | [LICENSE](LICENSE) (proprietary, all rights reserved) |
+| License | [LICENSE](LICENSE) (Apache-2.0; ACT-DEC-035) |
 
-> Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved. See [LICENSE](LICENSE).
+> Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
 This README follows the Kritva README standard (`v2/planning/standards/README_STANDARD.md` in [kritva-program](https://github.com/KritvaOS/kritva-program)). It is the entry point; the documents it links own the detail. Every value in sections 3 and 8 is a proposed planning value with the status stated there, not an approved requirement.
 
@@ -330,4 +330,4 @@ No author approves their own safety-critical design. If no qualified reviewer is
 
 ## 17. License
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved. See [LICENSE](LICENSE).
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (ACT-DEC-035). See [LICENSE](LICENSE) and [NOTICE](NOTICE). Third-party components keep their own licences.

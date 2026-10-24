@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The material choices below are proposals. The property values are **indicative minima** for planning. Every load-bearing part must be checked against the governing standard (for example IS 1570 / IS 2062 / IS 733, EN 10083, EN 573/755) and the **supplier's mill certificate** before release.
 

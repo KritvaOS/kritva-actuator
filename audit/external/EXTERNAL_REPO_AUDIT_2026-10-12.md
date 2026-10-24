@@ -9,7 +9,7 @@
 | Document owner | Project Lead (record keeper); findings owned by the external reviewer |
 | Reviewer / Approver | External reviewer: ChatGPT (remote documentary audit) / Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This records a **remote documentary and calculation audit** of the public repository at commit `58d7e6f` (`ACT-03-006: Add documentation baseline v0.1`). It was performed by ChatGPT acting as an external technical reviewer.
 >

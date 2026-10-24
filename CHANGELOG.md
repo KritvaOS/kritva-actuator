@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed (2026-10-24, repository visibility)
+
+- ACT-DEC-034 ACCEPTED: the parent and the four child repositories stay public; supersedes the private position of ACT-DEC-023. README, SECURITY.md, REPOSITORY_ARCHITECTURE.md, SUBMODULE_WORKFLOW.md, MIGRATION_PLAN.md and the docs-checks workflow comment updated. 
+### Changed (2026-10-24, licence)
+
+- ACT-DEC-035 ACCEPTED: the repository is licensed under Apache-2.0 (supersedes ACT-DEC-012). `LICENSE` replaced with the Apache-2.0 text, `NOTICE` added, source headers and the document `Classification` field changed to `Public (Apache-2.0, see LICENSE)`, `check_docs.py` updated to accept it, and licence wording in requirements, standards and CONTRIBUTING / CODE_OF_CONDUCT aligned.
+
 ### Added (2026-10-16, kritva-program V2 alignment)
 
 - `scripts/status/gen_status.py`, `status/` (tasks, workstream, vendored schema 2.0): task-fact reporting for the parent; `make check-status`.
@@ -121,7 +128,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 **Repository basics:**
 
-- `README.md`, `LICENSE` (proprietary), `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`.
+- `README.md`, `LICENSE` (proprietary at the time; Apache-2.0 since 2026-10-24), `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`.
 - Folder skeleton with `.gitkeep` placeholders.
 
 ### Superseded

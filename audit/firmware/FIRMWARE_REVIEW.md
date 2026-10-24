@@ -9,7 +9,7 @@
 | Document owner | Independent Electrical/Firmware Reviewer |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the review framework. No review has been carried out. Safety-relevant firmware must be reviewed by someone other than its author (FW-REQ-076).
 

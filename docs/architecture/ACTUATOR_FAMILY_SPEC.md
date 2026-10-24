@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Mechanical Reviewer |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The S, M and L classes are **provisional planning envelopes proposed by the external reviewer, not approved requirements and not guaranteed motor or gearbox ratings** (ACT-DEC-025, PROPOSED). Torque is defined at the **output shaft**. Each speed states whether it is no-load, rated-load or maximum; until a class says otherwise it means rated-load speed at the continuous torque. Only the M row carries the existing elbow baseline, which is itself not frozen (M0 blockers B1 to B6 are open).
 

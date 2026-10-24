@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A0 (fixture), A1 (integrated actuator) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This specification describes the **proposed** mechanical design concept for the integrated elbow actuator. Component models (motor, gearbox, bearings, encoder) are not yet selected. Dimensions are placeholders until the CAD exists (ACT-02-004). Nothing here may be fabricated before Gate A. Values are binding only once approved in `planning/v1/DECISIONS.md`.
 

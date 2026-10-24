@@ -9,7 +9,7 @@
 | Document owner | Independent Mechanical Reviewer |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This checklist is used twice:
 >

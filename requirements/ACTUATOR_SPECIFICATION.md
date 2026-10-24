@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Reviewers: Mechanical Intern, Electronics/Embedded Intern, Independent Mechanical Reviewer, Independent Electrical/Firmware Reviewer. Approver: Project Lead |
 | Applies to | Milestone A1 (Humanoid Smart Actuator); A0 for motor-level items; A2 for interface items |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every value in this specification is a **proposed target pending approval**. Nothing here is a measured result or a released rating. A value becomes binding only when the Project Lead approves it and records the approval in `planning/v1/DECISIONS.md` (the elbow load case and the torque/speed targets are decision **ACT-DEC-008**, status PROPOSED). Approved values are then copied into section 12 of this document with the decision reference.
 

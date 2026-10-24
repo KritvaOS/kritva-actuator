@@ -9,7 +9,7 @@
 | Document owner | Independent Electrical/Firmware Reviewer |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0 (E3 on the development board), A1 (E3 on the PCB, E4) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the acceptance framework. No results have been recorded. Acceptance limits marked TBD are approved before testing.
 

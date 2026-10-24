@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed (ACT-DEC-024). Replaces the two-intern split in `planning/v1/TASKS.md` for new work. Legacy IDs remain valid; see `TASK_ID_MAPPING.csv`.
 

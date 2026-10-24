@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate the Kritva Actuator requirements traceability matrix.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Inputs
 ------

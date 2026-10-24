@@ -9,7 +9,7 @@
 | Document owner | Electronics/Embedded Intern |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | Milestones A0 (development board), A1 (custom controller PCB), A2 (integration support) |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every numerical value in this document is a **proposed target pending approval**. Values marked **TBD** are not yet determined; values marked **TBC** are working figures that must be confirmed (typically once the motor, gearbox ratio and controller hardware are selected). Nothing here is binding until the Project Lead approves it and records the approval in `planning/v1/DECISIONS.md`. Phase-current figures in particular are **illustrative** until the motor and its torque constant are selected (ACT-01-002, joint motor/gearbox selection).
 
@@ -381,7 +381,7 @@ Safe-state policy and hazard analysis are owned by [S5]. This section defines th
 | ELEC-REQ-126 | The selected A0 board shall support **24 V** input and the selected motor's continuous current with margin, phase-current sensing suitable for FOC, an encoder/Hall input, a UART/USB link and SWD debug access. | Minimum A0 functionality. | I, D | Checklist completed against board documentation; bring-up demonstrates each function. | `hardware/motor_controller/development_board/` | SYS-REQ-005, SYS-REQ-050 | A0 | M |
 | ELEC-REQ-127 | Any modification made to the A0 board (component changes, wires, added protection) shall be recorded with photos and a schematic note. | Reproducibility (SYS-REQ-103). | I | Record exists for each board serial. | `hardware/motor_controller/development_board/` | SYS-REQ-103 | A0 | M |
 | ELEC-REQ-128 | A **spare A0 board** should be procured (budget permitting) because bring-up faults may destroy the power stage. | Schedule risk. | I | BOM entry or recorded decision not to. | `hardware/bom/ELECTRICAL_BOM.csv` | SYS-REQ-100 | A0 | L |
-| ELEC-REQ-129 | Licences of any vendor firmware or motor-control libraries supplied with the A0 board shall be recorded before code is copied into the repository. | ACT-DEC-012 proprietary repository. | I | Licence record. | `docs/firmware/` | SYS-REQ-054 | A0 | M |
+| ELEC-REQ-129 | Licences of any vendor firmware or motor-control libraries supplied with the A0 board shall be recorded before code is copied into the repository. | ACT-DEC-035 (Apache-2.0 repository). | I | Licence record. | `docs/firmware/` | SYS-REQ-054 | A0 | M |
 
 ### 6.11 A1 custom controller PCB
 

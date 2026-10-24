@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed standard (ACT-DEC-024). It applies to all four repositories once approved.
 
@@ -48,7 +48,7 @@ git commit -m "Pin kritva-actuator-m to <tag>"
 1. Never commit in a submodule while on a detached HEAD without a branch.
 2. Push the child before the parent; the parent must never point to an unpushed commit.
 3. No credentials in `.gitmodules` or in URLs. `.gitmodules` uses HTTPS URLs; to push over SSH from your machine run once: `git config --global url."git@github.com:".pushInsteadOf "https://github.com/"`.
-4. Parent CI uses a recursive checkout. While the children are public the default token works. When they are private, store a fine-grained personal access token (or GitHub App token) with read-only Contents access to the four children as the secret `CHILD_REPOS_TOKEN`. The default `GITHUB_TOKEN` cannot read other private repositories.
+4. Parent CI uses a recursive checkout. The children are public (ACT-DEC-034), so the default token works. If a child is ever made private, store a fine-grained personal access token (or GitHub App token) with read-only Contents access to the four children as the secret `CHILD_REPOS_TOKEN`. The default `GITHUB_TOKEN` cannot read other private repositories.
 5. Interface changes start in the parent, not in a child.
 
 ## Revision history

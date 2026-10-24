@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed schedule (ACT-DEC-024/025). The 12-week A0 checkpoint is the existing v1 milestone applied to the M variant. Weeks are planning estimates, not commitments, and depend on motor and gearbox lead times (ACT-DEC-008 and the M0 blockers).
 
