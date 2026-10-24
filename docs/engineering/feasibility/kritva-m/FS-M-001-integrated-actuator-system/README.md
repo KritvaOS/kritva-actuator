@@ -44,7 +44,7 @@ Can a Kritva-M actuator built from a commercial BLDC motor, commercial planetary
 ## Known issues carried in from earlier work
 
 - 12 mm shaft versus 6202 bearing with a 15 mm bore (IN-016, OQ-011).
-- EN8 normalised shaft safety factor about 0.86, so EN19 / 42CrMo4 Q&T is under consideration. The underlying calculation is not yet located (IN-037, OQ-012).
+- EN8 normalised shaft safety factor about 0.86, so EN19 / 42CrMo4 Q&T is under consideration. The underlying calculation is in `mechanical/calculations/SHAFT_STRENGTH.md`; independent reproduction and review are still open (IN-037, OQ-012). The 47.5 N·m impact torque derivation is in `mechanical/calculations/LOAD_CASES.md` section 8 (IN-019).
 - A0 BOM about ₹22,000 against ₹10,000–₹15,000 budget (IN-020, IN-021).
 - 20:1 needs a low-Kv pancake motor; about 37:1 suits a typical BLDC (IN-039).
 - Duty cycle, peak duration, acceleration profile, ambient and life are undefined (IN-026 to IN-032).

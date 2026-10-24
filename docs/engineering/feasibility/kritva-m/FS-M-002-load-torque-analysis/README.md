@@ -31,6 +31,14 @@ What output torque and associated mechanical loads must the Kritva-M elbow actua
 | `calculations/`, `outputs/` | Mandatory evidence folders | Create when work starts; do not create empty folders to imply progress |
 | `component_research/`, `references/`, `simulation/`, `CAD/`, `cost_estimate/`, `test_data/` | Conditional; see SPECIFICATION deliverable applicability | Per applicability decision |
 
+## Start readiness (2026-10-24)
+
+**Can start now (nominal, labelled ASSUMED/PRELIMINARY):** static gravity torque sweep 0–135° with a stated upper-arm orientation (FS2-IN-010); CoM and payload sensitivity; independent recalculation of arm inertia and stop energy; reflected inertia for 15:1, 20:1 and 25:1 with a parametric rotor-inertia range; reproduction of the 47.5 N·m screening estimate from `mechanical/calculations/LOAD_CASES.md` section 8.
+
+**Needs a Project Lead decision before final conclusions:** acceleration profile (FS2-OQ-004), duty cycle, holding duration, peak duration and repetition (FS2-OQ-008), payload and external-contact loads and shock-load scope (FS2-OQ-009, upstream OQ-009), payload-position bounds (FS2-OQ-005), upper-arm orientation (FS2-OQ-011), final upper joint limit (FS2-OQ-010), independent reviewer (FS2-OQ-006). Until decided, dynamic, RMS and peak results are illustrative only.
+
+**Needs CAD or a selected motor:** CAD centre of mass, mass properties, stop radius and overhang; rotor inertia (IN-014); friction model (FS2-OQ-003); bumper force-deflection curve. No CAD exists in the repository yet.
+
 ## How to start
 
 1. Project Lead approves `SPECIFICATION.md` and records it in `registers/STUDY_REGISTER.csv`.

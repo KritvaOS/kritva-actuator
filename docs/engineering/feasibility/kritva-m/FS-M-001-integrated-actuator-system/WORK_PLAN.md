@@ -377,26 +377,26 @@ Track the specification acceptance criteria AC-001 through AC-016 using the foll
 
 | Criterion | Required evidence | Initial disposition | Owner |
 |---|---|---|---|
-| AC-001 | Requirement-to-evidence mapping | OPEN | Mechanical Intern |
-| AC-002 | Input provenance and status audit | OPEN | Mechanical Intern |
-| AC-003 | Gravity torque and load-case calculations | OPEN | Mechanical Intern |
-| AC-004 | Ratio calculations and operating-point consistency | OPEN | Mechanical Intern |
-| AC-005 | Candidate datasheets and source register | OPEN | Mechanical Intern |
-| AC-006 | Shaft/bearing interface assessment | OPEN | Mechanical Intern |
-| AC-007 | Shaft, bearing and stop checks plus independent review | OPEN | Mechanical Intern / Independent Reviewer TBD |
-| AC-008 | Stop-energy/impact model and assumptions | OPEN | Mechanical Intern / Independent Reviewer TBD |
-| AC-009 | Electrical/thermal input gap assessment | OPEN | Embedded Intern |
-| AC-010 | Packaging/interface evidence | OPEN | Mechanical Intern |
-| AC-011 | BOM/cost estimate and budget comparison | OPEN | Mechanical Intern |
-| AC-012 | Sensitivity analysis and risk register | OPEN | Mechanical Intern |
-| AC-013 | Reproducible calculations and source revisions | OPEN | Mechanical Intern |
-| AC-014 | Deliverable inventory and applicability decisions | OPEN | Mechanical Intern |
-| AC-015 | Independent-review evidence | OPEN | Project Lead / Independent Reviewer TBD |
-| AC-016 | Integrated conclusion and limitations | OPEN | Mechanical Intern / Project Lead |
+| AC-001 | Requirement-to-evidence mapping | NOT_STARTED | Mechanical Intern |
+| AC-002 | Input provenance and status audit | NOT_STARTED | Mechanical Intern |
+| AC-003 | Gravity torque and load-case calculations | NOT_STARTED | Mechanical Intern |
+| AC-004 | Ratio calculations and operating-point consistency | NOT_STARTED | Mechanical Intern |
+| AC-005 | Candidate datasheets and source register | NOT_STARTED | Mechanical Intern |
+| AC-006 | Shaft/bearing interface assessment | NOT_STARTED | Mechanical Intern |
+| AC-007 | Shaft, bearing and stop checks plus independent review | NOT_STARTED | Mechanical Intern / Independent Reviewer TBD |
+| AC-008 | Stop-energy/impact model and assumptions | NOT_STARTED | Mechanical Intern / Independent Reviewer TBD |
+| AC-009 | Electrical/thermal input gap assessment | NOT_STARTED | Embedded Intern |
+| AC-010 | Packaging/interface evidence | NOT_STARTED | Mechanical Intern |
+| AC-011 | BOM/cost estimate and budget comparison | NOT_STARTED | Mechanical Intern |
+| AC-012 | Sensitivity analysis and risk register | NOT_STARTED | Mechanical Intern |
+| AC-013 | Reproducible calculations and source revisions | NOT_STARTED | Mechanical Intern |
+| AC-014 | Deliverable inventory and applicability decisions | NOT_STARTED | Mechanical Intern |
+| AC-015 | Independent-review evidence | NOT_STARTED | Project Lead / Independent Reviewer TBD |
+| AC-016 | Integrated conclusion and limitations | NOT_STARTED | Mechanical Intern / Project Lead |
 
-`OPEN` in this acceptance-criteria table is a tracking disposition, not a verification status. Update the table only when supporting evidence or a justified disposition exists.
+Initial status is `NOT_STARTED` for every criterion. Allowed values are the verification values in standard v0.4 section 15.4. Update the table only when supporting evidence or a justified disposition exists.
 
-> Note: the AC-to-evidence mapping above was produced by ChatGPT and must be reconciled against the AC-001..016 definitions in `SPECIFICATION.md` during WP-01.
+> Note: the second column is a short evidence/check label only; the criterion wording in `SPECIFICATION.md` governs. The labels were reconciled against the AC-001..016 titles in `SPECIFICATION.md` on 2026-10-24 (all sixteen match).
 
 ## 8. Status-tracking table
 
