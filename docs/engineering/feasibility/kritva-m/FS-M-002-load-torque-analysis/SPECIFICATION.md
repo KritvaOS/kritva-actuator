@@ -168,6 +168,8 @@ These proposed inputs must be added to the study-local input record with owner, 
 - Do not use IN-019 as verified until its derivation is reproduced or independently substantiated.
 - Do not apply IN-023, IN-024, or IN-025 as multipliers on physical load unless a specific calculation convention explicitly justifies it.
 - Record all unresolved inputs and their effect on conclusions.
+- The repository already holds reference calculations (`mechanical/calculations/LOAD_CASES.md`, `TORQUE_AND_SPEED.md`, `mechanical/common-sizing/actuator_sizing.py`, `expected_results.json`; all draft, pending approval). Recalculate independently first, then compare and record any difference. Do not edit the script or expected results from this study. The repository uses g = 9.81 m/s² (about 0.03 % different from FS2-IN-001).
+- Use the sign convention in `docs/interfaces/SIGNAL_AND_UNIT_CONVENTIONS.md` section 3 and state the upper-arm orientation (FS2-IN-010) for every gravity-torque result.
 
 ## 7. Technical Tasks and Calculation Method
 
