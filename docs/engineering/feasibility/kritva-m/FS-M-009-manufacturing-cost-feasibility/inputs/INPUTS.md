@@ -133,3 +133,15 @@ New local inputs use the next available `FS9-IN-nnn` ID. Do not reuse an ID or c
 ## 8. Initial readiness
 
 The baseline includes budget targets but does not establish a complete priced BOM or supplier availability. Process selection, cost totals, lead times, and manufacturing readiness remain unverified until actual component data, geometry, quotations, and process evidence have been reviewed.
+
+## 9. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `docs/architecture/COMPONENTS_SOURCING_AND_COST.md` (draft) sections 2 and 3 | Component breakdown by phase; the A0 total of 22,000 INR line by line (the source of IN-020); scenarios S1 to S4 replacing the motor and gearbox lines with listed prices (26,245 to 32,885 INR for S1 to S3, 22,328 INR for S4) | Lines are mostly estimates; listings are dated 2026-10-13 and are not quotations; no gearbox price is known; no shipping, duty, GST or lead time |
+| `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` section 2.2 | Dated motor listing prices (CubeMars store in USD, Robokits India in INR) | Not quotations; delivered cost unknown |
+
+The BOM files cited by those documents, `mechanical/bom/MECHANICAL_BOM.csv` and `hardware/bom/ELECTRICAL_BOM.csv`, are not in the repository (both folders contain only placeholder files). Until they are restored or located, the tables in `COMPONENTS_SOURCING_AND_COST.md` are the only record of the estimate. Record that in the source register and do not treat the 22,000 INR total as a priced BOM. Cost classification remains as in section 6 of this register.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.
