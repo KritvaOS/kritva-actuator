@@ -6,7 +6,7 @@ version: 0.1
 status: PROPOSED
 lifecycle: PROPOSED
 owner: Mechanical Intern
-reviewer: Project Lead
+reviewer: Project Lead; Independent Reviewer TBD for safety-critical motor peak and thermal checks
 upstream_assumptions: ../FS-M-001-integrated-actuator-system/ASSUMPTIONS_AND_OPEN_QUESTIONS.md
 upstream_load_source: ../FS-M-002-load-torque-analysis/outputs/LOAD_CASES.csv
 ---

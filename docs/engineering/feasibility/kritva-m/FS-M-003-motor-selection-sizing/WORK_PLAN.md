@@ -9,7 +9,7 @@ lifecycle: PROPOSED
 owner: Mechanical Intern
 contributors:
 - Embedded Intern
-reviewer: Project Lead
+reviewer: Project Lead; Independent Reviewer TBD for safety-critical motor peak and thermal checks
 planned_duration_working_days: 10
 verification_status: NOT_STARTED
 upstream_dependencies:
