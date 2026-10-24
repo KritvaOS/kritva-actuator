@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Rewrite relative Markdown links in a child repository that point at parent-repo paths.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Documents moved out of the parent (migration Stage 4) contain links such as
 ``../requirements/FIRMWARE_REQUIREMENTS.md``. In the child repository those targets

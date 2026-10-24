@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is a **screening shortlist for supplier quotation. It is not a component selection and does not close ACT-DEC-003, ACT-DEC-016 or ACT-DEC-017.** The candidate data were gathered by the ChatGPT reviewer session on 2026-10-13 (it labelled each figure DATASHEET-VERIFIED or UNVERIFIED) and have **not** been independently re-checked against the vendor pages; web search is not enabled for this project's Claude sessions. Fit calculations in §3 are the author's, using `TORQUE_AND_SPEED.md` conventions. Operating point values remain provisional (M0 blockers B1 to B6 are open, see `planning/v1/M0_DECISION_SHEET.md`).
 

@@ -9,7 +9,7 @@
 | Document owner | Independent Mechanical Reviewer |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the acceptance-audit framework. No results have been recorded. Acceptance limits marked TBD must be approved **before** testing. Physical inspection by a qualified person is required; a remote review alone does not satisfy M3 or M4.
 

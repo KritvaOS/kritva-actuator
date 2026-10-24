@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is protocol version **1.0, proposed**. The identifier layout follows INTERFACE_REQUIREMENTS IF-REQ-065. The payload encoding (scaled 16-bit integers) is **proposed under ACT-DEC-022** and is not yet accepted. Function codes are frozen only after the F1 review.
 

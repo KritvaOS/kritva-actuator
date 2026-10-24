@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check that the mechanical calculation documents match the canonical script.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Addresses external-audit finding EXT-AUD-011 (calculation CI was a smoke run only).
 

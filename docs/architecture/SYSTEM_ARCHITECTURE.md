@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer; Independent Mechanical Reviewer / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This architecture realises `requirements/SYSTEM_REQUIREMENTS.md`. Component choices still open (motor, gearbox, MCU family, A0 board, encoder ICs) are shown as roles, not products. Values are proposed until approved in `planning/v1/DECISIONS.md`.
 

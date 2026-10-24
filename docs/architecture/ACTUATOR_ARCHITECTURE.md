@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer; Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 (A0 subset noted) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This document describes the proposed internal architecture of one actuator module. Component models are not selected. Rates and thresholds are proposed (TBC).
 

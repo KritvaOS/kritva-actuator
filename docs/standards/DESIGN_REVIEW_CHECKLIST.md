@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed standard (ACT-DEC-024). It applies to all four repositories once approved. The checklist is a template; each variant copies it into its own `docs/` and records the result there.
 

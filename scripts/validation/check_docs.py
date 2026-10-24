@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check Kritva Actuator Markdown documents for the mandatory header and revision history.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Scope
 -----
@@ -22,7 +22,7 @@ checks (ERROR unless stated otherwise):
   * a ``Revision history`` heading followed by a table;
   * WARNING when the last revision-history row does not match the header
     revision, when no status note is found near the top, when the
-    classification does not say "Proprietary", or when emoji characters are
+    classification does not say "Public", or when emoji characters are
     present (the documentation standard forbids them).
 
 Files without a ``Document ID`` header:
@@ -249,8 +249,8 @@ def check_file(path: Path, root: Path, report: Report, strict: bool,
         report.error(rel, f"Date '{date}' is not ISO YYYY-MM-DD")
 
     classification = header.get("Classification", "")
-    if classification and "proprietary" not in classification.lower():
-        report.warn(rel, f"Classification '{classification}' does not state 'Proprietary'")
+    if classification and "public" not in classification.lower():
+        report.warn(rel, f"Classification '{classification}' does not state 'Public'")
 
     # --- status note --------------------------------------------------------
     head_text = "\n".join(raw_lines[:60]).lower()

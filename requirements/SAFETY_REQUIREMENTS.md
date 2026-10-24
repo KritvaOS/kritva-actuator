@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent Mechanical Reviewer and Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** The reaction times, thresholds and limits here are **proposed targets pending approval**. They become binding only when the Project Lead approves them and records the approval in `planning/v1/DECISIONS.md`. This document supports a laboratory development programme. It is **not** a certification-grade safety case.
 

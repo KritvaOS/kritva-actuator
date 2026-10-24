@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (approver); Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Milestone content, gate weeks and exit criteria are **proposed targets pending approval**. They become binding only after the Project Lead approves them and records the approval in `planning/v1/DECISIONS.md`. Technical limits are owned by `requirements/` and are referenced here by ID, not restated as new values.
 

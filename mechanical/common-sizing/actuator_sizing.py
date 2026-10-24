@@ -2,7 +2,7 @@
 """
 Kritva Actuator - mechanical sizing calculations (canonical script).
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Produces the numbers used in:
     mechanical/calculations/LOAD_CASES.md

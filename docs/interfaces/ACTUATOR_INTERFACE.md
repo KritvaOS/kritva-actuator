@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0 (USB/UART), A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the proposed interface definition produced under ACT-03-001. Function names, numeric codes, parameter defaults and limits are proposed and pending approval. Interface **version 1** is not frozen until the ACT-03-001 review passes.
 

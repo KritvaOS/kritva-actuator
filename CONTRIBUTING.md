@@ -1,6 +1,6 @@
 # Contributing to Kritva Actuator
 
-This guide is for everyone working in the `KritvaOS/kritva-actuator` repository: the Project Lead, interns, reviewers and contractors. The repository is **proprietary and confidential** ([LICENSE](LICENSE)). Do not copy its contents outside Kritvaos systems.
+This guide is for everyone working in the `KritvaOS/kritva-actuator` repository: the Project Lead, interns, reviewers and contractors. The repository is **public** and licensed under **Apache-2.0** ([LICENSE](LICENSE)); your contributions are accepted under the same licence. Do not commit confidential third-party material (supplier quotes, NDA-covered files, personal data, credentials).
 
 ## 1. Before you start
 
@@ -74,7 +74,7 @@ Every controlled Markdown document starts with this header table:
 | Document owner | <role> |
 | Reviewer / Approver | <role> / <role> |
 | Applies to | A0 / A1 / A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 ```
 
 Then:

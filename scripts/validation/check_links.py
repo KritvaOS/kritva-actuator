@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check relative links in the Kritva Actuator Markdown files.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 What is checked
 ---------------

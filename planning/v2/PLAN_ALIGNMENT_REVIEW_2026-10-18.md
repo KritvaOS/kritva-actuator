@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Review record. An external planning discussion (ChatGPT, "Actuator Implementation Plan", 2026-10-18) proposed milestones M0 to M6, task formats, a document layout and a tool flow. This record compares it with the repository as it stands and lists what was adopted, adapted or not adopted. The discussion is advice, not a source of requirements or approvals. No existing ID, status file, gate or baseline was changed.
 

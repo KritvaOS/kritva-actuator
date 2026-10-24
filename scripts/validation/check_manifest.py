@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check planning/v2/MIGRATION_MANIFEST.csv against the working tree.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Rules (ERROR unless stated)
 ---------------------------

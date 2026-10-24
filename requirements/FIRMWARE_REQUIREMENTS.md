@@ -9,7 +9,7 @@
 | Document owner | Electronics/Embedded Intern |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** All rates, thresholds and timeouts in this document are **proposed targets pending approval**. They become binding only when the Project Lead approves them and records the approval in `planning/v1/DECISIONS.md`. Values marked TBC need confirmation during ACT-01-002/ACT-01-003. Values marked TBD are not yet set.
 
@@ -297,7 +297,7 @@ The firmware shall implement the externally visible state machine of `requiremen
 | FW-REQ-071 | Static analysis (for example cppcheck or clang-tidy) shall run in CI with zero unresolved high-severity findings at release. | Defect prevention. | I | CI report. | `.github/workflows/` | SYS-REQ-107 | A1 | H |
 | FW-REQ-072 | Platform-independent modules (`foc`, `joint_control`, fault manager, protocol parsers, trajectory) shall have **host unit tests** in `tests/unit/`, with ≥ 80 % (TBC) statement coverage for those modules. | Verify maths and logic off-target. | T | Coverage report. | `tests/unit/` | SYS-REQ-006 | A1 | H |
 | FW-REQ-073 | **HIL and bench tests** shall verify timing, fault injection and control performance, with records per SYS-REQ-103. | Evidence on real hardware. | T | Test reports in `results/`. | `results/` | SYS-REQ-103 | A0 | M |
-| FW-REQ-074 | Code reused from open-source references (for example **SimpleFOC**, MIT; **moteus**, Apache-2.0) shall be identified file by file, with the licence notice retained. The use shall be approved by the Project Lead after a licence-compatibility review against the proprietary Kritvaos licence. Copyleft code shall not be included without explicit approval. | Legal and IP hygiene (SYS-REQ-054). | I | Third-party register in `firmware/README.md`. | `firmware/README.md` | SYS-REQ-054 | A0 | M |
+| FW-REQ-074 | Code reused from open-source references (for example **SimpleFOC**, MIT; **moteus**, Apache-2.0) shall be identified file by file, with the licence notice retained. The use shall be approved by the Project Lead after a licence-compatibility review against the Apache-2.0 licence of this repository. Copyleft code shall not be included without explicit approval. | Legal and IP hygiene (SYS-REQ-054). | I | Third-party register in `firmware/README.md`. | `firmware/README.md` | SYS-REQ-054 | A0 | M |
 | FW-REQ-075 | Every firmware release shall have release notes, a tag, the binary and its hash, the configuration defaults, and the passed test list. A release shall be approved at gate F4. | Release control. | I | `audit/firmware/FIRMWARE_ACCEPTANCE_AUDIT.md` signed. | `audit/firmware/` | SYS-REQ-102 | A1 | M |
 | FW-REQ-076 | Safety-relevant firmware (fault manager, limits, state machine, watchdog supervision) shall be reviewed by the **Independent Electrical/Firmware Reviewer**, not only by the author. | Independent-review rule (ACT-DEC-014). | I | Review record exists with reviewer ≠ author. | `audit/firmware/FIRMWARE_REVIEW.md` | SYS-REQ-106 | A1 | M |
 

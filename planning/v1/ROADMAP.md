@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead (approver); Independent Mechanical Reviewer and Independent Electrical/Firmware Reviewer (review of gate placement) |
 | Applies to | A0, A1, A2 and post-v1 planning |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** All dates, durations, budgets and technical values in this roadmap are **proposed targets pending approval**. They become binding only after the Project Lead approves them and records the approval in `planning/v1/DECISIONS.md`. Technical values are owned by `requirements/SYSTEM_REQUIREMENTS.md` (KA-REQ-SYS) and its child documents; this roadmap repeats them only as context and never overrides them.
 

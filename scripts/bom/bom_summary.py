@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Summarise the Kritva Actuator BOM costs by milestone and category.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Reads the same files as ``check_bom.py`` (``mechanical/bom/MECHANICAL_BOM.csv``
 and ``hardware/bom/ELECTRICAL_BOM.csv`` by default), using its parser and

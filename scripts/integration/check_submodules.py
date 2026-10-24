@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check the four-submodule layout of the parent repository.
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Reads ``.gitmodules`` (if present) and checks:
   * the four expected submodules are declared at the expected paths;

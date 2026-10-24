@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Mechanical Reviewer for the mechanical rows |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is a **draft consolidation, not a purchase plan or an approved budget.** Prices are of three kinds, marked in every row: **L** = a listing price read from a supplier web page on 2026-10-13 (not a quotation); **E** = an estimate carried from `mechanical/bom/MECHANICAL_BOM.csv` or `hardware/bom/ELECTRICAL_BOM.csv`; **TBD** = no price known, and none is assumed. Sources named without an **L** are candidate suppliers that have **not** been checked. No quotation, shipping, duty or lead time has been obtained. Drivetrain data from the ChatGPT reviewer session are unverified (see `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md`).
 

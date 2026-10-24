@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed working guide, derived from `OPEN_SOURCE_TOOLFLOW.md` (KA-STD-TOOLFLOW), which holds the full reasoning, licence notes and the checked reference list. The toolchain is **not yet frozen**; versions and commands are placeholders until the owner records the freeze in `planning/v1/DECISIONS.md`. Builds, ERC/DRC, unit tests, simulation and CI passes are evidence inputs only. They never close Gate A, B or C or replace independent electrical/firmware review (ACT-DEC-014). The mechanical HOLD was lifted by ACT-DEC-029; fabrication, procurement and loaded testing still need the gates.
 
@@ -68,7 +68,7 @@ A compile does not show that the motor, current sensing, PWM timing, gearbox and
 | SimpleFOC | MIT | Learning and concept reference |
 | moteus | Apache-2.0 | Controller architecture, diagnostics, host tools |
 | ODrive (legacy v3.x) | MIT | Historical reference only |
-| VESC firmware | GPL-3.0 | Study only. No code copied into proprietary firmware without a licence decision |
+| VESC firmware | GPL-3.0 | Study only. No code copied into this Apache-2.0 repository without a licence decision |
 
 Before reusing source, record the component, licence, version or commit, modified files and notices. A reference design is not validated for Kritva hardware.
 

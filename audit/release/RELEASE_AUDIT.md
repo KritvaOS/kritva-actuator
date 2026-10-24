@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the release-gate framework. No gate has been passed. A gate is passed only when every item is supported by evidence and every required specialist has signed. If any required review is `NOT_VERIFIED`, the gate stays blocked (ACT-DEC-014).
 

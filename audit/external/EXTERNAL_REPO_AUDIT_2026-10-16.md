@@ -9,7 +9,7 @@
 | Document owner | Project Lead (record keeper); findings owned by the external reviewer |
 | Reviewer / Approver | External reviewer: ChatGPT (remote documentary audit) / Project Lead |
 | Applies to | Repository restructure Stages 1 to 5 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 ## Revision history
 

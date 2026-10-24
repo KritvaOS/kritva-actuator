@@ -9,7 +9,7 @@
 | Document owner | Independent Electrical/Firmware Reviewer |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0 (E0, E1), A1 (E2) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This is the audit framework. No gate has been reviewed. The Electronics/Embedded Intern must not be the sole approver of power-stage protection or motor-control safety (ACT-DEC-014). Without a qualified reviewer, the result is `NOT VERIFIED`.
 

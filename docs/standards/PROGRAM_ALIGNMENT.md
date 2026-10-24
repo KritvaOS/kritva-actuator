@@ -9,7 +9,7 @@
 | Document owner | Project Lead / Integration Owner |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed (ACT-DEC-027), from the external program audit of 2026-10-16; sections 1, 2, 3 and 5 updated 2026-10-18 to match kritva-program decisions D-034 and D-052. kritva-program remains the authority for the program baseline, task weights, approvals and accepted progress. This repository reports task facts only.
 

@@ -21,7 +21,7 @@ The following are not acceptable:
 - dismissive or demeaning comments in reviews, meetings or chat;
 - deliberately misreporting test results, falsifying evidence, or marking a requirement `PASS` without the required evidence;
 - bypassing a safety rule or a gate, or encouraging someone else to do so;
-- sharing proprietary material outside Kritvaos without authorisation.
+- sharing confidential third-party material (for example supplier quotes or NDA-covered files) or personal data without authorisation.
 
 ## 3. Laboratory conduct
 
@@ -33,13 +33,13 @@ Safety is everyone's responsibility. In the lab:
 - report incidents and near misses on the same day; reports are used for learning, not blame;
 - keep the bench tidy, and keep tools, cables and spare parts out of the clear zone.
 
-## 4. Confidentiality
+## 4. Confidentiality and licensing
 
-The repository and all related material are **proprietary and confidential** ([LICENSE](LICENSE)). Do not:
+The repository is public and licensed under Apache-2.0 ([LICENSE](LICENSE)), so its contents may be shared under that licence. Material that is not in the repository is not covered by it. Do not:
 
-- publish, upload or share files, CAD, firmware, schematics, test data or screenshots outside approved Kritvaos systems;
-- paste proprietary content into public tools or forums;
-- reuse the material in other projects without written permission.
+- commit or share confidential third-party material (supplier quotes, NDA-covered files, datasheets without redistribution rights) or personal data;
+- put credentials, tokens or details of an unpatched vulnerability in any public place (see [SECURITY.md](SECURITY.md));
+- remove licence notices when reusing the material; reuse is governed by Apache-2.0.
 
 AI assistants used for review, such as the remote technical review described in [planning/v1/DECISIONS.md](planning/v1/DECISIONS.md) ACT-DEC-014, may only be used through accounts and workspaces approved by Kritvaos.
 

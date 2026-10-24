@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Bearing type and size are **not yet selected**. ACT-DEC-009 says to select them after the load calculation. This document performs that calculation with assumed geometry. Catalogue ratings are **typical published values** for the generic size and must be verified against the chosen manufacturer's catalogue. The results are proposed and pending approval.
 

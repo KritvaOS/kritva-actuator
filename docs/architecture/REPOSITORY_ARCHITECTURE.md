@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This document records the proposed restructuring of this repository for the four-intern implementation plan: three Mechanical Interns (Kritva-S, Kritva-M, Kritva-L) and one Embedded Intern. It follows the external reviewer's recommendation of 2026-10-15 (ChatGPT session, branch of the Kritva OS project) and is **proposed, pending Project Lead approval** (ACT-DEC-024). **Status (2026-10-16): Stages 1 to 4 are complete and the four submodules are added (Stage 5 implemented, not yet verified by a passing full parent CI on a fresh recursive clone). Stage 6 (audit and release) has not started.** The migration is staged and tracked in `planning/v2/MIGRATION_PLAN.md`; every existing file has a recorded destination in `planning/v2/MIGRATION_MANIFEST.csv`.
 
@@ -21,7 +21,7 @@
 
 ## 2. Repositories and owners
 
-The four child repositories were created (private, empty) on 2026-10-15: `https://github.com/KritvaOS/kritva-actuator-{s,m,l,embedded}`. Their scaffolds are pushed by `scripts/integration/bootstrap_children.sh`.
+The four child repositories were created (empty) on 2026-10-15: `https://github.com/KritvaOS/kritva-actuator-{s,m,l,embedded}`. Their scaffolds are pushed by `scripts/integration/bootstrap_children.sh`.
 
 | Repository | Owner | Contents | Must not redefine |
 |---|---|---|---|
@@ -104,7 +104,7 @@ A directory whose contents span ownership is **split by file**. Each destination
 | Submodule integrity | `scripts/integration/check_submodules.py`: four expected submodules, no credentials in URLs, pins valid | n/a |
 | Firmware build, unit tests, static analysis | No | Embedded repository |
 
-Parent CI checks out submodules recursively over HTTPS. While the children are public the default token is enough. When they are private, the default `GITHUB_TOKEN` cannot read them, so use a **fine-grained personal access token or GitHub App token with read-only Contents access to the four children**, stored as the Actions secret `CHILD_REPOS_TOKEN` (the workflow uses it when present). Secrets live in Actions secrets and never in `.gitmodules`, URLs, logs or artefacts.
+Parent CI checks out submodules recursively over HTTPS. The children are public (ACT-DEC-034), so the default token is enough. If a child is ever made private, the default `GITHUB_TOKEN` cannot read it, so use a **fine-grained personal access token or GitHub App token with read-only Contents access to the four children**, stored as the Actions secret `CHILD_REPOS_TOKEN` (the workflow uses it when present). Secrets live in Actions secrets and never in `.gitmodules`, URLs, logs or artefacts.
 
 ## 7. Open items
 
@@ -114,7 +114,7 @@ Parent CI checks out submodules recursively over HTTPS. While the children are p
 | 2 | Create the four child repositories from the scaffolds | Project Lead | Stage 3 |
 | 3 | Choose the history method (filtered history or documented import commit) | Project Lead | Stage 4 |
 | 4 | Make `software/` ownership final once ACT-03-001 is approved | Project Lead / Embedded Intern | Stage 4 |
-| 5 | When the children return to private: create the read-only token and store it as `CHILD_REPOS_TOKEN` | Repository administrator | Before making the repositories private again |
+| 5 | Only if a child repository is ever made private: create the read-only token and store it as `CHILD_REPOS_TOKEN` | Repository administrator | Before making any repository private |
 
 ## 8. Revision history
 

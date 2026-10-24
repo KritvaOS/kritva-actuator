@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Helper for migration Stage 4 (used by stage4_migrate.sh).
 
-Proprietary and confidential. Copyright (c) 2026 Kritvaos. All rights reserved.
+Copyright (c) 2026 Kritvaos. Licensed under the Apache License, Version 2.0 (see LICENSE).
 
 Subcommands (run from the parent repository root):
   list <key>   print "path<TAB>destination_path" for MOVE rows still PLANNED

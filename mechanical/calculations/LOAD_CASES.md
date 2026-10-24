@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 (design basis), A0 (motor sizing) |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every input here is a proposed baseline (ACT-DEC-008) or an explicit assumption. The forearm centre of mass (180 mm) is **provisional** and must be replaced with a CAD or measured value (SYS-REQ-011). These results become binding only after approval recorded in `planning/v1/DECISIONS.md`.
 

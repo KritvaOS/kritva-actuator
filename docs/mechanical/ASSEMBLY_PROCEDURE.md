@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This procedure follows the proposed concept in `MECHANICAL_DESIGN_SPECIFICATION.md`. Steps, part numbers and tightening torques are **provisional**. They are updated as-built after the first assembly (ACT-02-005), and the procedure is re-issued before the A1 release. Component manufacturers' instructions (motor, gearbox, coupling, bearings) take precedence where they differ.
 

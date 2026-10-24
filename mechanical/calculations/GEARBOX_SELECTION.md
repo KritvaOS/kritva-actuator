@@ -9,7 +9,7 @@
 | Document owner | Mechanical Intern (lead); Electronics/Embedded Intern (control implications) |
 | Reviewer / Approver | Independent Mechanical Reviewer / Project Lead |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** ACT-DEC-003 sets the baseline: a commercial planetary gearbox, with 20:1 evaluated first and 15:1 and 25:1 as alternatives. **No gearbox model is selected yet.** This document defines the selection method, the required ratings, the comparison template and the release gate. Candidate rows are filled in during ACT-02-002 from real datasheets and quotations. They are never filled with invented data.
 

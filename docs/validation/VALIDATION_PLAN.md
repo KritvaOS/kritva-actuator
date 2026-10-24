@@ -9,7 +9,7 @@
 | Document owner | Project Lead (coordination); interns execute their domain tests |
 | Reviewer / Approver | Independent Mechanical Reviewer; Independent Electrical/Firmware Reviewer / Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** This plan is proposed and pending approval. Numerical pass limits that are not yet set (backlash, position error, repeatability, thermal stability) **must be approved and recorded before the related test is run**. They are never chosen after seeing the results.
 

@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead |
 | Applies to | A0, A1, A2 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Dated reforecast overlay under `ACT-DEC-030` (48 weeks, rev 0.1), re-sequenced under `ACT-DEC-032` (A0 exit extended to P12) and `ACT-DEC-033` (Gate A to fabrication gap of two weeks). The file name is kept from rev 0.1 for traceability; the horizon is now **58 weeks, ending 28 Nov 2027**, a forecast consequence that the Project Lead should confirm (ACT-DEC-033 item 4). It does not replace the official program clock (`ACT-DEC-029`: week 1 = Mon 14 Sep 2026), does not rewrite `ACT-DEC-028`, and does not change any gate, task ID or status file. Dates are planning targets, not supplier commitments. Gates A/B/C, independent review (ACT-DEC-014) and restrained-fixture testing (ACT-DEC-015) apply unchanged and are never waived to protect a date.
 

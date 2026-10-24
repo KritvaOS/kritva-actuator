@@ -9,7 +9,7 @@
 | Document owner | Project Lead |
 | Reviewer / Approver | Project Lead; Independent Reviewer |
 | Applies to | A0, A1 |
-| Classification | Proprietary and confidential |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Proposed plan (ACT-DEC-024), pending Project Lead approval. Stages 1 to 4 are complete (files moved per the manifest; 0 PLANNED rows) and Stage 5 (submodules) is implemented but **not yet verified** (parent CI and fresh-clone evidence outstanding, external audit 2026-10-16). Stage 6 has not started. Stage 4 onward is run by the repository owner with the git steps in section 4.
 
@@ -59,9 +59,9 @@ Status: the four repositories exist (created 2026-10-15 by the Project Lead):
 
 Remaining Stage 3 work: run `scripts/integration/bootstrap_children.sh` (pushes the scaffold as the first commit of each repo), then the items below.
 
-- Confirm the four repositories are **private** (Settings, General).
+- Confirm the four repositories are **public** (Settings, General; ACT-DEC-034).
 - Copy the matching scaffold from `child-repos/` (delivered separately) as the first commit.
-- CI access: submodules use HTTPS URLs. While the children are public nothing is needed. When they are private again, store a read-only fine-grained token as the secret `CHILD_REPOS_TOKEN` (the default `GITHUB_TOKEN` cannot read other private repositories).
+- CI access: submodules use HTTPS URLs. The children are public (ACT-DEC-034), so nothing is needed. If one is ever made private, store a read-only fine-grained token as the secret `CHILD_REPOS_TOKEN` (the default `GITHUB_TOKEN` cannot read other private repositories).
 - Enable branch protection and CODEOWNERS in each child.
 
 ### Stage 4: migrate by workstream
@@ -122,7 +122,7 @@ Move files in the parent with `git mv`, never delete and recreate.
 | Risk | Mitigation |
 |---|---|
 | Interns diverge on interfaces | Interface Control Document in the parent; change by design change request |
-| Parent CI cannot read private children | Deploy keys or GitHub App; checked in `check_submodules.py` and the CI notes |
+| Parent CI cannot read a child that is later made private | Deploy keys or GitHub App; checked in `check_submodules.py` and the CI notes |
 | Detached-HEAD or unpushed submodule commits | Submodule workflow standard; CI fails if a pinned SHA is not fetchable |
 | History loss | filter-repo or documented import commit with source SHA |
 | Three variants triple the review load | Same template, same checklists; M first, S and L only after M passes the Design review |

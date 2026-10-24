@@ -10,7 +10,7 @@
 | Contributors | Mechanical Intern, Electronics/Embedded Intern |
 | Reviewer / Approver | Independent Electrical/Firmware Reviewer and Independent Mechanical Reviewer (review); Project Lead (approval) |
 | Applies to | Kritva Actuator Development Platform, milestones A0, A1, A2 |
-| Classification | Proprietary and confidential (see `LICENSE`) |
+| Classification | Public (Apache-2.0, see `LICENSE`) |
 
 > **Status note.** Every numerical value, identifier layout, rate, timeout and code in this document is a **proposed target pending approval**. Values marked **TBD** are not yet determined; values marked **TBC** are proposed and must be confirmed by analysis, datasheet or test. Nothing in this document is binding until the Project Lead approves it and records the approval in `planning/v1/DECISIONS.md`.
 
