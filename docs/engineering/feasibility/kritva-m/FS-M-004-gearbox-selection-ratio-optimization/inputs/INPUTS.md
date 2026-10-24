@@ -164,3 +164,20 @@ Before making a definitive recommendation, verify that:
 - Every material numerical claim has traceable evidence.
 
 If these conditions are not met, the study may still produce a provisional shortlist, but it must not claim confirmed suitability or release readiness.
+
+## 10. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` (rev 0.2) section 2.3 and 3.2 | Seed gearboxes: Neugart PLE 040, PLE 060, PLPE 050 (series-level ranges for continuous, maximum and emergency-stop torque, backlash, efficiency, mass) and WITTENSTEIN alpha DP+ as a benchmark | Series ranges, not part-number ratings; reported by an AI reviewer session and not re-checked. No gearbox price exists online, so every cost is unknown |
+| `mechanical/calculations/GEARBOX_SELECTION.md` sections 2 to 6 | Required ratings from the load cases, the joint selection rule, a comparison template and a scoring method | Comparison rows are empty by design |
+| `mechanical/calculations/TORQUE_AND_SPEED.md` section 3 | Motor-side torque by ratio | Illustrative |
+
+Points to resolve, not assume:
+
+- Efficiency: the repository uses 0.85 (IN-012, ASSUMED); the AI session used 0.92; the quoted datasheet range is 92 to 98 %. Do not change IN-012 here. Run both as sensitivity cases.
+- The shortlist reports that only PLE 060 clears the 47.5 N·m screening stop torque (emergency-stop rating). That stop torque is an idealised estimate that depends on bumper and approach speed; do not eliminate candidates on it alone.
+- Motor and gearbox are selected jointly (`TORQUE_AND_SPEED.md` section 5): this study depends on the FS-M-003 candidate operating points.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.

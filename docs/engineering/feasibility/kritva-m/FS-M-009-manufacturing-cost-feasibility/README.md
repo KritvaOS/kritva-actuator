@@ -33,6 +33,8 @@ Can the Kritva-M actuator be manufactured and sourced with credible process rout
 
 ## How to start
 
+Read the section "Repository starting evidence" at the end of `inputs/INPUTS.md` first. It lists draft repository documents that already cover part of this study and the gaps that remain.
+
 1. Project Lead approves `SPECIFICATION.md` and records it in `registers/STUDY_REGISTER.csv`.
 2. Assign the independent reviewer where the SPECIFICATION requires one. Without one, safety-critical results stay `NOT_VERIFIED`.
 3. Run the work packages in `WORK_PLAN.md`, updating its status table and evidence paths.

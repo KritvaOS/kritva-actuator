@@ -204,3 +204,16 @@ Before claiming integration feasibility, confirm:
 - Mandatory calculations, outputs and source register are reproducible.
 
 Unresolved safety-critical inputs must remain `BLOCKED`, `PROVISIONAL` or `NOT_VERIFIED`.
+
+## 13. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md` sections 3 to 6 | Concept axial stack and load paths; proposed Al 6061-T6 housing and mounting plate (gearbox concentricity target 0.05 mm, TBC); balanced hard stops; stationary encoder PCB; mounting interface IF-01 (at least 4 x M4 pattern, TBC); a mass table with rough housing, shaft and fastener estimates | The mass table has motor and gearbox as TBD, so the total is not computable; housing stiffness limit and the mass and envelope budget are open items (the budget is a Project Lead decision needed by Gate A) |
+| `docs/mechanical/MATERIAL_SELECTION.md` | Material candidates and rules for aluminium and printed parts | Indicative properties |
+| `mechanical/calculations/LOAD_CASES.md` section 7 | Load cases the housing must carry (LC-04, LC-05, LC-06 handling, LC-09 misalignment) | Several loads are TBD |
+
+No CAD exists in the repository yet (`mechanical/actuator-m` is empty). Geometry, mass properties and envelope therefore remain UNKNOWN until CAD is created, and structural checks can only be hand calculations on stated assumptions.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.

@@ -130,3 +130,16 @@ When an upstream input, motor candidate, gearbox ratio, current convention, supp
 ## 8. Initial readiness
 
 The initial baseline contains critical unknown electrical and thermal inputs. Screening calculations and sensitivity analyses may proceed, but unconditional feasibility conclusions are blocked wherever required motor data, operating limits, current limits, duty cycle, ambient conditions, thermal parameters, or independent review evidence is missing.
+
+## 9. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `requirements/ELECTRICAL_REQUIREMENTS.md` | Detailed electrical requirements (ELEC-REQ-nnn) that this study does not yet cite | Large document; applicable IDs are not reconciled with this study |
+| `mechanical/calculations/TORQUE_AND_SPEED.md` sections 2.1, 3, 4 and 6 | Minimum Kv at 24 V by ratio, phase-current versus Kt table for 20:1, holding-current thermal note, and the Kv/Kt/current convention rules | Illustrative; Kt is not known until a motor is selected |
+| `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` section 3.1 and 3.3 | Estimated copper loss per candidate and the vendor-versus-repository Kt convention discrepancy | Reported figures, not verified; copper loss is an I²R estimate |
+
+Gaps: `docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md` (cited by `TORQUE_AND_SPEED.md`) does not exist, and `docs/electronics/` and `hardware/bom/` contain only placeholder files. The development board for A0 is not chosen. Supply current limit, ambient temperature and duty cycle remain UNKNOWN (IN-026, IN-028, IN-029), so thermal and supply conclusions stay conditional.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.

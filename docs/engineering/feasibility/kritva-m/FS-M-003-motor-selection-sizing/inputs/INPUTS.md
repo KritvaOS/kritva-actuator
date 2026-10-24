@@ -92,3 +92,21 @@ If a file is absent or its results remain unverified, record the dependency as o
 5. Record calculated values separately from manufacturer-published values.
 6. When an upstream input or FS-M-002 output changes, identify affected calculations, candidates, and downstream handoffs.
 7. Do not promote an assumption to verified without evidence and the applicable review.
+
+## 6. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `mechanical/calculations/MOTOR_GEARBOX_SHORTLIST.md` (rev 0.2) section 2.1 and 3.1 | Four CubeMars frameless motors as a seed list: RI50 KV100, RI60 KV120, RI70 KV95, RI80 V2.0 KV75, with reported torque, Kv, Kt, resistance, rated speed, power, mass, and a fit-at-20:1 table | Reported by an AI reviewer session; labelled DV (appears in the vendor spec) or UV (not established); not re-checked. No vendor documents are committed. RI70 Kt is UV |
+| `mechanical/calculations/TORQUE_AND_SPEED.md` (rev 0.2) sections 2.1 and 3 | Motor-side torque, speed, power and minimum Kv for 15:1, 20:1 and 25:1 (Kv minimum at 24 V: 59.5 RPM/V at 20:1); Kv/Kt convention rules | Illustrative until a motor is selected |
+| `docs/architecture/COMPONENTS_SOURCING_AND_COST.md` section 3.3 | An integrated option (RMCS-2071, listed 8,328 INR) that is not in the shortlist | Listing price, not a quotation |
+
+Points to resolve, not assume:
+
+- The vendor Kt values are about 1.4 to 1.45 times the repository convention Kt = 8.27/Kv. The shortlist suspects a per-A-RMS definition but that is unconfirmed. Resolve with the vendor and the Kt convention in `TORQUE_AND_SPEED.md` section 2.1 before computing any current.
+- At the repository efficiency of 0.85, the shortlist finds RI50 and RI60 at or above rated torque at 10 N·m continuous, and RI70 at about 63 %. The shortlist's alternative efficiency of 0.92 comes from the AI session, not a datasheet. Treat these as screening results.
+- The motors are frameless kits (no housing, bearings or coupling). Housed or integrated motors are not yet compared.
+- `docs/electronics/MOTOR_CONTROLLER_SPECIFICATION.md`, cited by `TORQUE_AND_SPEED.md`, does not exist in the repository.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.

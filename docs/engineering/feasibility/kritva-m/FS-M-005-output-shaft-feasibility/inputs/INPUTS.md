@@ -151,3 +151,16 @@ Before concluding that a shaft configuration is feasible, verify:
 - Independent review evidence is recorded for critical strength and impact cases.
 
 A preliminary feasibility calculation can proceed with explicit assumptions, but unresolved safety-critical inputs prevent a verified design conclusion.
+
+## 10. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `mechanical/calculations/SHAFT_STRENGTH.md` | 12 mm shaft check at the governing single-sided stop case LC-05: EN8 normalised safety factor 0.86 (not acceptable), EN8 hardened and tempered 1.33, EN19/42CrMo4 Q&T 2.00, with minimum diameters per material | Conditional on assumed geometry, an assumed Kt and indicative material data; the document itself says the shaft is not frozen |
+| `mechanical/calculations/LOAD_CASES.md` sections 7 and 8 | Load-case register (LC-01..LC-09) and the stop model behind the governing load | Idealised screening model; the single-sided case governs until a balanced stop is proven |
+| `docs/mechanical/MATERIAL_SELECTION.md` and `docs/mechanical/MECHANICAL_DESIGN_SPECIFICATION.md` section 4.4 | Material candidates and the proposed shaft design | Indicative properties; certificates not available |
+
+Points to resolve, not assume: reproduce the 0.86 and 2.00 results independently (IN-037); confirm geometry (overhang, stop radius) from CAD, which does not exist yet; the bearing seats may step to 15 mm (see FS-M-006), so section-by-section checks are needed.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.

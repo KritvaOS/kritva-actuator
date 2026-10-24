@@ -170,3 +170,15 @@ Before a verified bearing suitability claim, confirm:
 - Mandatory outputs and source register are reproducible.
 
 If any required safety-critical input remains unresolved, a preliminary comparison may proceed, but the result must not be presented as a verified design.
+
+## 12. Repository starting evidence (as of 2026-10-24)
+
+The repository already holds draft calculation and design documents that overlap this study. They are **starting points, not verified evidence**: each is a draft pending approval, none has been independently reviewed, and several figures were gathered by an AI reviewer session and not re-checked against vendor pages. Read them first, then reproduce or re-source what you rely on and register it in `references/SOURCE_REGISTER.csv`. They do not change the status of any upstream input.
+
+| Source | What it gives | Limits |
+|---|---|---|
+| `mechanical/calculations/BEARING_SELECTION.md` (rev 0.3) | Bearing arrangement and reaction method (assumed bearing spacing L = 25 mm and overhang a = 20 mm), candidate deep-groove sizes with generic C and C0, static factor target s0 of at least 2.0 and life target L10h of at least 2,000 h (both TBC) | Generic catalogue values, not vendor-verified; geometry assumed; 6202 is a candidate, not a released part (BOM item MB-004, status CANDIDATE) |
+| `mechanical/calculations/LOAD_CASES.md` section 8.2 | Governing single-sided stop reaction (1,000 N at 25 mm radius for a 25 N·m stall) | Screening estimate |
+
+Proposed resolution of the 12 mm shaft versus 15 mm bearing bore mismatch (IN-016, OQ-011): `BEARING_SELECTION.md` section 9 proposes stepping the bearing seats to 15 mm with a 6202-size pair (s0 about 2.1) while the shaft stays 12 mm between the seats, and allows 6001/6201 on 12 mm seats only if a balanced stop is proven and decision ACT-DEC-019 is recorded. This is a proposal pending approval, not a decision. The axial and moment loads, the duty cycle (for life) and the vendor ratings remain open.
+Child requirement documents also exist and are not yet reconciled with this study: `requirements/MECHANICAL_REQUIREMENTS.md` (MECH-REQ-nnn) and `requirements/ELECTRICAL_REQUIREMENTS.md` (ELEC-REQ-nnn). Check which IDs apply and cite them by ID.
