@@ -9,7 +9,7 @@ lifecycle: PROPOSED
 owner: Mechanical Intern
 contributors:
 - Embedded Intern
-reviewer: Project Lead
+reviewer: Project Lead; Independent Reviewer TBD for safety-critical motor peak and thermal checks
 upstream_dependencies:
 - FS-M-001
 - FS-M-002
@@ -357,6 +357,7 @@ Planned duration: 10 working days, coordinated with FS-M-004.
 | Mechanical Intern — Owner | Load reconciliation, motor sizing, candidate research, calculations, and documentation |
 | Embedded Intern | Current/voltage constraints, FOC feedback, drive compatibility, regeneration, and thermal/electrical interface input |
 | Project Lead — Reviewer | Review methods, assumptions, candidate evidence, and study disposition |
+| Independent Reviewer (TBD) | Independent review of safety-critical motor peak-torque, current and thermal conclusions; without it those results stay NOT_VERIFIED |
 | FS-M-004 owner | Joint gearbox ratio iteration and interface feedback |
 | FS-M-008 owner | Consume current, voltage, feedback, and thermal handoff |
 | FS-M-007 owner | Consume package, mass, mounting, and cooling constraints |
@@ -422,7 +423,7 @@ This study must not conclude:
 |---|---|
 | Study owner | Mechanical Intern |
 | Embedded input | Embedded Intern |
-| Reviewer | Project Lead |
+| Reviewer | Project Lead; Independent Reviewer TBD for safety-critical motor peak and thermal checks |
 | Review decision | PENDING |
 | Review evidence | TBD |
 | Approval date | TBD |

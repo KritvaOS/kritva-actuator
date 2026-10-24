@@ -9,9 +9,9 @@
 | Verification status | NOT_STARTED |
 | Review decision | PENDING |
 | Owner | Mechanical Intern |
-| Reviewer | Project Lead |
+| Reviewer | Project Lead; Independent Reviewer TBD for safety-critical motor peak and thermal checks |
 | Upstream studies | FS-M-001, FS-M-002 |
-| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.3, proposed) |
+| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.4, proposed) |
 | Canonical requirements | `requirements/SYSTEM_REQUIREMENTS.md` (rev 0.2, proposed) |
 | Upstream inputs | `../FS-M-001-integrated-actuator-system/inputs/INPUTS.md` |
 

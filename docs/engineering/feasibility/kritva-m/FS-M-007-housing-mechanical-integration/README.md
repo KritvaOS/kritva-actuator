@@ -11,7 +11,7 @@
 | Owner | Mechanical Intern |
 | Reviewer | Project Lead; Independent Reviewer TBD for safety-critical structural and hard-stop checks |
 | Upstream studies | FS-M-001, FS-M-003, FS-M-004, FS-M-005, FS-M-006 |
-| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.3, proposed) |
+| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.4, proposed) |
 | Canonical requirements | `requirements/SYSTEM_REQUIREMENTS.md` (rev 0.2, proposed) |
 | Upstream inputs | `../FS-M-001-integrated-actuator-system/inputs/INPUTS.md` |
 

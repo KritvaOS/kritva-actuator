@@ -11,7 +11,7 @@
 | Owner | Mechanical Intern |
 | Reviewer | Independent Reviewer TBD |
 | Upstream studies | FS-M-001, FS-M-002, FS-M-004 |
-| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.3, proposed) |
+| Standard | `../../FEASIBILITY_STUDIES_STANDARD.md` (v0.4, proposed) |
 | Canonical requirements | `requirements/SYSTEM_REQUIREMENTS.md` (rev 0.2, proposed) |
 | Upstream inputs | `../FS-M-001-integrated-actuator-system/inputs/INPUTS.md` |
 
