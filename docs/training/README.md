@@ -22,13 +22,32 @@ component choices are not yet frozen
 
 ## Project Artwork
 
+### Two-arm robot concepts aligned with A0/A1
+
+The following concept sheet compares four affordable two-arm robot
+directions aligned with the A0 bench-prototype and A1 smart-actuator
+development plan. **Option 2 (upper-body humanoid)** is the recommended
+initial platform direction: validate the actuator on the bench first,
+then integrate a small number of validated actuators into the upper body.
+A mobile base and full-body humanoid are later extensions, not A0
+requirements.
+
+![KritvaOS two-arm humanoid robot concepts aligned with A0/A1](../images/kritva-two-arm-robot-concepts-a0-a1.png)
+
+> **Concept-only note:** This artwork is for planning and discussion. It
+> does not freeze robot degrees of freedom, actuator allocation, S/M/L
+> ratings, mechanical geometry, component selection, or cost. The S/M/L
+> values depicted are preliminary envelopes; use the controlled
+> engineering tables below for decisions and procurement.
+
+### Smart actuator concept overview
+
 The following concept infographic provides a visual overview of the
 actuator architecture, development stages, humanoid-joint applications,
 and reference projects. It is an illustrative concept---not a released
 mechanical design or a validated bill of materials.
 
-![Kritva Smart Actuator --- concept
-overview](docs/images/kritva-smart-actuator-overview.png)
+![Kritva Smart Actuator --- concept overview](../images/kritva-smart-actuator-overview.png)
 
 > **Engineering note:** Use this artwork for project orientation and
 > training. Do not use its illustrative geometry, component placement,
@@ -48,7 +67,7 @@ design review.
 
 ![Kritva Smart Actuator --- actuator family and preliminary
 specification
-concept](docs/images/kritva-smart-actuator-family-and-baseline.png)
+concept](../images/kritva-smart-actuator-family-and-baseline.png)
 
 ## 1. Project Purpose
 
@@ -195,7 +214,7 @@ actual delivery dates change. A custom PCB is optional and must not
 block the first closed-loop demonstration.
 
 ![Kritva Smart Actuator --- 24-week parallel development
-roadmap](docs/images/kritva-smart-actuator-24-week-roadmap.png)
+roadmap](../images/kritva-smart-actuator-24-week-roadmap.png)
 
 ### Workstream plan
 
@@ -1027,6 +1046,20 @@ validation evidence before adopting anything.
     Reference for mechanical design organization, transmission concepts,
     and characterization.
 
+-   **OpenQDD-V1:**
+    https://github.com/aaedmusa/OpenQDD-V1\
+    Reference for quasi-direct-drive actuator concepts, mechanical
+    packaging, and available design resources. Verify the design's
+    documented operating limits and suitability before comparing it
+    against Kritva requirements.
+
+-   **ODRI Open Robot Actuator Hardware:**
+    https://github.com/open-dynamic-robot-initiative/open_robot_actuator_hardware\
+    Research-oriented actuator hardware reference. Study the mechanical
+    interfaces, assembly approach, and available validation evidence;
+    do not assume the complete design is suitable for Kritva without
+    an engineering comparison.
+
 -   **Integrated Cycloidal Robotic Actuator:**
     https://github.com/AtomsClark/Integrated-Cycloidal-Robotic-Actuator\
     Experimental integrated actuator reference. Study its transmission
@@ -1043,7 +1076,37 @@ validation evidence before adopting anything.
 -   **ODrive:** https://odriverobotics.com/\
     Reference for motor-control hardware and development workflows.
     Select a specific product only after checking motor, encoder,
-    voltage, and current compatibility.
+    voltage, and current compatibility. The product website and the
+    open-source firmware repository are different references.
+
+### Additional motor-control firmware reference
+
+-   **VESC firmware:**
+    https://github.com/vedderb/bldc\
+    Optional reference for FOC implementation, motor configuration,
+    sensing, and embedded motor-control firmware. Check the target
+    hardware assumptions, supported MCU/peripherals, project status,
+    and license before considering reuse.
+
+### Intern reference-study exercise
+
+Before recommending an actuator design or motor-control implementation:
+
+1. Study at least two mechanical actuator references and two
+   motor-control references relevant to the assigned workstream.
+2. Record the repository URL, revision or commit reviewed, license,
+   available CAD/firmware, documented specifications, and reported
+   validation results.
+3. Compare the architecture and design trade-offs against the current
+   Kritva actuator requirements.
+4. Identify missing evidence, hardware incompatibilities,
+   implementation risks, and additional validation required.
+5. Submit a concise comparison table and engineering recommendation
+   for project-lead review.
+
+The goal is evidence-based learning, not simply collecting repository
+links. Do not adopt external designs or claim performance based only on
+a repository description, illustration, or headline specification.
 
 ### Reuse and licensing
 
